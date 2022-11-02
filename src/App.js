@@ -1,25 +1,73 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import NavLink from 'react-bootstrap/esm/NavLink'
+import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Container from 'react-bootstrap/Container';
+import 'bootstrap/dist/css/bootstrap.min.css'
+// import Button from 'react-bootstrap/Button'
+import Kalenteri from './Kalenteri'
+import Etusivu from './Etusivu';
+import Asiakkaat from "./Asiakkaat"
+import Hinnasto from './Hinnasto';
+import HyvaTietaa from './HyvaTietaa';
+import Lisavarusteet from './Lisavarusteet';
+import Palaute from "./Palaute"
+import VuokrattavatAutot from './VuokrattavatAutot';
+import Vuokrausehdot from './Vuokrausehdot';
+import Yhteystiedot from "./Yhteystiedot"
+import Yritys from "./Yritys"
+import { BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+function App(){
+  return(
+    <div className="taustakuva">
+      <Router>        
+        <Navbar bg='dark' variant="dark">
+        <Nav className='me-auto'/>
+          <Nav className='me-auto'>
+              <Navbar.Brand style={{fontSize:25}}>TSR Matkailuauto</Navbar.Brand>
+          </Nav>
+          <Nav className='me-auto' style={{fontSize:20}}>
+            {/* <NavLink to={'/Etusivu'}>Etusivu</NavLink> */}
+            <NavLink href='/Etusivu'>Etusivu</NavLink>
+            {/* <Link to={'/Etusivu'} className='nav-link'>Etusivu</Link> */}
+            <NavLink href='/Yritys'>Yritys</NavLink>
+              <NavDropdown title="Vuokraus" id="collasible-nav-dropdown" >
+                <NavDropdown.Item href="/VuokrattavatAutot">Vuokrattavat autot</NavDropdown.Item>
+                <NavDropdown.Item href="/Kalenteri">Varaa</NavDropdown.Item>
+                <NavDropdown.Item href="/Hinnasto">Hinnasto</NavDropdown.Item>
+                <NavDropdown.Item href="/Lisavarusteet">Lisävarusteet</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/HyvaTietaa">Hyvä tietää</NavDropdown.Item>
+                <NavDropdown.Item href="/Vuokrausehdot">Vuokrausehdot</NavDropdown.Item>
+              </NavDropdown>
+            <NavLink href="/Palaute" >Palaute</NavLink>
+          </Nav>
+            <Nav className='me-auto' style={{fontSize:20}}>
+              <NavLink href="/Asiakkaat">Asiakkaat</NavLink>
+              <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>
+              {/* <Button>Kirjaudu</Button> */}
+            </Nav>
+        </Navbar>
+        <Switch >
+          <Route path="/Etusivu"><Etusivu/></Route>
+          <Route path="/Yritys"><Yritys/></Route>
+          <Route path="/VuokrattavatAutot"><VuokrattavatAutot/></Route>
+          <Route path="/Kalenteri"><Kalenteri/></Route>
+          <Route path="/Hinnasto"><Hinnasto/></Route>
+          <Route path="/Lisavarusteet"><Lisavarusteet/></Route>
+          <Route path="/HyvaTietaa"><HyvaTietaa/></Route>
+          <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
+          <Route path="/Palaute"><Palaute/></Route>
+          <Route path="/Asiakkaat"><Asiakkaat/></Route>
+          <Route path="/Yhteystiedot"><Yhteystiedot/></Route>
+        </Switch >
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App;

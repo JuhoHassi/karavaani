@@ -20,6 +20,8 @@ import Yhteystiedot from "./Yhteystiedot"
 import Yritys from "./Yritys"
 import { BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
 
+import { AiOutlineUser } from "react-icons/ai"
+
 
 function App(){
   return(
@@ -28,7 +30,7 @@ function App(){
         <Navbar bg='dark' variant="dark">
         <Nav className='me-auto'/>
           <Nav className='me-auto'>
-              <Navbar.Brand style={{fontSize:25}}>TSR Matkailuauto</Navbar.Brand>
+              <h className='tsr'>TSR </h><h className='matka'> Matkailuauto</h>
           </Nav>
           <Nav className='me-auto' style={{fontSize:20}}>
             {/* <NavLink to={'/Etusivu'}>Etusivu</NavLink> */}
@@ -45,12 +47,13 @@ function App(){
                 <NavDropdown.Item href="/Vuokrausehdot">Vuokrausehdot</NavDropdown.Item>
               </NavDropdown>
             <NavLink href="/Palaute" >Palaute</NavLink>
+            <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>  
           </Nav>
-            <Nav className='me-auto' style={{fontSize:20}}>
+            <Nav style={{fontSize:20}} >
               <NavLink href="/Asiakkaat">Asiakkaat</NavLink>
-              <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>
-              {/* <Button>Kirjaudu</Button> */}
+              <NavLink className='loginBtn'><AiOutlineUser color='smokewhite'/></NavLink>
             </Nav>
+            
         </Navbar>
         <Switch >
           <Route path="/Etusivu"><Etusivu/></Route>

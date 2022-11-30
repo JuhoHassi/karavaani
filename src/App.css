@@ -2,6 +2,8 @@
   font-family: 'MyFont';
   src: local('MyFont'), url(./fonts/Poppins-Regular.ttf) format('ttf');
 }
+
+/*----- ETUSIVU -----*/
 .taustakuva{
   background-image: url('./img/etusivu.png');
   height: 100vh;
@@ -11,6 +13,25 @@
   font-family: 'MyFont';
   src: local('MyFont'), url(./fonts/Poppins-Regular.ttf) format('ttf');
 }
+
+.tsr{
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(235, 235, 161)
+
+}
+.matka{
+  color: rgb(203, 199, 199);
+  font-size: 25px;
+  padding-left: 5px;
+  padding-right: 100%;
+}
+
+.loginBtn{
+}
+
+
+/*----- KALENTERI -----*/
 .react-calendar {
   /* width: 350px;
   max-width: 100%;

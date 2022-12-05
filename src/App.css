@@ -17,17 +17,63 @@
 .tsr{
   font-size: 25px;
   font-weight: 700;
-  color: rgb(235, 235, 161)
+  color: rgb(235, 235, 161);
+  padding-top: 10px;
 
 }
 .matka{
   color: rgb(203, 199, 199);
   font-size: 25px;
   padding-left: 5px;
+  padding-top: 10px;
   padding-right: 100%;
 }
 
-.loginBtn{
+
+/*----- ASIAKKAAN VARAUKSET -----*/
+.custBookDiv{
+  background-color: rgb(194, 208, 211);
+  height: 90%;
+  max-width: 80%;
+  margin: auto;
+  text-align: center;
+}
+.asiakVar{
+  padding-top: 10px;
+  font-size: 20px;
+}
+.asVarShow{
+  cursor: pointer;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #918308;
+}
+.asVarList{
+  font-size: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #918308;
+}
+.asVarList th{
+  text-align: left;
+  padding-left: 15px;
+}
+.asVarList td{
+  text-align: left;
+  padding-left: 15px;
+}
+.asiakkaatBtn{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.varauksetBtn{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
 

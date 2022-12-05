@@ -3,19 +3,19 @@ import React from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavLink from 'react-bootstrap/esm/NavLink'
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown'
 // import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import Button from 'react-bootstrap/Button'
 import Kalenteri from './Kalenteri'
-import Etusivu from './Etusivu';
-import Asiakkaat from "./Asiakkaat"
-import Hinnasto from './Hinnasto';
-import HyvaTietaa from './HyvaTietaa';
-import Lisavarusteet from './Lisavarusteet';
+import Etusivu from './Etusivu'
+import AsiakkaanVaraukset from './AsiakkaanVaraukset'
+import Hinnasto from './Hinnasto'
+import HyvaTietaa from './HyvaTietaa'
+import Lisavarusteet from './Lisavarusteet'
 import Palaute from "./Palaute"
-import VuokrattavatAutot from './VuokrattavatAutot';
-import Vuokrausehdot from './Vuokrausehdot';
+import VuokrattavatAutot from './VuokrattavatAutot'
+import Vuokrausehdot from './Vuokrausehdot'
 import Yhteystiedot from "./Yhteystiedot"
 import Yritys from "./Yritys"
 import { BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
@@ -30,7 +30,7 @@ function App(){
         <Navbar bg='dark' variant="dark">
         <Nav className='me-auto'/>
           <Nav className='me-auto'>
-              <h className='tsr'>TSR </h><h className='matka'> Matkailuauto</h>
+              <h2 className='tsr'>TSR </h2><h2 className='matka'> Matkailuauto</h2>
           </Nav>
           <Nav className='me-auto' style={{fontSize:20}}>
             {/* <NavLink to={'/Etusivu'}>Etusivu</NavLink> */}
@@ -50,7 +50,7 @@ function App(){
             <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>  
           </Nav>
             <Nav style={{fontSize:20}} >
-              <NavLink href="/Asiakkaat">Asiakkaat</NavLink>
+              <NavLink href="/AsiakkaanVaraukset">Varaukset</NavLink>
               <NavLink className='loginBtn'><AiOutlineUser color='smokewhite'/></NavLink>
             </Nav>
             
@@ -65,7 +65,7 @@ function App(){
           <Route path="/HyvaTietaa"><HyvaTietaa/></Route>
           <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
           <Route path="/Palaute"><Palaute/></Route>
-          <Route path="/Asiakkaat"><Asiakkaat/></Route>
+          <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>
           <Route path="/Yhteystiedot"><Yhteystiedot/></Route>
         </Switch >
       </Router>

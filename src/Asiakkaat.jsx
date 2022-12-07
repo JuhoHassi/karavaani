@@ -12,13 +12,57 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
     const [reload, reloadNow] = useState(false) //Käyttöliitymän päivitys
 
 
-
+    // Haetaan asiakkaat
     useEffect(() => {
         CustomerService.getAll()
         .then(data => {
             setCustomers(data)
         })
     }, [lisäystila, reload])
+
+
+    // Asiakkaan poisto
+    const deleteAsiakas = (customer) => {
+        let vastaus = window.confirm(`Poistetaanko asiakas ${customer.fistName} ${customer.lastName}?`)
+        if(vastaus === true){
+            CustomerService.remove(customer.customerId)
+            .then(res => {
+                if(res.status === 200){
+                    setMessage(`Asiakas ${customer.fistName} ${customer.lastName} on nyt poistettu.`)
+                    setIsPositive(true)
+                    setShowMessage(true)
+                    //window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
+
+                    setTimeout(() =>{
+                        setShowMessage(false)
+                    }, 5000)
+                    reloadNow(!reload)
+                }
+            })
+            .catch(error => {
+                setMessage("Error")
+                setIsPositive(false)
+                setShowMessage(true)
+                //window.scrollBy(0, -10000)
+
+                setTimeout(() =>{
+                    setShowMessage(false)
+                }, 8000)
+            })
+        }
+        // Jos haluat perua poiston
+        else{
+            setMessage('Asiakkaan poisto on keskeytetty!')
+            setIsPositive(true)
+            setShowMessage(true)
+            //window.scrollBy(0, -10000)
+
+            setTimeout(() =>{
+                setShowMessage(false)
+            }, 5000)
+        }
+    }
+
     
 
     return(
@@ -67,7 +111,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{c.terms.toString()}</td>
 
                         <button className='asiakkaatEdit'><BsPen/></button>
-                        <button className='asiakkaatDelete'><BsTrash/></button> 
+                        <button className='asiakkaatDelete' onClick={() => deleteAsiakas(c)}><BsTrash/></button> 
                     </tr>
                     )}
                 </tbody>

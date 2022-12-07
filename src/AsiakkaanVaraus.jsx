@@ -7,7 +7,7 @@ const AsiakkaanVaraus = ({customerBook}) => {
 
 
     return(
-        <div className='asiDiv'>
+        <div>
             <h4 onClick={() => setShow(!show)} className='asVarShow'> {customerBook.rentingStart} - {customerBook.rentingEnd} {customerBook.firstName} {customerBook.lastName}</h4>
             
             {show && <div className='asVarList'>

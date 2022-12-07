@@ -18,15 +18,15 @@
   font-size: 25px;
   font-weight: 700;
   color: rgb(235, 235, 161);
-  padding-top: 10px;
+  margin-top: 10px;
 
 }
 .matka{
   color: rgb(203, 199, 199);
   font-size: 25px;
   padding-left: 5px;
-  padding-top: 10px;
-  padding-right: 100%;
+  margin-top: 10px;
+  margin-right: 100%;
 }
 
 
@@ -34,34 +34,13 @@
 .custBookDiv{
   background-color: rgb(194, 208, 211);
   height: 90%;
-  max-width: 80%;
+  max-width: 90%;
   margin: auto;
   text-align: center;
 }
 .asiakVar{
   padding-top: 10px;
   font-size: 20px;
-}
-.asVarShow{
-  cursor: pointer;
-  padding-top: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #918308;
-}
-.asVarList{
-  font-size: 12px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #918308;
-}
-.asVarList th{
-  text-align: left;
-  padding-left: 15px;
-}
-.asVarList td{
-  text-align: left;
-  padding-left: 15px;
 }
 .asiakkaatBtn{
   background-color: #918308;
@@ -74,6 +53,124 @@
   color: whitesmoke;
   font-size: 14px;
   border-radius: 5px;
+}
+.asVarShow{
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #918308;
+}
+.asVarList{
+  font-size: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #918308;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.asVarList th{
+  padding-left: 15px;
+}
+.asVarList td{
+  padding-left: 15px;
+}
+
+
+
+/*----- ASIAKKAAT -----*/
+.asiakkaatTable{
+  background-color: rgb(194, 208, 211);
+  height: 90%;
+  max-width: 85%;
+  margin: auto;
+  text-align: center;
+}
+.addAsiakasBtn{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+
+}
+.asiakkaatList{
+  font-size: 12px;
+  text-align: left;
+}
+.asiakkaatList th{
+  padding-left: 10px;
+}
+.asiakkaatList td{
+  padding-left: 10px;
+}
+.trAsiakkaat{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #918308;
+}
+.asiakkaatEdit{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.asiakkaatDelete{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+/*----- ASIAKAS ADD -----*/
+.addAsiakas h4{
+  font-size: 14px;
+  margin-top: 10px;
+}
+.addAsiakas form{
+  font-size: 16px;
+}
+.terms{
+  margin-right: 8px;
+  margin-top: 5px;
+}
+.true{
+  color: green;
+  margin-left: 5px;
+}
+.false{
+  color: red;
+  margin-left: 5px;
+}
+
+
+
+/*----- ILMOITUS -----*/
+.neg{
+  background-color: rgb(219, 149, 112);
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  max-width: 85%;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+.pos{
+  background-color: rgb(188, 187, 131);
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  max-width: 85%;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
 }
 
 

@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavLink from 'react-bootstrap/esm/NavLink'
@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import Button from 'react-bootstrap/Button'
 import Kalenteri from './Kalenteri'
 import Etusivu from './Etusivu'
-import AsiakkaanVaraukset from './AsiakkaanVaraukset'
 import Hinnasto from './Hinnasto'
 import HyvaTietaa from './HyvaTietaa'
 import Lisavarusteet from './Lisavarusteet'
@@ -21,12 +20,21 @@ import Yritys from "./Yritys"
 import { BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
 
 import { AiOutlineUser } from "react-icons/ai"
+import AsiakkaanVaraukset from './AsiakkaanVaraukset'
+import Asiakkaat from './Asiakkaat'
+import Ilmoitus from './Ilmoitus'
 
 
 function App(){
+
+  //State - ilmotuksen varten
+  const [showMessage, setShowMessage] = useState(false)
+  const [message, setMessage] = useState("")
+  const [isPositive, setIsPositive] = useState(false)
+
   return(
     <div className="taustakuva">
-      <Router>        
+      <Router>       
         <Navbar bg='dark' variant="dark">
         <Nav className='me-auto'/>
           <Nav className='me-auto'>
@@ -50,11 +58,17 @@ function App(){
             <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>  
           </Nav>
             <Nav style={{fontSize:20}} >
-              <NavLink href="/AsiakkaanVaraukset">Varaukset</NavLink>
+              <NavDropdown title="Asiakkaat & Varaukset">
+                <NavDropdown.Item href="/AsiakkaanVaraukset">Asiakkaiden varaukset</NavDropdown.Item>
+                <NavDropdown.Item href="/Asiakkaat">Asiakkaat</NavDropdown.Item>
+                <NavDropdown.Item href="/Varaukset">Varaukset</NavDropdown.Item>
+              </NavDropdown>
               <NavLink className='loginBtn'><AiOutlineUser color='smokewhite'/></NavLink>
-            </Nav>
-            
+            </Nav>     
         </Navbar>
+
+        {showMessage && <Ilmoitus message={message} isPositive={isPositive}/>}
+
         <Switch >
           <Route path="/Etusivu"><Etusivu/></Route>
           <Route path="/Yritys"><Yritys/></Route>
@@ -66,10 +80,11 @@ function App(){
           <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
           <Route path="/Palaute"><Palaute/></Route>
           <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>
+          <Route path="/Asiakkaat"><Asiakkaat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/Yhteystiedot"><Yhteystiedot/></Route>
         </Switch >
       </Router>
-    </div>
+    </div>    
   )
 }
 

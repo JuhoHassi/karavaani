@@ -2,6 +2,7 @@ import './App.css'
 import React, {useState, useEffect} from 'react'
 import CustomerService from './services/Customer'
 import AsiakasAdd from './AsiakasAdd'
+import AsiakasEdit from './AsiakasEdit'
 
 import { BsPen, BsTrash } from "react-icons/bs"
 
@@ -10,6 +11,8 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
     const [customers, setCustomers] = useState([])
     const [lisäystila, setLisäystila] = useState(false)
     const [reload, reloadNow] = useState(false) //Käyttöliitymän päivitys
+    const [muokkaustila, setMuokkaustila] = useState(false)
+    const [muokattavaAsiakas, setMuokattavaAsiakas] = useState(false)
 
 
     // Haetaan asiakkaat
@@ -18,7 +21,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
         .then(data => {
             setCustomers(data)
         })
-    }, [lisäystila, reload])
+    }, [lisäystila, muokkaustila, reload])
 
 
     // Asiakkaan poisto
@@ -63,18 +66,27 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
         }
     }
 
+    // Asiakkaan muokkaus
+    const editAsiakas = (customer) =>{
+        setMuokattavaAsiakas(customer)
+        setMuokkaustila(true)
+    }
+
     
 
     return(
         <div className='asiakkaatTable'>
             <h2><nobr className="asiakVar">ASIAKKAAT</nobr>
-            {!lisäystila && <button className='addAsiakasBtn' onClick={() => setLisäystila(true)} >Lisää uusi</button>}
+            {!lisäystila && !muokkaustila && <button className='addAsiakasBtn' onClick={() => setLisäystila(true)} >Lisää uusi</button>}
             {lisäystila && <AsiakasAdd setLisäystila={setLisäystila} reload={reload} reloadNow={reloadNow} setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage} />}
             </h2>
 
+            {muokkaustila && <AsiakasEdit setMuokkaustila={setMuokkaustila} muokattavaAsiakas={muokattavaAsiakas} setIsPositive={setIsPositive}
+            setMessage={setMessage} setShowMessage={setShowMessage} reload={reload} reloadNow={reloadNow} />}
+
             
 
-            {!lisäystila && <div className='asiakkaatList'>
+            {!lisäystila && !muokkaustila && <div className='asiakkaatList'>
             <table>
                 <thead>
                     <tr>
@@ -110,7 +122,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{c.message}</td>
                         <td>{c.terms.toString()}</td>
 
-                        <button className='asiakkaatEdit'><BsPen/></button>
+                        <button className='asiakkaatEdit' onClick={() => editAsiakas(c)}><BsPen/></button>
                         <button className='asiakkaatDelete' onClick={() => deleteAsiakas(c)}><BsTrash/></button> 
                     </tr>
                     )}

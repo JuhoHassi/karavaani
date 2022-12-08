@@ -224,6 +224,23 @@
   border-radius: 5px;
 }
 
+/*----- VARAUS ADD -----*/
+.addVaraus h4{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.addVaraus form{
+  font-size: 16px;
+}
+.addPvm{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.varauslb{
+  margin-right: 8px;
+  margin-top: 5px;
+}
+
 
 /*----- KALENTERI -----*/
 .react-calendar {

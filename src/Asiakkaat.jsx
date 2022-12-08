@@ -78,7 +78,8 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
         <div className='asiakkaatTable'>
             <h2><nobr className="asiakVar">ASIAKKAAT</nobr>
             {!lisäystila && !muokkaustila && <button className='addAsiakasBtn' onClick={() => setLisäystila(true)} >Lisää uusi</button>}
-            {lisäystila && <AsiakasAdd setLisäystila={setLisäystila} reload={reload} reloadNow={reloadNow} setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage} />}
+            {lisäystila && <AsiakasAdd setLisäystila={setLisäystila} reload={reload} reloadNow={reloadNow} setIsPositive={setIsPositive}
+                setMessage={setMessage} setShowMessage={setShowMessage} />}
             </h2>
 
             {muokkaustila && <AsiakasEdit setMuokkaustila={setMuokkaustila} muokattavaAsiakas={muokattavaAsiakas} setIsPositive={setIsPositive}

@@ -112,7 +112,9 @@ const AsiakasAdd = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, setI
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Syntymäpäivä' value={newBirthday} onChange={({ target }) => setNewBirthday(target.value)}/>
+                    <label>Syntymäpäivä:</label>
+                    <br></br>
+                    <input className='addPvm' type='datetime-local' placeholder='Syntymäpäivä' value={newBirthday} onChange={({ target }) => setNewBirthday(target.value)}/>
                 </div>
 
                 <div>

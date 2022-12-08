@@ -1,13 +1,14 @@
 import './App.css'
 import React, {useState, useEffect} from 'react'
 import BookingService from './services/Booking'
+import VarausAdd from './VarausAdd'
 
 import { BsPen, BsTrash } from "react-icons/bs"
 
 const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
     //State 
     const [bookings, setBookings] = useState([])
-    //const [lisäystila, setLisäystila] = useState(false)
+    const [lisäystila, setLisäystila] = useState(false)
     const [reload, reloadNow] = useState(false) //Käyttöliitymän päivitys
     //const [muokkaustila, setMuokkaustila] = useState(false)
     //const [muokattavaAsiakas, setMuokattavaAsiakas] = useState(false)
@@ -19,7 +20,7 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
         .then(data =>{
             setBookings(data)
         })
-    }, [reload])    //lisäystila muokkaustila
+    }, [reload, lisäystila])    // muokkaustila
 
 
 
@@ -76,10 +77,12 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
     return(
         <div className='varauksetTable'>
             <h2><nobr className="asiakVar">VARAUKSET</nobr>
-            <button className='addVarausBtn'>Lisää uusi</button>
+            {!lisäystila && <button className='addVarausBtn'onClick={() => setLisäystila(true)} >Lisää uusi</button>}
+            {lisäystila && <VarausAdd setLisäystila={setLisäystila} reload={reload} reloadNow={reloadNow}
+                setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage} />}
             </h2>
 
-            {<div className='varauksetList'>
+            {!lisäystila && <div className='varauksetList'>
             <table>
                 <thead>
                     <tr>

@@ -3,12 +3,13 @@ import React, {useState, useEffect} from 'react'
 import CustomerBookingService from './services/CustomerBooking'
 import AsiakkaanVaraus from './AsiakkaanVaraus'
 import Asiakkaat from './Asiakkaat'
-
+import Varaukset from './Varaukset'
 
 
 const AsiakkaanVaraukset = () => {
     const [customerBookings, setCustomerBookings] = useState([])
     const [customers, setCustomers] = useState(false)
+    const [showAsiakkaat, setShowAsiakkaat] = useState(false)
 
     //const [reload, reloadNow] = useState(false)  //Käyttöliitymän päivitys
 
@@ -21,20 +22,18 @@ const AsiakkaanVaraukset = () => {
     }, [customers])  //backendin päivitys
 
 
-    return(
+    return(                                             // ! -tarkoittaa että sitä ei näytettäisi kun ollaan esim showAsiakkaat sivulla
         <div className='custBookDiv'>
-            {!customers && <h3 className='asiakVar'>ASIAKKAAN VARAUKSET</h3>}
-            {!customers && <button className='asiakkaatBtn' onClick={() => setCustomers(true)} >Asiakkaat</button>}
-            {!customers && <button className='varauksetBtn'>Varaukset</button>}
+            {!customers && !showAsiakkaat && <h3 className='asiakVar'>ASIAKKAAN VARAUKSET</h3>}
+            {!customers && !showAsiakkaat && <button className='asiakkaatBtn' onClick={() => setCustomers(true)} >Asiakkaat</button>}
+            {!customers && !showAsiakkaat && <button className='varauksetBtn' onClick={() => setShowAsiakkaat(true)}>Varaukset</button>}
             
-            {!customers && customerBookings && customerBookings.map(c =>(
+            {!showAsiakkaat && !customers && customerBookings && customerBookings.map(c =>(
                 <AsiakkaanVaraus key={c.customerId} customerBook={c}></AsiakkaanVaraus>
             ))}
 
-            {customers && <Asiakkaat ></Asiakkaat>}
-
-
-
+            {customers &&  <Asiakkaat ></Asiakkaat>}
+            {showAsiakkaat && <Varaukset></Varaukset>}
         </div>
 
     )

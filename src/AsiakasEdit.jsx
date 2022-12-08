@@ -95,6 +95,8 @@ const AsiakasAdd = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, setI
 
             <form onSubmit={handleSubmit}>
                 <div>
+                    <label>AsiakasID:</label>
+                    <br></br>
                     <input type="text" placeholder='AsiakasID' value={newCustomerId} disabled />
                 </div>
                 <div>

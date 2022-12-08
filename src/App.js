@@ -23,6 +23,7 @@ import { AiOutlineUser } from "react-icons/ai"
 import AsiakkaanVaraukset from './AsiakkaanVaraukset'
 import Asiakkaat from './Asiakkaat'
 import Ilmoitus from './Ilmoitus'
+import Varaukset from './Varaukset'
 
 
 function App(){
@@ -81,6 +82,7 @@ function App(){
           <Route path="/Palaute"><Palaute/></Route>
           <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>
           <Route path="/Asiakkaat"><Asiakkaat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
+          <Route path="/Varaukset"><Varaukset setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/Yhteystiedot"><Yhteystiedot/></Route>
         </Switch >
       </Router>

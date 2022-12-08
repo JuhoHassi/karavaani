@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import CustomerService from './services/Customer'
 import { Switch } from 'antd'
 
-const AsiakasAdd = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, setIsPositive, setShowMessage, setMessage}) => {
+const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, setIsPositive, setShowMessage, setMessage}) => {
     
     const [newCustomerId] = useState(muokattavaAsiakas.customerId)
     const [newCompanyName, setNewCompanyName] = useState(muokattavaAsiakas.companyName)
@@ -66,7 +66,7 @@ const AsiakasAdd = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, setI
         CustomerService.update(newCustomer)
         .then(response => {
             if(response.status === 200){
-                setMessage("Muokattava asiakas: " + newCustomer.fistName + ' ' +newCustomer.lastName)
+                setMessage("Muokattu asiakasta: " + newCustomer.fistName + ' ' +newCustomer.lastName)
                 setIsPositive(true)     //näyttää vihreän ilmoitustekstin
                 setShowMessage(true)    //näyttää ilmoituksen
 
@@ -161,4 +161,4 @@ const AsiakasAdd = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, setI
     )
 }
 
-export default AsiakasAdd
+export default AsiakasEdit

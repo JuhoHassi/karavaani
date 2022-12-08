@@ -4,85 +4,89 @@ import BookingService from './services/Booking'
 import VarausAdd from './VarausAdd'
 
 import { BsPen, BsTrash } from "react-icons/bs"
+import VarausEdit from './VarausEdit'
 
 const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
     //State 
     const [bookings, setBookings] = useState([])
     const [lisäystila, setLisäystila] = useState(false)
     const [reload, reloadNow] = useState(false) //Käyttöliitymän päivitys
-    //const [muokkaustila, setMuokkaustila] = useState(false)
-    //const [muokattavaAsiakas, setMuokattavaAsiakas] = useState(false)
+    const [muokkaustila, setMuokkaustila] = useState(false)
+    const [muokattavaVaraus, setMuokattavaVaraus] = useState(false)
 
 
-    // Haetaan asiakkaat
+    // Haetaan varaukset
     useEffect(() =>{
         BookingService.getAll()
         .then(data =>{
             setBookings(data)
         })
-    }, [reload, lisäystila])    // muokkaustila
+    }, [reload, lisäystila, muokkaustila])
 
 
 
-    // Asiakkaan poisto
-    // const deleteAsiakas = (customer) => {
-    //     let vastaus = window.confirm(`Poistetaanko asiakas ${customer.fistName} ${customer.lastName}?`)
-    //     if(vastaus === true){
-    //         CustomerService.remove(customer.customerId)
-    //         .then(res => {
-    //             if(res.status === 200){
-    //                 setMessage(`Asiakas ${customer.fistName} ${customer.lastName} on nyt poistettu.`)
-    //                 setIsPositive(true)
-    //                 setShowMessage(true)
-    //                 //window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
+    // Varauksen poisto
+    const deleteVaraus = (booking) => {
+        let vastaus = window.confirm(`Poistetaanko varaus aikaväliltä: ${booking.startDay} - ${booking.endDay}?`)
+        if(vastaus === true){
+            BookingService.remove(booking.bookingId)
+            .then(res => {
+                if(res.status === 200){
+                    setMessage(`Varaus aikaväliltä: ${booking.startDay} - ${booking.endDay} on nyt poistettu.`)
+                    setIsPositive(true)
+                    setShowMessage(true)
+                    //window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
 
-    //                 setTimeout(() =>{
-    //                     setShowMessage(false)
-    //                 }, 5000)
-    //                 reloadNow(!reload)
-    //             }
-    //         })
-    //         .catch(error => {
-    //             setMessage("Error")
-    //             setIsPositive(false)
-    //             setShowMessage(true)
-    //             //window.scrollBy(0, -10000)
+                    setTimeout(() =>{
+                        setShowMessage(false)
+                    }, 5000)
+                    reloadNow(!reload)
+                }
+            })
+            .catch(error => {
+                setMessage("Error")
+                setIsPositive(false)
+                setShowMessage(true)
+                //window.scrollBy(0, -10000)
 
-    //             setTimeout(() =>{
-    //                 setShowMessage(false)
-    //             }, 8000)
-    //         })
-    //     }
-    //     // Jos haluat perua poiston
-    //     else{
-    //         setMessage('Asiakkaan poisto on keskeytetty!')
-    //         setIsPositive(true)
-    //         setShowMessage(true)
-    //         //window.scrollBy(0, -10000)
+                setTimeout(() =>{
+                    setShowMessage(false)
+                }, 8000)
+            })
+        }
+        // Jos haluat perua poiston
+        else{
+            setMessage('Varauksen poisto on keskeytetty!')
+            setIsPositive(true)
+            setShowMessage(true)
+            //window.scrollBy(0, -10000)
 
-    //         setTimeout(() =>{
-    //             setShowMessage(false)
-    //         }, 5000)
-    //     }
-    // }
+            setTimeout(() =>{
+                setShowMessage(false)
+            }, 5000)
+        }
+    }
 
-    // Asiakkaan muokkaus
-    // const editAsiakas = (customer) =>{
-    //     setMuokattavaAsiakas(customer)
-    //     setMuokkaustila(true)
-    // }
+    // Varauksen muokkaus
+    const editVaraus = (booking) =>{
+        setMuokattavaVaraus(booking)
+        setMuokkaustila(true)
+    }
 
     
 
     return(
         <div className='varauksetTable'>
             <h2><nobr className="asiakVar">VARAUKSET</nobr>
-            {!lisäystila && <button className='addVarausBtn'onClick={() => setLisäystila(true)} >Lisää uusi</button>}
+            {!lisäystila && !muokkaustila && <button className='addVarausBtn'onClick={() => setLisäystila(true)} >Lisää uusi</button>}
             {lisäystila && <VarausAdd setLisäystila={setLisäystila} reload={reload} reloadNow={reloadNow}
                 setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage} />}
             </h2>
 
-            {!lisäystila && <div className='varauksetList'>
+            {muokkaustila && <VarausEdit setMuokkaustila={setMuokkaustila} muokattavaVaraus={muokattavaVaraus} setIsPositive={setIsPositive}
+                setMessage={setMessage} setShowMessage={setShowMessage} reload={reload} reloadNow={reloadNow} />}
+
+            {!lisäystila && !muokkaustila && <div className='varauksetList'>
             <table>
                 <thead>
                     <tr>
@@ -108,8 +112,8 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{b.tableChairs.toString()}</td>
                         <td>{b.cleaningToiletEmpty.toString()}</td>
 
-                        <button className='varauksetEdit'><BsPen/></button>
-                        <button className='varauksetDelete'><BsTrash/></button> 
+                        <button className='varauksetEdit' onClick={() => editVaraus(b)}><BsPen/></button>
+                        <button className='varauksetDelete' onClick={() => deleteVaraus(b)}><BsTrash/></button> 
                     </tr>
                     )}
                 </tbody>

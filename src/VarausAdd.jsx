@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import BookingService from './services/Booking'
 import { Switch } from 'antd'
 
-const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMessage, setMessage}) => {
+const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMessage, setMessage}) => {
     const [newCustomerId, setNewCustomerId] = useState('')
     const [newRentStart, setNewRentStart] = useState('')
     const [newRentEnd, setNewRentEnd] = useState('')
@@ -131,4 +131,4 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
     )
 }
 
-export default AsiakasAdd
+export default VarausAdd

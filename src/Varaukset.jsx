@@ -108,9 +108,9 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{b.startDay}</td>
                         <td>{b.endDay}</td>
                         <td>{b.persons}</td>
-                        <td>{b.gasGrill.toString()}</td>
-                        <td>{b.tableChairs.toString()}</td>
-                        <td>{b.cleaningToiletEmpty.toString()}</td>
+                        <td>{String(b.gasGrill)}</td>
+                        <td>{String(b.tableChairs)}</td>
+                        <td>{String(b.cleaningToiletEmpty)}</td>
 
                         <button className='varauksetEdit' onClick={() => editVaraus(b)}><BsPen/></button>
                         <button className='varauksetDelete' onClick={() => deleteVaraus(b)}><BsTrash/></button> 

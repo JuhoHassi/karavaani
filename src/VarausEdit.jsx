@@ -82,7 +82,7 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
             }
         })
         .catch(error => {
-            setMessage(error)
+            setMessage(error.response.data)
             setIsPositive(false)
             setShowMessage(true)
 

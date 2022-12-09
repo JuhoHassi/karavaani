@@ -79,7 +79,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
             }
         })
         .catch(error => {
-            setMessage(error)
+            setMessage("Error")
             setIsPositive(false)
             setShowMessage(true)
 

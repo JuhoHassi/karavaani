@@ -8,9 +8,10 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
     const [newRentStart, setNewRentStart] = useState('')
     const [newRentEnd, setNewRentEnd] = useState('')
     const [newPersons, setNewPersons] = useState('')
-    const [newGasgrill, setNewGasgrill] = useState('')
-    const [newTableChairs, setNewTableChairs] = useState('')
-    const [newCleaningWc, setNewCleaningWc] = useState('')
+    const [newGasgrill, setNewGasgrill] = useState(false)
+    const [newTableChairs, setNewTableChairs] = useState(false)
+    const [newCleaningWc, setNewCleaningWc] = useState(false)
+
 
     const Grill = () => {
         newGasgrill ? setNewGasgrill(false) : setNewGasgrill(true)
@@ -68,7 +69,7 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
             }
         })
         .catch(error => {
-            setMessage(error)
+            setMessage(error.response.data)  //Pitää olla response.data - pelkkään error ei riitä, backendistä tarvitaan vastaus!
             setIsPositive(false)
             setShowMessage(true)
 

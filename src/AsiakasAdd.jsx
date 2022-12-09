@@ -55,7 +55,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
             message: newMessage,
             terms: newTerms
         }
-        console.log(newCustomer)
+        //console.log(newCustomer)
 
         CustomerService.create(newCustomer)
         .then(response => {
@@ -73,7 +73,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
             }
         })
         .catch(error => {
-            setMessage(error)
+            setMessage("Error, hyväksyitkö ehdot ja annoitko kaikki tarvittavat tiedot?")
             setIsPositive(false)
             setShowMessage(true)
 

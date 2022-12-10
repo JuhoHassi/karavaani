@@ -24,6 +24,7 @@ import AsiakkaanVaraukset from './AsiakkaanVaraukset'
 import Asiakkaat from './Asiakkaat'
 import Ilmoitus from './Ilmoitus'
 import Varaukset from './Varaukset'
+import Admins from './Admins'
 
 
 function App(){
@@ -63,6 +64,7 @@ function App(){
                 <NavDropdown.Item href="/AsiakkaanVaraukset">Asiakkaiden varaukset</NavDropdown.Item>
                 <NavDropdown.Item href="/Asiakkaat">Asiakkaat</NavDropdown.Item>
                 <NavDropdown.Item href="/Varaukset">Varaukset</NavDropdown.Item>
+                <NavDropdown.Item href="/Admins">Käyttäjät</NavDropdown.Item>
               </NavDropdown>
               <NavLink className='loginBtn'><AiOutlineUser color='smokewhite'/></NavLink>
             </Nav>     
@@ -83,6 +85,7 @@ function App(){
           <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>
           <Route path="/Asiakkaat"><Asiakkaat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/Varaukset"><Varaukset setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
+          <Route path="/Admins"><Admins setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/Yhteystiedot"><Yhteystiedot/></Route>
         </Switch >
       </Router>
@@ -90,4 +93,4 @@ function App(){
   )
 }
 
-export default App;
+export default App

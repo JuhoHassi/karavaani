@@ -218,10 +218,7 @@
   border-radius: 5px;
 }
 .varauksetDelete{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
+  
 }
 
 /*----- VARAUS ADD -----*/
@@ -241,6 +238,43 @@
   margin-top: 5px;
 }
 
+/*----- ADMIN -----*/
+.adminTable{
+  background-color: rgb(194, 208, 211);
+  height: 90%;
+  max-width: 85%;
+  margin: auto;
+  text-align: center;
+}
+.addAdminBtn{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.adminList{
+  font-size: 12px;
+  text-align: left;
+  padding-left: 400px;
+}
+.adminList th{
+  padding-right: 15px;
+}
+.adminList td{
+  padding-right: 15px;
+}
+.trAdmin{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #918308;
+}
+.adminDelete{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+}
 
 /*----- KALENTERI -----*/
 .react-calendar {

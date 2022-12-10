@@ -26,12 +26,12 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
 
     // Asiakkaan poisto
     const deleteAsiakas = (customer) => {
-        let vastaus = window.confirm(`Poistetaanko asiakas ${customer.fistName} ${customer.lastName}?`)
+        let vastaus = window.confirm(`Poistetaanko asiakas ${customer.firstName} ${customer.lastName}?`)
         if(vastaus === true){
             CustomerService.remove(customer.customerId)
             .then(res => {
                 if(res.status === 200){
-                    setMessage(`Asiakas ${customer.fistName} ${customer.lastName} on nyt poistettu.`)
+                    setMessage(`Asiakas ${customer.firstName} ${customer.lastName} on nyt poistettu.`)
                     setIsPositive(true)
                     setShowMessage(true)
                     //window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
@@ -111,7 +111,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                     <tr key={c.customerId} className="trAsiakkaat">
                         <td>{c.customerId}</td>
                         <td>{c.companyName}</td>
-                        <td>{c.fistName}</td>
+                        <td>{c.firstName}</td>
                         <td>{c.lastName}</td>
                         <td>{c.birthDay}</td>
                         <td>{c.address}</td>

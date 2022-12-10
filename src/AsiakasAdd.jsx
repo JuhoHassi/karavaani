@@ -5,7 +5,7 @@ import { Switch } from 'antd'
 
 const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMessage, setMessage}) => {
     const [newCompanyName, setNewCompanyName] = useState('')
-    const [newFistName, setNewFirstName] = useState('')
+    const [newFirstName, setNewFirstName] = useState('')
     const [newLastName, setNewLastName] = useState('')
     const [newBirthday, setNewBirthday] = useState('')
     const [newAddress, setNewAddress] = useState('')
@@ -43,7 +43,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
         event.preventDefault()
         var newCustomer = {
             companyName: newCompanyName,
-            fistName: newFistName,
+            firstName: newFirstName,
             lastName: newLastName,
             birthDay: newBirthday,
             address: newAddress,
@@ -60,7 +60,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
         CustomerService.create(newCustomer)
         .then(response => {
             if(response.status === 200){
-                setMessage("Lisätty uusi asiakas: " + newCustomer.fistName)
+                setMessage("Lisätty uusi asiakas: " + newCustomer.firstName)
                 setIsPositive(true)     //näyttää vihreän ilmoitustekstin
                 setShowMessage(true)    //näyttää ilmoituksen
 
@@ -93,7 +93,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Etunimi' value={newFistName} onChange={({ target }) => setNewFirstName(target.value)}/>
+                    <input type='text' placeholder='Etunimi' value={newFirstName} onChange={({ target }) => setNewFirstName(target.value)}/>
                 </div>
 
                 <div>

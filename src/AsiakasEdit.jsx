@@ -7,7 +7,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
     
     const [newCustomerId] = useState(muokattavaAsiakas.customerId)
     const [newCompanyName, setNewCompanyName] = useState(muokattavaAsiakas.companyName)
-    const [newFistName, setNewFirstName] = useState(muokattavaAsiakas.fistName)
+    const [newFirstName, setNewFirstName] = useState(muokattavaAsiakas.firstName)
     const [newLastName, setNewLastName] = useState(muokattavaAsiakas.lastName)
     const [newBirthday, setNewBirthday] = useState(muokattavaAsiakas.birthDay)
     const [newAddress, setNewAddress] = useState(muokattavaAsiakas.address)
@@ -32,7 +32,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
     //Input kentän tyhjennys
     const resetFields = () => {
         setNewCompanyName(muokattavaAsiakas.companyName)
-        setNewFirstName(muokattavaAsiakas.fistName)
+        setNewFirstName(muokattavaAsiakas.firstName)
         setNewLastName(muokattavaAsiakas.lastName)
         setNewBirthday(muokattavaAsiakas.birthDay)
         setNewAddress(muokattavaAsiakas.address)
@@ -50,7 +50,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
         var newCustomer = {
             customerId: newCustomerId,
             companyName: newCompanyName,
-            fistName: newFistName,
+            firstName: newFirstName,
             lastName: newLastName,
             birthDay: newBirthday,
             address: newAddress,
@@ -66,7 +66,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
         CustomerService.update(newCustomer)
         .then(response => {
             if(response.status === 200){
-                setMessage("Muokattu asiakasta: " + newCustomer.fistName + ' ' +newCustomer.lastName)
+                setMessage("Muokattu asiakasta: " + newCustomer.firstName + ' ' +newCustomer.lastName)
                 setIsPositive(true)     //näyttää vihreän ilmoitustekstin
                 setShowMessage(true)    //näyttää ilmoituksen
 
@@ -104,7 +104,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Etunimi' value={newFistName} onChange={({ target }) => setNewFirstName(target.value)}/>
+                    <input type='text' placeholder='Etunimi' value={newFirstName} onChange={({ target }) => setNewFirstName(target.value)}/>
                 </div>
 
                 <div>

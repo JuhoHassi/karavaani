@@ -17,6 +17,10 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
 
     // Haetaan varaukset
     useEffect(() =>{
+        const token = localStorage.getItem('token')
+        BookingService
+        .setToken(token)
+
         BookingService.getAll()
         .then(data =>{
             setBookings(data)

@@ -69,7 +69,7 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
             }
         })
         .catch(error => {
-            setMessage(error.response.data)  //Pitää olla response.data - pelkkään error ei riitä, backendistä tarvitaan vastaus!
+            setMessage("Error, tarkista päivämäärät!")  //Pitää olla response.data - pelkkään error ei riitä, backendistä tarvitaan vastaus!
             setIsPositive(false)
             setShowMessage(true)
 
@@ -101,7 +101,7 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
                 </div>
 
                 <div>
-                    <input type='number' placeholder='Henkilömäärä' value={newPersons} onChange={({ target }) => setNewPersons(target.value)}/>
+                    <input type='number' placeholder='Henkilömäärä' value={newPersons} onChange={({ target }) => setNewPersons(target.value)} required/>
                 </div>
 
                 <div>

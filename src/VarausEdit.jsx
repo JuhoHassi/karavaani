@@ -82,7 +82,7 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
             }
         })
         .catch(error => {
-            setMessage(error.response.data)
+            setMessage("Error, tarkista päivämäärät!")
             setIsPositive(false)
             setShowMessage(true)
 
@@ -123,7 +123,7 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
                 <div>
                     <label>Henkilömäärä</label>
                     <br></br>
-                    <input type='number' value={newPersons} onChange={({ target }) => setNewPersons(target.value)}/>
+                    <input type='number' value={newPersons} onChange={({ target }) => setNewPersons(target.value)} required/>
                 </div>
 
                 <div>

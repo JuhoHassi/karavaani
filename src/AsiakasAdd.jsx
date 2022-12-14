@@ -73,7 +73,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
             }
         })
         .catch(error => {
-            setMessage("Error, hyväksyitkö ehdot ja annoitko kaikki tarvittavat tiedot?")
+            setMessage("Error, tarkista ehdot ja syntymäpäivä?")
             setIsPositive(false)
             setShowMessage(true)
 
@@ -89,15 +89,15 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
 
             <form onSubmit={handleSubmit}>
                 <div>
-                    <input type='text' placeholder='Yritys' value={newCompanyName} onChange={({ target }) => setNewCompanyName(target.value)} required/>
+                    <input type='text' placeholder='Yritys' value={newCompanyName} onChange={({ target }) => setNewCompanyName(target.value)}/>
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Etunimi' value={newFirstName} onChange={({ target }) => setNewFirstName(target.value)}/>
+                    <input type='text' placeholder='Etunimi' value={newFirstName} onChange={({ target }) => setNewFirstName(target.value)} required/>
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Sukunimi' value={newLastName} onChange={({ target }) => setNewLastName(target.value)}/>
+                    <input type='text' placeholder='Sukunimi' value={newLastName} onChange={({ target }) => setNewLastName(target.value)} required/>
                 </div>
 
                 <div>
@@ -107,19 +107,19 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Osoite' value={newAddress} onChange={({ target }) => setNewAddress(target.value)}/>
+                    <input type='text' placeholder='Osoite' value={newAddress} onChange={({ target }) => setNewAddress(target.value)} required/>
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Postinumero' value={newPostalcode} onChange={({ target }) => setNewPostalcode(target.value)}/>
+                    <input type='text' placeholder='Postinumero' value={newPostalcode} onChange={({ target }) => setNewPostalcode(target.value)} required/>
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Kaupunki' value={newCity} onChange={({ target }) => setNewCity(target.value)}/>
+                    <input type='text' placeholder='Kaupunki' value={newCity} onChange={({ target }) => setNewCity(target.value)} required/>
                 </div>
 
                 <div>
-                    <input type='text' placeholder='Maa' value={newCountry} onChange={({ target }) => setNewCountry(target.value)}/>
+                    <input type='text' placeholder='Maa' value={newCountry} onChange={({ target }) => setNewCountry(target.value)} required/>
                 </div>
 
                 <div>
@@ -127,7 +127,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
                 </div>
 
                 <div>
-                    <input type='phone' placeholder='Puhelin' value={newPhone} onChange={({ target }) => setNewPhone(target.value)}/>
+                    <input type='phone' placeholder='Puhelin' value={newPhone} onChange={({ target }) => setNewPhone(target.value)} required/>
                 </div>
 
                 <div>

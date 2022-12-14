@@ -14,6 +14,10 @@ const Admin = ({setIsPositive, setShowMessage, setMessage}) => {
 
     // Haetaan asiakkaat
     useEffect(() => {
+        const token = localStorage.getItem('token')
+        AdminService
+        .setToken(token)
+
         AdminService.getAll()
         .then(data => {
             setUsers(data)

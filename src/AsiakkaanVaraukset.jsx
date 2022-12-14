@@ -14,6 +14,10 @@ const AsiakkaanVaraukset = () => {
     //const [reload, reloadNow] = useState(false)  //Käyttöliitymän päivitys
 
     useEffect(() => {
+        const token = localStorage.getItem('token') //Otetaan mukaan token (backend)
+        CustomerBookingService
+        .setToken(token)
+
         CustomerBookingService.getAll()
         .then(data => {
             setCustomerBookings(data)   

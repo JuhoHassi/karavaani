@@ -17,6 +17,10 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
 
     // Haetaan asiakkaat
     useEffect(() => {
+        const token = localStorage.getItem('token') //Otetaan mukaan token (backend)
+        CustomerService
+        .setToken(token)
+
         CustomerService.getAll()
         .then(data => {
             setCustomers(data)

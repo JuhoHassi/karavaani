@@ -37,11 +37,11 @@ const AsiakkaanVaraus = ({customerBook}) => {
                                 <td>{customerBook.email}</td>
                                 <td>{customerBook.phone}</td>
                                 <td>{customerBook.people}</td>
-                                <td>{customerBook.gasGrill.toString()}</td>
-                                <td>{customerBook.tableAndChairs.toString()}</td>
-                                <td>{customerBook.cleaningAndWc.toString()}</td>
+                                <td>{String(customerBook.gasGrill)}</td>
+                                <td>{String(customerBook.tableAndChairs)}</td>
+                                <td>{String(customerBook.cleaningAndWc)}</td>
                                 <td>{customerBook.message}</td>
-                                <td>{customerBook.terms.toString()}</td>
+                                <td>{String(customerBook.terms)}</td>
                             </tr>
                         </tbody>
                     </table>

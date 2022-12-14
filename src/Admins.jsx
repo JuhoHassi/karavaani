@@ -90,7 +90,7 @@ const Admin = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{u.name}</td>
                         <td>{u.email}</td>
                         <td>{u.userName}</td>
-                        <td>{u.accessId}</td>
+                        <td>{String(u.accessId)}</td>
 
                         <button className='adminDelete' onClick={() => deleteAdmin(u)} ><BsTrash/></button> 
                     </tr>

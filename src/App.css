@@ -28,6 +28,27 @@
   margin-top: 10px;
   margin-right: 100%;
 }
+.logOutBtn{
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  background-color: #222;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  border-radius: 5px;
+}
+
+/*----- LOGIN -----*/
+.loginWindow{
+  margin-left: 75%;
+  margin-top: 10px;
+}
+.loginWindow h4{
+  font-size: 20px;
+}
+#logEmpty{
+  margin-left: 5px;
+}
 
 
 /*----- ASIAKKAAN VARAUKSET -----*/
@@ -218,7 +239,10 @@
   border-radius: 5px;
 }
 .varauksetDelete{
-  
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
 }
 
 /*----- VARAUS ADD -----*/

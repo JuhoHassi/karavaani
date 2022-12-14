@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavLink from 'react-bootstrap/esm/NavLink'
@@ -25,6 +25,7 @@ import Asiakkaat from './Asiakkaat'
 import Ilmoitus from './Ilmoitus'
 import Varaukset from './Varaukset'
 import Admins from './Admins'
+import Login from './Login'
 
 
 function App(){
@@ -33,6 +34,22 @@ function App(){
   const [showMessage, setShowMessage] = useState(false)
   const [message, setMessage] = useState("")
   const [isPositive, setIsPositive] = useState(false)
+
+  const [loggedIn, setLoggedIn] = useState("")
+
+  //LogOut tapahtumakäsittelijä
+  const logOut = () =>{
+    localStorage.clear()
+    setLoggedIn('')
+  }
+
+  //Ei heitä ulos ja muista kirjautumiseen
+  useEffect(() =>{
+    let storedUser = localStorage.getItem("username")
+    if(storedUser !== null){
+      setLoggedIn(storedUser)
+    }
+  }, [])
 
   return(
     <div className="taustakuva">
@@ -60,13 +77,14 @@ function App(){
             <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>  
           </Nav>
             <Nav style={{fontSize:20}} >
-              <NavDropdown title="Asiakkaat & Varaukset">
+              {loggedIn && <NavDropdown className='appTiedot' title="Tiedot">
                 <NavDropdown.Item href="/AsiakkaanVaraukset">Asiakkaiden varaukset</NavDropdown.Item>
                 <NavDropdown.Item href="/Asiakkaat">Asiakkaat</NavDropdown.Item>
                 <NavDropdown.Item href="/Varaukset">Varaukset</NavDropdown.Item>
                 <NavDropdown.Item href="/Admins">Käyttäjät</NavDropdown.Item>
-              </NavDropdown>
-              <NavLink className='loginBtn'><AiOutlineUser color='smokewhite'/></NavLink>
+              </NavDropdown>}
+              {!loggedIn && <NavLink className='loginBtn' href="/Login"><AiOutlineUser color='smokewhite'/></NavLink>}
+              {loggedIn && <button className='logOutBtn' onClick={() => logOut()}>LogOut</button>}
             </Nav>     
         </Navbar>
 
@@ -82,11 +100,12 @@ function App(){
           <Route path="/HyvaTietaa"><HyvaTietaa/></Route>
           <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
           <Route path="/Palaute"><Palaute/></Route>
-          <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>
-          <Route path="/Asiakkaat"><Asiakkaat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
-          <Route path="/Varaukset"><Varaukset setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
-          <Route path="/Admins"><Admins setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/Yhteystiedot"><Yhteystiedot/></Route>
+          {loggedIn && <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>}
+          {loggedIn && <Route path="/Asiakkaat"><Asiakkaat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>}
+          {loggedIn && <Route path="/Varaukset"><Varaukset setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>}
+          {loggedIn && <Route path="/Admins"><Admins setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>}
+          {!loggedIn && <Route path="/Login"><Login setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage} setLoggedIn={setLoggedIn}/></Route>}
         </Switch >
       </Router>
     </div>    

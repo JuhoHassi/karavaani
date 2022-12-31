@@ -100,7 +100,7 @@ function App(){
           <Route path="/HyvaTietaa"><HyvaTietaa/></Route>
           <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
           <Route path="/Palaute"><Palaute/></Route>
-          <Route path="/Yhteystiedot"><Yhteystiedot/></Route>
+          <Route path="/Yhteystiedot"><Yhteystiedot setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           {loggedIn && <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>}
           {loggedIn && <Route path="/Asiakkaat"><Asiakkaat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>}
           {loggedIn && <Route path="/Varaukset"><Varaukset setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>}

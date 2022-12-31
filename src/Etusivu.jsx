@@ -1,9 +1,10 @@
 import './App.css'
-import React, {useState} from 'react'
+import React from 'react'
 
 const Etusivu = () => {
     return(
-        <h1>Etusivu</h1>
+        <>
+        </>
     )
 }
 

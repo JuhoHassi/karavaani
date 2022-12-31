@@ -27,10 +27,10 @@ const AsiakkaanVaraukset = () => {
 
 
     return(                                             // ! -tarkoittaa että sitä ei näytettäisi kun ollaan esim showAsiakkaat sivulla
-        <div className='custBookDiv'>
-            {!customers && !showAsiakkaat && <h3 className='asiakVar'>ASIAKKAAN VARAUKSET</h3>}
-            {!customers && !showAsiakkaat && <button className='asiakkaatBtn' onClick={() => setCustomers(true)} >Asiakkaat</button>}
-            {!customers && !showAsiakkaat && <button className='varauksetBtn' onClick={() => setShowAsiakkaat(true)}>Varaukset</button>}
+        <div className='divBack'>
+            {!customers && !showAsiakkaat && <h3 className='titleName'>ASIAKKAAN VARAUKSET</h3>}
+            {!customers && !showAsiakkaat && <button className='asvarBtn' onClick={() => setCustomers(true)} >Asiakkaat</button>}
+            {!customers && !showAsiakkaat && <button className='asvarBtn' onClick={() => setShowAsiakkaat(true)}>Varaukset</button>}
             
             {!showAsiakkaat && !customers && customerBookings && customerBookings.map(c =>(
                 <AsiakkaanVaraus key={c.customerId} customerBook={c}></AsiakkaanVaraus>

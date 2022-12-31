@@ -72,7 +72,7 @@ const AdminAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMess
     }
 
     return(
-        <div className='addAsiakas'>
+        <div className='addAsVar'>
             <h4>Liää uusi käyttäjä</h4>
 
             <form onSubmit={handleSubmit}>

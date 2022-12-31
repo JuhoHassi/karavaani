@@ -69,9 +69,9 @@ const Admin = ({setIsPositive, setShowMessage, setMessage}) => {
 
    
     return(
-        <div className='adminTable'>
-            <h2><nobr className="asiakVar">KÄYTTÄJÄT</nobr>
-            {!lisäystila && <button className='addAdminBtn' onClick={() => setLisäystila(true)} >Lisää uusi</button>}
+        <div className='divBack'>
+            <h2><nobr className="titleName">KÄYTTÄJÄT</nobr>
+            {!lisäystila && <button className='addBtn' onClick={() => setLisäystila(true)} >Lisää uusi</button>}
             {lisäystila && <AdminAdd setLisäystila={setLisäystila} setIsPositive={setIsPositive} setMessage={setMessage}
                 setShowMessage={setShowMessage} reload={reload} reloadNow={reloadNow} />}
             </h2>
@@ -96,7 +96,7 @@ const Admin = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{u.userName}</td>
                         <td>{String(u.accessId)}</td>
 
-                        <button className='adminDelete' onClick={() => deleteAdmin(u)} ><BsTrash/></button> 
+                        <button className='asvarEditDelete' onClick={() => deleteAdmin(u)} ><BsTrash/></button> 
                     </tr>
                     )}
                 </tbody>

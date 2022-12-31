@@ -79,9 +79,9 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
     
 
     return(
-        <div className='asiakkaatTable'>
-            <h2><nobr className="asiakVar">ASIAKKAAT</nobr>
-            {!lisäystila && !muokkaustila && <button className='addAsiakasBtn' onClick={() => setLisäystila(true)} >Lisää uusi</button>}
+        <div className='divBack'>
+            <h2><nobr className="titleName">ASIAKKAAT</nobr>
+            {!lisäystila && !muokkaustila && <button className='addBtn' onClick={() => setLisäystila(true)} >Lisää uusi</button>}
             {lisäystila && <AsiakasAdd setLisäystila={setLisäystila} reload={reload} reloadNow={reloadNow} setIsPositive={setIsPositive}
                 setMessage={setMessage} setShowMessage={setShowMessage} />}
             </h2>
@@ -127,8 +127,8 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{c.message}</td>
                         <td>{c.terms.toString()}</td>
 
-                        <button className='asiakkaatEdit' onClick={() => editAsiakas(c)}><BsPen/></button>
-                        <button className='asiakkaatDelete' onClick={() => deleteAsiakas(c)}><BsTrash/></button> 
+                        <button className='asvarEditDelete' onClick={() => editAsiakas(c)}><BsPen/></button>
+                        <button className='asvarEditDelete' onClick={() => deleteAsiakas(c)}><BsTrash/></button> 
                     </tr>
                     )}
                 </tbody>

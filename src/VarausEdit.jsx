@@ -93,7 +93,7 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
     }
 
     return(
-        <div className='editAsiakas'>
+        <div className='editAsVar'>
             <h4>Varauksen muokkaus</h4>
 
             <form onSubmit={handleSubmit}>

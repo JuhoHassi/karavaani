@@ -80,7 +80,7 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
     }
 
     return(
-        <div className='addVaraus'>
+        <div className='addAsVar'>
             <h4>Liää uusi varaus</h4>
 
             <form onSubmit={handleSubmit}>

@@ -51,30 +51,130 @@
 }
 
 
-/*----- ASIAKKAAN VARAUKSET -----*/
-.custBookDiv{
+/*----- ILMOITUS -----*/
+.neg{
+  background-color: rgb(219, 149, 112);
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+.pos{
+  background-color: rgb(188, 187, 131);
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+
+
+/*----- YHTEYSTIEDOT -----*/
+.yhtForm{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 16px;
+  padding: 50px;
+  margin-left: 800px;
+  margin-right: 50px;
+  margin-top: -480px;
+  /* border-radius: 5px;
+  border: #918308;
+  border-style: solid; */
+  background-image: url('https://pikwizard.com/photos/a0efe701a6330906ea95cf8d7f85db7b-s.jpg');
+  background-size: cover;
+}
+.yhtForm h4{
+  font-size: 18px;
+}
+.yhtForm label{
+  font-size: 14px;
+}
+
+.divInfo{
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.divInfo h5{
+  font-size: 16px;
+}
+.divInfo p{
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.gMap{
+  width: 400px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+
+/*----- YLEISET -----*/
+.divBack{
   background-color: rgb(194, 208, 211);
   height: 90%;
   max-width: 90%;
   margin: auto;
   text-align: center;
 }
-.asiakVar{
+.titleName{
   padding-top: 10px;
   font-size: 20px;
 }
-.asiakkaatBtn{
+
+
+/*----- ASIAKKAAT & VARAUKSET & ADMIN -----*/
+.addBtn{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.asvarEditDelete{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.addAsVar h4{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.addAsVar form{
+  font-size: 16px;
+}
+
+.editAsVar h4{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.editAsVar form{
+  font-size: 14px;
+}
+
+
+/*----- ASIAKKAAN VARAUKSET -----*/
+.asvarBtn{
   background-color: #918308;
   color: whitesmoke;
   font-size: 14px;
   border-radius: 5px;
 }
-.varauksetBtn{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 14px;
-  border-radius: 5px;
-}
+
 .asVarShow{
   cursor: pointer;
   margin-top: 15px;
@@ -99,23 +199,7 @@
 }
 
 
-
 /*----- ASIAKKAAT -----*/
-.asiakkaatTable{
-  background-color: rgb(194, 208, 211);
-  height: 90%;
-  max-width: 85%;
-  margin: auto;
-  text-align: center;
-}
-.addAsiakasBtn{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-  margin-left: 10px;
-
-}
 .asiakkaatList{
   font-size: 12px;
   text-align: left;
@@ -132,27 +216,9 @@
   border-style: solid;
   border-color: #918308;
 }
-.asiakkaatEdit{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-}
-.asiakkaatDelete{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-}
+
 
 /*----- ASIAKAS ADD -----*/
-.addAsiakas h4{
-  font-size: 16px;
-  margin-top: 10px;
-}
-.addAsiakas form{
-  font-size: 16px;
-}
 .terms{
   margin-right: 8px;
   margin-top: 5px;
@@ -166,56 +232,8 @@
   margin-left: 5px;
 }
 
-/*----- ASIAKAS EDIT -----*/
-.editAsiakas h4{
-  font-size: 16px;
-  margin-top: 10px;
-}
-.editAsiakas form{
-  font-size: 14px;
-}
-
-/*----- ILMOITUS -----*/
-.neg{
-  background-color: rgb(219, 149, 112);
-  font-size: 16px;
-  font-weight: bolder;
-  border-radius: 5px;
-  border-width: 2px;
-  border-style: solid;
-  max-width: 85%;
-  margin: auto;
-  text-align: center;
-  padding: 5px;
-}
-.pos{
-  background-color: rgb(188, 187, 131);
-  font-size: 16px;
-  font-weight: bolder;
-  border-radius: 5px;
-  border-width: 2px;
-  border-style: solid;
-  max-width: 85%;
-  margin: auto;
-  text-align: center;
-  padding: 5px;
-}
 
 /*----- VARAUKSET -----*/
-.varauksetTable{
-  background-color: rgb(194, 208, 211);
-  height: 90%;
-  max-width: 85%;
-  margin: auto;
-  text-align: center;
-}
-.addVarausBtn{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-  margin-left: 10px;
-}
 .varauksetList{
   font-size: 12px;
   text-align: left;
@@ -232,27 +250,9 @@
   border-style: solid;
   border-color: #918308;
 }
-.varauksetEdit{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-}
-.varauksetDelete{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-}
+
 
 /*----- VARAUS ADD -----*/
-.addVaraus h4{
-  font-size: 16px;
-  margin-top: 10px;
-}
-.addVaraus form{
-  font-size: 16px;
-}
 .addPvm{
   padding-left: 20px;
   padding-right: 20px;
@@ -262,21 +262,8 @@
   margin-top: 5px;
 }
 
+
 /*----- ADMIN -----*/
-.adminTable{
-  background-color: rgb(194, 208, 211);
-  height: 90%;
-  max-width: 85%;
-  margin: auto;
-  text-align: center;
-}
-.addAdminBtn{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-  margin-left: 10px;
-}
 .adminList{
   font-size: 12px;
   text-align: left;
@@ -293,12 +280,7 @@
   border-style: solid;
   border-color: #918308;
 }
-.adminDelete{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-}
+
 
 /*----- KALENTERI -----*/
 .react-calendar {

@@ -90,7 +90,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
     }
 
     return(
-        <div className='editAsiakas'>
+        <div className='editAsVar'>
             <h4>Asiakkaan muokkaus</h4>
 
             <form onSubmit={handleSubmit}>

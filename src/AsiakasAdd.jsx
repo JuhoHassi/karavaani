@@ -84,7 +84,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
     }
 
     return(
-        <div className='addAsiakas'>
+        <div className='addAsVar'>
             <h4>Liää uusi asiakas</h4>
 
             <form onSubmit={handleSubmit}>

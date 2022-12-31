@@ -80,9 +80,9 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
     
 
     return(
-        <div className='varauksetTable'>
-            <h2><nobr className="asiakVar">VARAUKSET</nobr>
-            {!lisäystila && !muokkaustila && <button className='addVarausBtn'onClick={() => setLisäystila(true)} >Lisää uusi</button>}
+        <div className='divBack'>
+            <h2><nobr className="titleName">VARAUKSET</nobr>
+            {!lisäystila && !muokkaustila && <button className='addBtn'onClick={() => setLisäystila(true)} >Lisää uusi</button>}
             {lisäystila && <VarausAdd setLisäystila={setLisäystila} reload={reload} reloadNow={reloadNow}
                 setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage} />}
             </h2>
@@ -116,8 +116,8 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{String(b.tableChairs)}</td>
                         <td>{String(b.cleaningToiletEmpty)}</td>
 
-                        <button className='varauksetEdit' onClick={() => editVaraus(b)}><BsPen/></button>
-                        <button className='varauksetDelete' onClick={() => deleteVaraus(b)}><BsTrash/></button> 
+                        <button className='asvarEditDelete' onClick={() => editVaraus(b)}><BsPen/></button>
+                        <button className='asvarEditDelete' onClick={() => deleteVaraus(b)}><BsTrash/></button> 
                     </tr>
                     )}
                 </tbody>

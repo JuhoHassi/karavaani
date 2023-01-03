@@ -77,6 +77,65 @@
   padding: 5px;
 }
 
+/*----- YLEISET -----*/
+.divBack{
+  background-color: rgb(194, 208, 211);
+  height: 90%;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.titleName{
+  padding-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/*----- VUOKRAUSEHDOT -----*/
+.divEhdot{
+  background-color: rgb(194, 208, 211);
+  margin: auto;
+}
+.flexbox-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flexbox-item{
+  width: 700px;
+  margin: 10px;
+  border: 1px solid #918308;
+  background-color: rgb(194, 208, 211);
+  height: auto;
+}
+.flexbox-item h5{
+  font-size: 14px;
+}
+.flexbox-item p{
+  font-size: 14px;
+}
+.ehdotBtn{
+  background-color: #918308;
+  color: whitesmoke;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/*btn bact to top*/
+.backTopBtn{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 24px;
+  color: #918308;
+  background: none;
+  border: none;
+}
+
 
 /*----- YHTEYSTIEDOT -----*/
 .yhtForm{
@@ -118,20 +177,6 @@
   width: 400px;
   height: 250px;
   margin-bottom: 20px;
-}
-
-
-/*----- YLEISET -----*/
-.divBack{
-  background-color: rgb(194, 208, 211);
-  height: 90%;
-  max-width: 90%;
-  margin: auto;
-  text-align: center;
-}
-.titleName{
-  padding-top: 10px;
-  font-size: 20px;
 }
 
 
@@ -456,3 +501,5 @@
   /* background-color: #e6e6e6; */
   background-color: #f8f8fa;
 }
+
+

@@ -135,10 +135,10 @@ const Vuokrausehdot = () => {
                         <h5>16. VUOKRASOPIMUSTA KOSKEVAT ERIMIELISYYDET</h5>
                         <p>Erimielisyydet pyritään ratkaisemaan ensisijaisesti neuvottelemalla. Mikäli erimielisyys saatettaisiin tuomioistuimen ratkaistavaksi, asian ratkaisee vuokranantajan kotipaikan käräjäoikeus.</p>       
                     </section>
+
                     <a href='Vuokrausehdot.pdf' download='Vuokrausehdot.pdf'>
                         <button className='ehdotBtn'>Vuokrausehdot PDF</button>
                     </a>
-                    
                 </div>
             </div>
             <BackToTopBtn/>

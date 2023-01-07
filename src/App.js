@@ -4,15 +4,13 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavLink from 'react-bootstrap/esm/NavLink'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-// import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css'
-// import Button from 'react-bootstrap/Button'
 import Kalenteri from './Kalenteri'
 import Etusivu from './Etusivu'
 import Hinnasto from './Hinnasto'
 import HyvaTietaa from './HyvaTietaa'
 import Lisavarusteet from './Lisavarusteet'
-import Palaute from "./Palaute"
+import Palaute from './Palaute'
 import VuokrattavatAutot from './VuokrattavatAutot'
 import Vuokrausehdot from './Vuokrausehdot'
 import Yhteystiedot from "./Yhteystiedot"
@@ -60,9 +58,7 @@ function App(){
               <h2 className='tsr'>TSR </h2><h2 className='matka'> Matkailuauto</h2>
           </Nav>
           <Nav className='me-auto' style={{fontSize:20}}>
-            {/* <NavLink to={'/Etusivu'}>Etusivu</NavLink> */}
             <NavLink href='/Etusivu'>Etusivu</NavLink>
-            {/* <Link to={'/Etusivu'} className='nav-link'>Etusivu</Link> */}
             <NavLink href='/Yritys'>Yritys</NavLink>
               <NavDropdown title="Vuokraus" id="collasible-nav-dropdown" >
                 <NavDropdown.Item href="/VuokrattavatAutot">Vuokrattavat autot</NavDropdown.Item>
@@ -99,7 +95,7 @@ function App(){
           <Route path="/Lisavarusteet"><Lisavarusteet/></Route>
           <Route path="/HyvaTietaa"><HyvaTietaa/></Route>
           <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
-          <Route path="/Palaute"><Palaute/></Route>
+          <Route path="/Palaute"><Palaute setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/Yhteystiedot"><Yhteystiedot setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           {loggedIn && <Route path="/AsiakkaanVaraukset"><AsiakkaanVaraukset/></Route>}
           {loggedIn && <Route path="/Asiakkaat"><Asiakkaat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>}

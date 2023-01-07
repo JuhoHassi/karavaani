@@ -35,39 +35,42 @@ const Yhteystiedot = ({setIsPositive, setShowMessage, setMessage}) => {
     }
 
     return(
-    <div className='divBack'>
-        <h1 className='titleName'>YHTEYSTIEDOT</h1>
-        <div className='divInfo'>
-            <h5>Puhelin:<p>0407377606 / 0458812550</p></h5>
-            <h5>Sähköposti:<p>tsrcaravan@gmail.com</p></h5>
-            <h5>Osoite: <p>Liekokuja 6, 03100 Vihti</p></h5>
-            <iframe className='gMap'
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974.0187245369555!2d24.332375416023847!3d60.345806382025955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468de9b0d25bd9ed%3A0x6fe556540c2aea63!2sLiekokuja%206%2C%2003100%20Vihti!5e0!3m2!1sfi!2sfi!4v1672433158957!5m2!1sfi!2sfi"></iframe>
-            
-            <br></br>
-            <p>Palvelemme sopimuksen mukaan ja meille voi soittaa myös iltaisin ja viikonloppuisin!</p>
+        <div className='divYht'>
+            <h1 className='titleName'>YHTEYSTIEDOT</h1>
+            <div className='divInfo'>
+                <div className='divInfo-item'>
+                    <h5>Puhelin:<p>0407377606 / 0458812550</p></h5>
+                    <h5>Sähköposti:<p>tsrcaravan@gmail.com</p></h5>
+                    <h5>Osoite: <p>Liekokuja 6, 03100 Vihti</p></h5>
+                    <iframe className='gMap'
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974.0187245369555!2d24.332375416023847!3d60.345806382025955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468de9b0d25bd9ed%3A0x6fe556540c2aea63!2sLiekokuja%206%2C%2003100%20Vihti!5e0!3m2!1sfi!2sfi!4v1672433158957!5m2!1sfi!2sfi"></iframe>
 
+                    <br></br>
+                    <p>Palvelemme sopimuksen mukaan ja meille voi soittaa myös iltaisin ja viikonloppuisin!</p>
+                </div>
 
-        <form className='yhtForm' ref={form} onSubmit={sendEmail}>
-            <h4>Lähetä meille viesti</h4>
-            <br></br>
-        <label>Nimi</label>
-        <input type="text" name="user_name" className='form-control' required/>
+                <div className='divInfo-item'>
+                    <form className='yhtForm' ref={form} onSubmit={sendEmail}>
+                        <h4>Lähetä meille viesti</h4>
+                        <br></br>
+                        <label>Nimi</label>
+                        <input type="text" name="user_name" className='form-control' required />
 
-        <label>Sähköposti</label>
-        <input type="email" name="user_email" className='form-control' required/>
+                        <label>Sähköposti</label>
+                        <input type="email" name="user_email" className='form-control' required />
 
-        <label>Aihe</label>
-        <input type="text" name="subject" className='form-control' />
+                        <label>Aihe</label>
+                        <input type="text" name="subject" className='form-control' />
 
-        <label>Viesti</label>
-        <textarea name="message" className='form-control' required/>
+                        <label>Viesti</label>
+                        <textarea name="message" className='form-control' required />
 
-        <input type="submit" style={{marginTop:'20px'}}
-        className='form-control btn btn-dark' value="Lähetä" />
-    </form>
-    </div>
-    </div>
+                        <input type="submit" style={{ marginTop: '20px' }}
+                            className='form-control btn btn-dark' value="Lähetä" />
+                    </form>
+                </div>
+            </div>
+        </div>
         
     )
 }

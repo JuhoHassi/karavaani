@@ -109,7 +109,7 @@
   justify-content: center;
 }
 .flexbox-item{
-  width: 600px;
+  width: 700px;
   margin: 10px;
   border: 1px solid #918308;
   background-color: rgb(194, 208, 211);
@@ -117,9 +117,12 @@
 }
 .flexbox-item h5{
   font-size: 14px;
+  margin-left: 5px;
+  margin-top: 10px;
 }
 .flexbox-item p{
   font-size: 14px;
+  margin-left: 10px;
 }
 .ehdotBtn{
   background-color: #918308;
@@ -141,6 +144,90 @@
   background: none;
   border: none;
 }
+
+/*----- VALOKUVAT -----*/
+.gallery{
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
+}
+.gallery .pics{
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.gallery .pics:hover{
+  opacity: 0.8;
+}
+@media (max-width: 991px){
+  .gallery{
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+  }
+}
+
+@media (max-width: 480px){
+  .gallery{
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      -webkit-column-width: 100%;
+      -moz-column-width: 100%;
+      column-width: 100%;
+  }
+}
+/*model*/
+.model{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: 999;
+}
+.model.open{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+.model img{
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
+}
+.closeBtn{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  cursor: pointer;
+}
+
 
 /*----- VUOKRATTAVAT AUTOT-----*/
 /*--- Slider ---*/
@@ -215,6 +302,21 @@
   background: #f1f1f1;
 }
 /* teksti */
+.ehdotLink{
+  font-size: 16px;
+  border: 1px solid #222;
+  background-color: #91830834;
+  padding: 5px;
+  text-align: center;
+}
+.galleriaLink{
+  font-size: 16px;
+  border: 1px solid #222;
+  background-color: #9183086e;
+  padding: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
 .avText{
   margin-left: 60px;
 }
@@ -289,9 +391,8 @@
 /*----- YHTEYSTIEDOT -----*/
 .divYht{
   background-color: rgb(194, 208, 211);
-  height: 90%;
-  max-width: 90%;
   margin: auto;
+  min-height: 100%;
 }
 .divInfo{
   display: flex;

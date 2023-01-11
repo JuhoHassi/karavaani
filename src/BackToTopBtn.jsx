@@ -7,7 +7,7 @@ function TakaisinYlösNappi() {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            if(window.scrollY > 100){
+            if(window.scrollY > 90){
                 setTakaisinNappi(true)
             }
             else{

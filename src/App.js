@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Kalenteri from './Kalenteri'
 import Etusivu from './Etusivu'
 import Hinnasto from './Hinnasto'
-import HyvaTietaa from './HyvaTietaa'
 import Lisavarusteet from './Lisavarusteet'
 import Palaute from './Palaute'
 import VuokrattavatAutot from './VuokrattavatAutot'
@@ -18,6 +17,7 @@ import Yritys from "./Yritys"
 import { BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
 
 import { AiOutlineUser } from "react-icons/ai"
+import Galleria from './Galleria'
 import AsiakkaanVaraukset from './AsiakkaanVaraukset'
 import Asiakkaat from './Asiakkaat'
 import Ilmoitus from './Ilmoitus'
@@ -66,7 +66,7 @@ function App(){
                 <NavDropdown.Item href="/Hinnasto">Hinnasto</NavDropdown.Item>
                 <NavDropdown.Item href="/Lisavarusteet">Lisävarusteet</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/HyvaTietaa">Hyvä tietää</NavDropdown.Item>
+                <NavDropdown.Item href="/Galleria">Valokuvat</NavDropdown.Item>
                 <NavDropdown.Item href="/Vuokrausehdot">Vuokrausehdot</NavDropdown.Item>
               </NavDropdown>
             <NavLink href="/Palaute" >Palaute</NavLink>
@@ -93,7 +93,7 @@ function App(){
           <Route path="/Kalenteri"><Kalenteri/></Route>
           <Route path="/Hinnasto"><Hinnasto/></Route>
           <Route path="/Lisavarusteet"><Lisavarusteet/></Route>
-          <Route path="/HyvaTietaa"><HyvaTietaa/></Route>
+          <Route path="/Galleria"><Galleria/></Route>
           <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
           <Route path="/Palaute"><Palaute setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/Yhteystiedot"><Yhteystiedot setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>

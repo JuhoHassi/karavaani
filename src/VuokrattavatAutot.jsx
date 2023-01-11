@@ -3,6 +3,10 @@ import React from 'react'
 import Slider from './Slider'
 import { BsDot } from "react-icons/bs"
 import BackToTopBtn from './BackToTopBtn'
+import { BrowserRouter as Router, Switch , Route} from 'react-router-dom'
+import NavLink from 'react-bootstrap/esm/NavLink'
+import Vuokrausehdot from './Vuokrausehdot'
+import Galleria from './Galleria'
 
 const VuokrattavatAutot = () => {
     return (
@@ -12,9 +16,19 @@ const VuokrattavatAutot = () => {
                 <div className='divInfo-item'>
                     <Slider />
                     <br />
-                    {/* <button>Valokuva galleria</button>
-                    <br />
-                    <button >Vuokrausehdot</button> */}
+                    <Router>
+                            <NavLink href="/Vuokrausehdot" className='ehdotLink'>Lue vuokrausehdot</NavLink>
+                            <NavLink href="/Galleria" className='galleriaLink'>Valokuva galleria</NavLink>          
+                        <Switch>
+                            <Route path="/Vuokrausehdot" exact>
+                                <Vuokrausehdot />
+                            </Route>
+                            <Route path="/Galleria" exact>
+                                <Galleria/>
+                            </Route>
+                        </Switch>
+                    </Router>
+                    {/* <button>Valokuva galleria</button> */}
 
                 </div>
 

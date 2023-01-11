@@ -4,37 +4,30 @@ const SliderData = [
   {
     id: uuidv4(),
     title: "Lorem ipsum",
-    subTitle: "Lorem"
+  },  
+  {
+    id: uuidv4(),
+    title: "Lorem ipsum",
   },
   {
     id: uuidv4(),
     title: "Lorem ipsum",
-    subTitle: "Lorem"
   },
   {
     id: uuidv4(),
     title: "Lorem ipsum",
-    subTitle: "Lorem"
   },
   {
     id: uuidv4(),
     title: "Lorem ipsum",
-    subTitle: "Lorem"
   },
   {
     id: uuidv4(),
     title: "Lorem ipsum",
-    subTitle: "Lorem"
   },
   {
     id: uuidv4(),
     title: "Lorem ipsum",
-    subTitle: "Lorem"
-  },
-  {
-    id: uuidv4(),
-    title: "Lorem ipsum",
-    subTitle: "Lorem"
   },
 ];
 

@@ -5,7 +5,7 @@
 
 /*----- PÄÄSIVU -----*/
 .taustakuva{
-  background-image: url('./img/etusivu.png');
+  background-image: url('./img/backpic.jpg');
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -125,13 +125,13 @@
   margin-left: 10px;
 }
 .ehdotBtn{
-  background-color: #918308;
-  color: whitesmoke;
-  font-size: 12px;
-  border-radius: 5px;
-  border: 1px solid gray;
-  margin-left: 10px;
+  font-size: 14px;
+  border: 1px solid #222;
+  background-color: #9183086e;
+  padding: 0 5%;
+  text-align: center;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 
 /*btn bact to top*/
@@ -301,7 +301,7 @@
 .dot.active {
   background: #f1f1f1;
 }
-/* teksti */
+/* ----- */
 .ehdotLink{
   font-size: 16px;
   border: 1px solid #222;
@@ -326,6 +326,23 @@
 }
 .leftText{
   margin-left: 20px;
+}
+.tiedotBtn{
+  font-size: 16px;
+  border: 1px solid #222;
+  background-color: #91830834;
+  padding: 0% 15%;
+  text-align: center;
+
+}
+
+/*----- Vuokrattava Auto Tiedot -----*/
+.backTiedotBtn{
+  font-size: 16px;
+  border: 1px solid #222;
+  background-color: #91830834;
+  padding: 0% 15%;
+  margin-left: 5%;
 }
 
 

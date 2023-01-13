@@ -1,5 +1,5 @@
 import './App.css'
-import React from 'react'
+import React, {useState} from 'react'
 import Slider from './Slider'
 import { BsDot } from "react-icons/bs"
 import BackToTopBtn from './BackToTopBtn'
@@ -7,10 +7,16 @@ import { BrowserRouter as Router, Switch , Route} from 'react-router-dom'
 import NavLink from 'react-bootstrap/esm/NavLink'
 import Vuokrausehdot from './Vuokrausehdot'
 import Galleria from './Galleria'
+import VuokrattavaAutoTiedot from './VuokrattavaAutoTiedot'
 
 const VuokrattavatAutot = () => {
+
+    const [carInfo, setCarInfo] = useState(false)
+
     return (
-        <div className='divEhdot'>
+        <>
+        {carInfo && <VuokrattavaAutoTiedot setCarInfo={setCarInfo}/>}
+        {!carInfo && <div className='divEhdot'>
             <h1 className='titleName'>VUOKRATTAVAT AUTOT</h1>
             <div className='divInfo'>
                 <div className='divInfo-item'>
@@ -18,7 +24,8 @@ const VuokrattavatAutot = () => {
                     <br />
                     <Router>
                             <NavLink href="/Vuokrausehdot" className='ehdotLink'>Lue vuokrausehdot</NavLink>
-                            <NavLink href="/Galleria" className='galleriaLink'>Valokuva galleria</NavLink>          
+                            <NavLink href="/Galleria" className='galleriaLink'>Valokuva galleria</NavLink>
+                            <NavLink href='https://www.youtube.com/watch?v=VLfLTruF8gQ' className='galleriaLink' >Youtube video - koeajo ja auton esittely</NavLink>          
                         <Switch>
                             <Route path="/Vuokrausehdot" exact>
                                 <Vuokrausehdot />
@@ -28,12 +35,11 @@ const VuokrattavatAutot = () => {
                             </Route>
                         </Switch>
                     </Router>
-                    {/* <button>Valokuva galleria</button> */}
-
                 </div>
 
                 <div className='divInfo-item'>
                     <div className='avText'>
+                        <br/>
                         <h4 className='vaTitle'>Hobby Optima T65 HKM ONTOUR, 2021</h4>
                         <h5><BsDot /> CITROËN Jumper 2,2 l BlueHDi 140, start-stop-järjestelmällä</h5>
                         <h5><BsDot /> Pituus 7m ja kokonaismassa 3500kg</h5>
@@ -46,6 +52,8 @@ const VuokrattavatAutot = () => {
 
                         <h4 className='vaTitle'>Varustelu - sisätilat ja mukavuudet: </h4>
                         <h5><BsDot /> Ajoaikainen ilmastointi</h5>
+                        <h5><BsDot />Sähkötoiminen ulkoporras</h5>
+                        <h5><BsDot />Ulosvedettävä kaasupulloteline, 2 x 11 kg pulloille</h5>
                         <h5><BsDot /> Truma Combi E6- ilmakeskuslömmitys (kaasu/ sähkö)</h5>
                         <h5><BsDot /> Korkea 133l jääkaappi pakaistinlokerolla (kaasu/ sähkö)</h5>
                         <h5><BsDot /> Kaasuliesi</h5>
@@ -64,12 +72,14 @@ const VuokrattavatAutot = () => {
                             <h5> - Keskellä alaslaskettava parivuode</h5>
                             <h5> - Keskellä sohvaryhmä yhdistettävissä isoksi parivuoteeksi</h5>
                         </div>
-
+                        <br />
+                        <button onClick={() => setCarInfo(true)} className='tiedotBtn'>Tarkemmat tiedot ja varustelut</button>
                     </div>
                 </div>
             </div>
             <BackToTopBtn />
-        </div>
+        </div>}
+        </>
     )
 }
 

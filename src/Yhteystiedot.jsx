@@ -39,6 +39,9 @@ const Yhteystiedot = ({setIsPositive, setShowMessage, setMessage}) => {
             <h1 className='titleName'>YHTEYSTIEDOT</h1>
             <div className='divInfo'>
                 <div className='divInfo-item'>
+                    <h4 className='vaTitle'>TSR Uusimaa Oy</h4>
+                    <h4 className='vaTitle'>3162110-9</h4>
+                    <br />
                     <h5>Puhelin:<p>0407377606 / 0458812550</p></h5>
                     <h5>Sähköposti:<p>tsrcaravan@gmail.com</p></h5>
                     <h5>Osoite: <p>Liekokuja 6, 03100 Vihti</p></h5>

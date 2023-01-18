@@ -4,6 +4,9 @@ import BackToTopBtn from './BackToTopBtn'
 
 import Img11 from './img/11.jpg'
 import Img22 from './img/22.jpg'
+import Img23 from './img/23.jpg'
+import Img24 from './img/24.jpg'
+import Img25 from './img/25.jpg'
 import Img33 from './img/33.jpg'
 import Img44 from './img/44.jpg'
 import Img55 from './img/55.jpg'
@@ -65,6 +68,18 @@ const Galleria = () => {
         {
             id: 12,
             imgSrc: Img99,
+        },
+        {
+            id: 13,
+            imgSrc: Img23,
+        },
+        {
+            id: 14,
+            imgSrc: Img24,
+        },
+        {
+            id: 14,
+            imgSrc: Img25,
         },
     ]
 

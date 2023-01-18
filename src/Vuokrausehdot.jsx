@@ -29,7 +29,7 @@ const Vuokrausehdot = () => {
                         <h5>5. VARAUSMAKSU / PANTTI</h5>
                         <p>Varausmaksu eli pantti on 300 €. Varausmaksun lasku lähetettään varauksen jälkeen sähköpostitse ja se on maksettavissa heti. 
                         Mikäli varausmaksu ei ole suoritettu kolmen päivän kuluessa varaus purkautuu. Varausmaksu toimii samalla panttina, joka maksetaan vuokraajalle takaisin,
-                        kun auto on palautettu sovittuna aikana siivottuna, astiat tiskattuna, tankattuna, kaasupullot täytettynä jamuutoinkin siinä kunnossa, 
+                        kun auto on palautettu sovittuna aikana siivottuna, astiat tiskattuna, tankattuna, kaasupullot täytettynä ja muutoinkin siinä kunnossa, 
                         kun auto oli asiakkaalle vuokra-ajan alussa luovutushetkellä.</p>
                         <h5>6. VUOKRAN MAKSU</h5>
                         <p>Vuokran maksu lähetettään sähköpotissa sen jälkeen kuin varausmaksu on maksettu. Koko vuokrasumma tulee olla maksettuna ja 
@@ -44,23 +44,26 @@ const Vuokrausehdot = () => {
                         Vuokranantaja pidättää itsellään oikeuden perua varaus ilman korvausvelvollisuutta milloin tahansa ennen sovittua autonvuokrausta, 
                         jos autoa ei voida luovuttaa vuokranantajasta riippumattomasta syystä, esimerkiksi kuin auto on vaurioitunut liikennekelvottomaan kuntoon.</p>                    
                         <h5>8. VUOKRAAN SISÄLTYY</h5>
-                        <p>Auton käyttö vuokra-ajaksi. Käytönopastus, sovittu ajokilometrimäärä, wc-kemikaalit, yksi täysi kaasupullo, täysi vesitankki, auton vakuutus 1000€ omavastuulla, 
+                        <p>Auton käyttö vuokra-ajaksi. Käytönopastus, sovittu ajokilometrimäärä, tankit täydetty (disel, AdBlue), wc-kemikaalit, yksi täysi kaasupullo, täysi vesitankki, auton vakuutus 200€ omavastuulla, 
                         auton ulkopesu (AUTOA EI SAA PESTÄ ITSE), sähköliityntäjohto adapterilla, ruokailuvälineet, astiasto 6 henkilölle, ruoanlaittovälineet.<br/>
                         Lisäksi autossa olevat käyttötavarat ja laitteet vuokraajan käyttöön koko vuokra-ajaksi. Tarvittaessa tuen matkasi aikana.<br/>
                         Polttoaine ei sisälly hintaan.</p>
                         <h5>9. LISÄPALVELUT (voi ostaa varauksen yhteydessä)</h5>
-                        <p>- Loppusiivous 100 €<br/>
+                        <p>
+                        - Loppusiivous 75 €<br/>
                         - WC-kasetin ja harmaavesisäiliön tyhjennys 70 €<br/>
                         - Taittopöytä + tuolit (4kpl) 35 €<br/>
+                        - Retkituolit 6€/kpl <br />
                         - Kaasugrilli + kaasupullo 45 €<br/>
                         - Pidennetty viikonloppu 100 €<br/>
                         - Toimitus kotiovelle 1.50€/km (kuitenkin vähintään 50 €)<br/>
-                        - Sähköpotkulauta 8€/ vrk </p>
+                        - Sähköpotkulauta 10€/ vrk 
+                        </p>
                         <h5>10. VAKUUTUKSET JA VASTUUT</h5>
                         <p>Matkailuautossa on liikenne- ja kaskovakuutus. Täyskasko korvaa matkailuauton vahingot törmäysonnettomuudessa. 
                         Lisäksi täyskasko korvaa vaunu-, eläin-, ilkivalta-, palo- ja varkausvahingot. Matkailuautossa on myös lasivakuutus.<br/>
-                        Vuokraajan omavastuu kussakin vahinkotapauksessa on 1000 €. Mikäli autolle sattuu vahinko auton vuokra-aikana, 
-                        maksetaan omavastuuosuus 1000 € seitsemän päivän kuluessa vuokra-ajan päättymisestä. Panttimaksu voidaan käyttää osasuorituksena vakuutuksen omavastuuosuudesta.
+                        Vuokraajan omavastuu kussakin vahinkotapauksessa on 200 €. Mikäli autolle sattuu vahinko auton vuokra-aikana, 
+                        maksetaan omavastuuosuus 200 € seitsemän päivän kuluessa vuokra-ajan päättymisestä. Panttimaksu voidaan käyttää osasuorituksena vakuutuksen omavastuuosuudesta.
                         Jos matkailuautolle koituneet vahingot johtuvat vuokraajan tahallisuudesta, huolimattomuudesta, tai matkailuauton väärinkäytöstä tai 
                         jos kuljettaja on vahingon sattuessa alkoholin tai huumaavien aineiden vaikutuksen alainen, tai jos vakuutusyhtiö ei suostu korvaamaan matkailuautolle sattunutta vahinkoa, 
                         tulee vuokralaisen korvata kaikki aiheutuneet vahingot kokonaisuudessaan välittömästi vahinkojen euromääräisen summa tultua ilmoitetuksi vuokraajalle.<br/>

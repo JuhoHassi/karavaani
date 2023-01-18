@@ -54,7 +54,7 @@ const Yhteystiedot = ({setIsPositive, setShowMessage, setMessage}) => {
 
                 <div className='divInfo-item'>
                     <form className='yhtForm' ref={form} onSubmit={sendEmail}>
-                        <h4>Lähetä meille viesti</h4>
+                        <h4>LÄHETÄ VIESTIÄ</h4>
                         <br></br>
                         <label>Nimi</label>
                         <input type="text" name="user_name" className='form-control' required />

@@ -8,12 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Kalenteri from './Kalenteri'
 import Etusivu from './Etusivu'
 import Hinnasto from './Hinnasto'
-import Lisavarusteet from './Lisavarusteet'
+import Lisäpalvelut from './Lisäpalvelut'
 import Palaute from './Palaute'
 import VuokrattavatAutot from './VuokrattavatAutot'
 import Vuokrausehdot from './Vuokrausehdot'
 import Yhteystiedot from "./Yhteystiedot"
-import Yritys from "./Yritys"
+import Tarjoukset from "./Tarjoukset"
 import { BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
 
 import { AiOutlineUser } from "react-icons/ai"
@@ -59,12 +59,12 @@ function App(){
           </Nav>
           <Nav className='me-auto' style={{fontSize:20}}>
             <NavLink href='/Etusivu'>Etusivu</NavLink>
-            <NavLink href='/Yritys'>Yritys</NavLink>
+            <NavLink href='/Tarjoukset'>Tarjoukset</NavLink>
               <NavDropdown title="Vuokraus" id="collasible-nav-dropdown" >
                 <NavDropdown.Item href="/VuokrattavatAutot">Vuokrattavat autot</NavDropdown.Item>
                 <NavDropdown.Item href="/Kalenteri">Varaa</NavDropdown.Item>
                 <NavDropdown.Item href="/Hinnasto">Hinnasto</NavDropdown.Item>
-                <NavDropdown.Item href="/Lisavarusteet">Lisävarusteet</NavDropdown.Item>
+                <NavDropdown.Item href="/Lisäpalvelut">Lisäpalvelut</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/Galleria">Valokuvat</NavDropdown.Item>
                 <NavDropdown.Item href="/Vuokrausehdot">Vuokrausehdot</NavDropdown.Item>
@@ -88,11 +88,11 @@ function App(){
 
         <Switch >
           <Route path="/Etusivu"><Etusivu/></Route>
-          <Route path="/Yritys"><Yritys/></Route>
+          <Route path="/Tarjoukset"><Tarjoukset/></Route>
           <Route path="/VuokrattavatAutot"><VuokrattavatAutot/></Route>
           <Route path="/Kalenteri"><Kalenteri/></Route>
           <Route path="/Hinnasto"><Hinnasto/></Route>
-          <Route path="/Lisavarusteet"><Lisavarusteet/></Route>
+          <Route path="/Lisäpalvelut"><Lisäpalvelut/></Route>
           <Route path="/Galleria"><Galleria/></Route>
           <Route path="/Vuokrausehdot"><Vuokrausehdot/></Route>
           <Route path="/Palaute"><Palaute setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>

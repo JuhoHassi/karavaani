@@ -45,16 +45,21 @@ const VuokrattavatAutot = () => {
                         <h5><BsDot /> Pituus 7m ja kokonaismassa 3500kg</h5>
                         <h5><BsDot /> Etuveto, manuaali vaihtesto</h5>
                         <h5><BsDot /> Vakionopeudensäädin, peruutuskamera</h5>
-                        <h5><BsDot /> Polkupyöräteline (max. 4 pyörälle)</h5>
+                        <h5><BsDot /> Polkupyöräteline (max. 4 pyörälle / max. 60kg)</h5>
                         <h5><BsDot /> Markiisi</h5>
-                        <h5><BsDot /> B- ajokortti riittää! / 120km/h</h5>
+                        <h5><BsDot /> Ajokiilat auton tasaamiseksi</h5>
+                        <h5><BsDot /> B- ajokortti riittää! / Saa ajaa 120km/h</h5>
+                        <h5><BsDot /> Talvipaketti - sopii hyvin myös talvikelein</h5>
+                        <h5><BsDot /> Aurinkopaneelijärjestelmä</h5>
+                        <h5><BsDot /> Invertteri 2500 W</h5>
                         <br />
 
                         <h4 className='vaTitle'>Varustelu - sisätilat ja mukavuudet: </h4>
                         <h5><BsDot /> Ajoaikainen ilmastointi</h5>
-                        <h5><BsDot />Sähkötoiminen ulkoporras</h5>
-                        <h5><BsDot />Ulosvedettävä kaasupulloteline, 2 x 11 kg pulloille</h5>
-                        <h5><BsDot /> Truma Combi E6- ilmakeskuslömmitys (kaasu/ sähkö)</h5>
+                        <h5><BsDot /> Sähkötoiminen ulkoporras</h5>
+                        <h5><BsDot /> Ulosvedettävä kaasupulloteline, 2 x 11 kg pulloille</h5>
+                        <h5><BsDot /> Truma Combi E6- ilmakeskuslämmitys (kaasu/ sähkö)</h5>
+                        <h5><BsDot /> Lattialämmitys</h5>
                         <h5><BsDot /> Korkea 133l jääkaappi pakaistinlokerolla (kaasu/ sähkö)</h5>
                         <h5><BsDot /> Kaasuliesi</h5>
                         <h5><BsDot /> Ruokailuvälineet ja astiasto kuudelle</h5>
@@ -62,7 +67,7 @@ const VuokrattavatAutot = () => {
                         <h5><BsDot /> Kahvin- ja vedenkeitin</h5>
                         <h5><BsDot /> Pölynimuri</h5>
                         <h5><BsDot /> WC / Suihku</h5>
-                        <h5><BsDot /> 22" Smart TV (Netflix, Youtube ...)</h5>
+                        <h5><BsDot /> 24" Android Smart TV (Netflix, Youtube ...)</h5>
                         <h5><BsDot /> CD - Radio, Navigaattori</h5>
                         <h5><BsDot /> Pimennys- ja hyönteisverkot ikkunoissa</h5>
                         <h5><BsDot /> Tilava tavaratila</h5>

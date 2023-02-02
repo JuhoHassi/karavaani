@@ -23,7 +23,13 @@ const AsiakkaanVaraus = ({customerBook}) => {
                                 <th>Henkilömäärä</th>
                                 <th>Kaasugrilli</th>
                                 <th>Pöytä & tuolit</th>
-                                <th>Loppusiivous & Wc</th>
+                                <th>Retkituolit</th>
+                                <th>Sähköpotkulauta</th>
+                                <th>Kaasupullon vaihto palaut.</th>
+                                <th>Pidenetty vkl</th>
+                                <th>Toimitus</th>
+                                <th>Loppusiivous</th>
+                                <th>Wc & vesisäiliön tyhjennys</th>
                                 <th>Viesti</th>
                                 <th>Ehdot</th>
                             </tr>
@@ -39,7 +45,13 @@ const AsiakkaanVaraus = ({customerBook}) => {
                                 <td>{customerBook.people}</td>
                                 <td>{String(customerBook.gasGrill)}</td>
                                 <td>{String(customerBook.tableAndChairs)}</td>
-                                <td>{String(customerBook.cleaningAndWc)}</td>
+                                <td>{String(customerBook.campChairs)}</td>
+                                <td>{String(customerBook.eScooter)}</td>
+                                <td>{String(customerBook.gasRep)}</td>
+                                <td>{String(customerBook.lWeekend)}</td>
+                                <td>{String(customerBook.homeDelivery)}</td>
+                                <td>{String(customerBook.cleaning)}</td>
+                                <td>{String(customerBook.wcAndWaterTankEmpty)}</td>
                                 <td>{customerBook.message}</td>
                                 <td>{String(customerBook.terms)}</td>
                             </tr>

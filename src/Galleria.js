@@ -96,14 +96,14 @@ const Galleria = () => {
         <div className="divEhdot">
             <h2 className="titleName">VALOKUVAT</h2>
             <div className={model ? "model open" : "model"}>
-                <img src={tempImg} />
+                <img src={tempImg} alt='' />
                 <AiOutlineClose onClick={() => setModel(false)} className='closeBtn' />
             </div>
             <div className="gallery">
                 {data.map((item, index) => {
                     return (
                         <div className="pics" key={index} onClick={() => getImg(item.imgSrc)} >
-                            <img src={item.imgSrc} style={{width: '100%'}}/>
+                            <img alt='' src={item.imgSrc} style={{width: '100%'}}/>
                         </div>
                         
                     )

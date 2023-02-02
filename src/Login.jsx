@@ -42,18 +42,20 @@ const Login = ({setLoggedIn, setIsPositive, setShowMessage, setMessage}) => {
             }
         })
         .catch(error => {
-            setMessage(error.response.data)
+            setMessage("Error, käyttäjätunnus tai salasana on väärä!")
             setIsPositive(false)
             setShowMessage(true)
 
             setTimeout(() => {
                 setShowMessage(false)
             }, 8000)
+
+            emptyFields()
         })       
     }
 
     return(
-        <div className='loginWindow'>
+        <div className='loginWindow'>   
             <h4>Admin login</h4>
 
             <form onSubmit={handleSubmit}>

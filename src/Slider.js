@@ -32,7 +32,7 @@ const Slider = () =>{
             {SliderData.map((obj, index) =>{
                 return(
                     <div key={obj.id} className={slideIndex === index +1 ? "slide active-anim" : "slide"}>
-                        <img src={process.env.PUBLIC_URL + `/sliderImgs/img${index +1}.jpg`}/>
+                        <img alt="" src={process.env.PUBLIC_URL + `/sliderImgs/img${index +1}.jpg`}/>
 
                         {/* <p>{obj.title}</p>  -jos halua kirjoittaa kommettin kuvalle (SliderData)*/}
                     </div>

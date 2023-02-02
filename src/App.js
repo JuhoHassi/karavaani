@@ -14,7 +14,7 @@ import VuokrattavatAutot from './VuokrattavatAutot'
 import Vuokrausehdot from './Vuokrausehdot'
 import Yhteystiedot from "./Yhteystiedot"
 import Tarjoukset from "./Tarjoukset"
-import { BrowserRouter as Router, Switch , Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch , Route} from 'react-router-dom'
 
 import { AiOutlineUser } from "react-icons/ai"
 import Galleria from './Galleria'

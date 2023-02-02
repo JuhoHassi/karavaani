@@ -101,7 +101,13 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                         <th>Henkilömäärä</th>
                         <th>Kaasugrilli</th>
                         <th>Pöytä ja tuolit</th>
-                        <th>Loppusiivous ja WC tyhjennys</th>
+                        <th>Retkituolit</th>
+                        <th>Sähköpotkulauta</th>
+                        <th>Kaasupullon vaihto palaut.</th>
+                        <th>Pidenetty vkl</th>
+                        <th>Toimitus</th>
+                        <th>Loppusiivous</th>
+                        <th>Wc ja h.vesisäiliöin tyhjennys</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -114,7 +120,13 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{b.persons}</td>
                         <td>{String(b.gasGrill)}</td>
                         <td>{String(b.tableChairs)}</td>
-                        <td>{String(b.cleaningToiletEmpty)}</td>
+                        <td>{String(b.campingChairs)}</td>
+                        <td>{String(b.electricScooter)}</td>
+                        <td>{String(b.gasReplacement)}</td>
+                        <td>{String(b.longWeekend)}</td>
+                        <td>{String(b.delivery)}</td>
+                        <td>{String(b.cleaning)}</td>
+                        <td>{String(b.wcWaterTankEmpty)}</td>
 
                         <button className='asvarEditDelete' onClick={() => editVaraus(b)}><BsPen/></button>
                         <button className='asvarEditDelete' onClick={() => deleteVaraus(b)}><BsTrash/></button> 

@@ -10,7 +10,13 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
     const [newPersons, setNewPersons] = useState('')
     const [newGasgrill, setNewGasgrill] = useState(false)
     const [newTableChairs, setNewTableChairs] = useState(false)
-    const [newCleaningWc, setNewCleaningWc] = useState(false)
+    const [newCampChairs, setNewCampChairs] = useState(false)
+    const [newScooter, setNewScooter] = useState(false)
+    const [newGasRep, setNewGasRep] = useState(false)
+    const [newLongW, setNewLongW] = useState(false)
+    const [newDelivery, setNewDelivery] = useState(false)
+    const [newCleaning, setNewCleaning] = useState(false)
+    const [newWcWaterEmpt, setNewWcWaterEmpt] = useState(false)
 
 
     const Grill = () => {
@@ -23,9 +29,39 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
         console.log(newTableChairs, "value")
     }
 
+    const CampingChairs = () => {
+        newCampChairs ? setNewCampChairs(false) : setNewCampChairs(true)
+        console.log(newCampChairs, "value")
+    }
+
+    const EScooter = () => {
+        newScooter ? setNewScooter(false) : setNewScooter(true)
+        console.log(newScooter, "value")
+    }
+
+    const GasReplacement = () => {
+        newGasRep ? setNewGasRep(false) : setNewGasRep(true)
+        console.log(newGasRep, "value")
+    }
+
+    const LongWeekend = () => {
+        newLongW ? setNewLongW(false) : setNewLongW(true)
+        console.log(newLongW, "value")
+    }
+
+    const HomeDelivery = () => {
+        newDelivery ? setNewDelivery(false) : setNewDelivery(true)
+        console.log(newDelivery, "value")
+    }
+
     const Cleaning = () => {
-        newCleaningWc ? setNewCleaningWc(false) : setNewCleaningWc(true)
-        console.log(newCleaningWc, "value")
+        newCleaning ? setNewCleaning(false) : setNewCleaning(true)
+        console.log(newCleaning, "value")
+    }
+
+    const WcAndWaterTank = () => {
+        newWcWaterEmpt ? setNewWcWaterEmpt(false) : setNewWcWaterEmpt(true)
+        console.log(newWcWaterEmpt, "value")
     }
 
 
@@ -37,7 +73,13 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
         setNewPersons('')
         setNewGasgrill(false)
         setNewTableChairs(false)
-        setNewCleaningWc(false)
+        setNewCampChairs(false)
+        setNewScooter(false)
+        setNewLongW(false)
+        setNewGasRep(false)
+        setNewDelivery(false)
+        setNewCleaning(false)
+        setNewWcWaterEmpt(false)
     }
 
     const handleSubmit = (event) => {
@@ -49,7 +91,13 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
             persons: newPersons,
             gasGrill: newGasgrill,
             tableChairs: newTableChairs,
-            cleaningToiletEmpty: newCleaningWc
+            campingChairs: newCampChairs,
+            electricScooter: newScooter,
+            longWeekend: newLongW,
+            delivery: newDelivery,
+            gasReplacement: newGasRep,
+            cleaning: newCleaning,
+            wcWaterTankEmpty: newWcWaterEmpt
         }
         //console.log(newBook)
 
@@ -117,9 +165,45 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
                 </div>
 
                 <div>
-                    <label className='varauslb'>Loppusiivous & wc tyhjennys: </label>
+                    <label className='varauslb'>Retkituolit: </label>
+                    <Switch onClick={CampingChairs}/>
+                    {newCampChairs ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
+                </div>
+
+                <div>
+                    <label className='varauslb'>Sähköpotkulauta: </label>
+                    <Switch onClick={EScooter}/>
+                    {newScooter ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
+                </div>
+
+                <div>
+                    <label className='varauslb'>Kaasupullon vaihto palaut. : </label>
+                    <Switch onClick={GasReplacement}/>
+                    {newGasRep ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
+                </div>
+
+                <div>
+                    <label className='varauslb'>Pidenetty vkl: </label>
+                    <Switch onClick={LongWeekend}/>
+                    {newLongW ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
+                </div>
+
+                <div>
+                    <label className='varauslb'>Toimitus: </label>
+                    <Switch onClick={HomeDelivery}/>
+                    {newDelivery ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
+                </div>
+
+                <div>
+                    <label className='varauslb'>Loppusiivous: </label>
                     <Switch onClick={Cleaning}/>
-                    {newCleaningWc ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
+                    {newCleaning ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
+                </div>
+
+                <div>
+                    <label className='varauslb'>Wc ja vesisäiliöin tyhjennys: </label>
+                    <Switch onClick={WcAndWaterTank}/>
+                    {newWcWaterEmpt ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                 </div>
 
                 <br></br>

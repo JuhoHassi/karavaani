@@ -1,6 +1,6 @@
 import axios from "axios"
 
-//const baseUrl = "https://localhost:44376/api/Booking"  //paikallinen
+// const baseUrl = "https://localhost:44376/api/Booking"  //paikallinen
 const baseUrl = "https://caravanbackend.azurewebsites.net/api/Booking"
 
 

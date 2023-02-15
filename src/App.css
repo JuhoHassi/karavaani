@@ -4,31 +4,33 @@
 }
 
 /*----- PÄÄSIVU -----*/
-.taustakuva{
+.taustakuva {
   background-image: url('./img/backpic.jpg');
   height: 100vh;
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat:no-repeat; */
   background-size: cover;
   font-family: 'MyFont';
   src: local('MyFont'), url(./fonts/Poppins-Regular.ttf) format('ttf');
 }
 
-.tsr{
+.tsr {
   font-size: 25px;
   font-weight: 700;
   color: rgb(235, 235, 161);
   margin-top: 10px;
 
 }
-.matka{
+
+.matka {
   color: rgb(203, 199, 199);
   font-size: 25px;
   padding-left: 5px;
   margin-top: 10px;
   margin-right: 100%;
 }
-.logOutBtn{
+
+.logOutBtn {
   margin-right: 20px;
   margin-left: 20px;
   font-size: 16px;
@@ -39,26 +41,28 @@
 }
 
 /*----- ETUSIVU -----*/
-.divEtusivu{
+.divEtusivu {
   margin-top: 30px;
   margin-left: 50px;
 }
 
 /*----- LOGIN -----*/
-.loginWindow{
+.loginWindow {
   margin-left: 75%;
   margin-top: 10px;
 }
-.loginWindow h4{
+
+.loginWindow h4 {
   font-size: 20px;
 }
-#logEmpty{
+
+#logEmpty {
   margin-left: 5px;
 }
 
 
 /*----- ILMOITUS -----*/
-.neg{
+.neg {
   background-color: rgb(219, 149, 112);
   font-size: 16px;
   font-weight: bolder;
@@ -70,7 +74,8 @@
   text-align: center;
   padding: 5px;
 }
-.pos{
+
+.pos {
   background-color: rgb(188, 187, 131);
   font-size: 16px;
   font-weight: bolder;
@@ -85,13 +90,14 @@
 
 
 /*----- YLEISET -----*/
-.divBack{
+.divBack {
   background-color: rgb(194, 208, 211);
   min-height: 100%;
   margin: auto;
   text-align: center;
 }
-.titleName{
+
+.titleName {
   padding-top: 10px;
   font-size: 20px;
   text-align: center;
@@ -99,7 +105,7 @@
 
 
 /*----- TARJOUKSET -----*/
-.tarjousPic{
+.tarjousPic {
   width: 100%;
   height: 100%;
   background-image: url('./img/dream.jpg');
@@ -107,39 +113,45 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.tarjousTxt{
+
+.tarjousTxt {
   margin-top: 40px;
   font-size: 18px;
 }
 
 
 /*----- VUOKRAUSEHDOT -----*/
-.divEhdot{
+.divEhdot {
   background-color: rgb(194, 208, 211);
   margin: auto;
 }
-.flexbox-container{
+
+.flexbox-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.flexbox-item{
+
+.flexbox-item {
   width: 700px;
   margin: 10px;
   border: 1px solid #918308;
   background-color: rgb(194, 208, 211);
   height: auto;
 }
-.flexbox-item h5{
+
+.flexbox-item h5 {
   font-size: 14px;
   margin-left: 5px;
   margin-top: 10px;
 }
-.flexbox-item p{
+
+.flexbox-item p {
   font-size: 14px;
   margin-left: 10px;
 }
-.ehdotBtn{
+
+.ehdotBtn {
   font-size: 14px;
   border: 1px solid #222;
   background-color: #9183086e;
@@ -150,7 +162,7 @@
 }
 
 /*btn bact to top*/
-.backTopBtn{
+.backTopBtn {
   position: fixed;
   bottom: 50px;
   right: 50px;
@@ -162,7 +174,7 @@
 
 
 /*----- VALOKUVAT -----*/
-.gallery{
+.gallery {
   -webkit-column-count: 4;
   -moz-column-count: 4;
   column-count: 4;
@@ -171,35 +183,39 @@
   column-width: 33%;
   padding: 0 12px;
 }
-.gallery .pics{
+
+.gallery .pics {
   -webkit-transition: all 350ms ease;
   transition: all 350ms ease;
   cursor: pointer;
   margin-bottom: 12px;
 }
-.gallery .pics:hover{
+
+.gallery .pics:hover {
   opacity: 0.8;
 }
-@media (max-width: 991px){
-  .gallery{
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
+
+@media (max-width: 991px) {
+  .gallery {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
   }
 }
 
-@media (max-width: 480px){
-  .gallery{
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
-      -webkit-column-width: 100%;
-      -moz-column-width: 100%;
-      column-width: 100%;
+@media (max-width: 480px) {
+  .gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
   }
 }
+
 /*model*/
-.model{
+.model {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -216,12 +232,14 @@
   overflow: hidden;
   z-index: 999;
 }
-.model.open{
+
+.model.open {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
 }
-.model img{
+
+.model img {
   width: auto;
   max-width: 100%;
   height: auto;
@@ -232,7 +250,8 @@
   padding: 20px 0 20px;
   margin: 0 auto;
 }
-.closeBtn{
+
+.closeBtn {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -255,11 +274,13 @@
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 700px) {
   .container-slider {
     margin: 100px 10px 0;
   }
 }
+
 .slide {
   width: 100%;
   height: 100%;
@@ -267,15 +288,18 @@
   opacity: 0;
   transition: opacity ease-in-out 0.4s;
 }
+
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
   /* object-fit: cover; */
 }
+
 .active-anim {
   opacity: 1;
 }
+
 .btn-slide {
   width: 40px;
   height: 40px;
@@ -288,16 +312,19 @@
   align-items: center;
   cursor: pointer;
 }
+
 .prev {
   top: 50%;
   left: 20px;
   transform: translateY(-60%);
 }
+
 .next {
   top: 50%;
   right: 20px;
   transform: translateY(-60%);
 }
+
 .container-dots {
   position: absolute;
   bottom: 10px;
@@ -305,6 +332,7 @@
   transform: translateX(-50%);
   display: flex;
 }
+
 .dot {
   width: 15px;
   height: 15px;
@@ -314,18 +342,21 @@
   background: rgb(32, 32, 32);
   cursor: pointer;
 }
+
 .dot.active {
   background: #f1f1f1;
 }
+
 /* ----- */
-.ehdotLink{
+.ehdotLink {
   font-size: 16px;
   border: 1px solid #222;
   background-color: #91830834;
   padding: 5px;
   text-align: center;
 }
-.galleriaLink{
+
+.galleriaLink {
   font-size: 16px;
   border: 1px solid #222;
   background-color: #9183086e;
@@ -333,17 +364,21 @@
   text-align: center;
   margin-top: 5px;
 }
-.avText{
+
+.avText {
   margin-left: 60px;
 }
-.vaTitle{
+
+.vaTitle {
   font-size: 16px;
-  font-weight: 600;  
+  font-weight: 600;
 }
-.leftText{
+
+.leftText {
   margin-left: 20px;
 }
-.tiedotBtn{
+
+.tiedotBtn {
   font-size: 16px;
   border: 1px solid #222;
   background-color: #91830834;
@@ -354,7 +389,7 @@
 
 
 /*----- Vuokrattava Auto Tiedot -----*/
-.backTiedotBtn{
+.backTiedotBtn {
   font-size: 16px;
   border: 1px solid #222;
   background-color: #91830834;
@@ -364,26 +399,28 @@
 
 
 /*----- HINNASTO -----*/
-.hinnastoTable{
+.hinnastoTable {
   margin-top: 50px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
 }
-.hinnastoPic{
+
+.hinnastoPic {
   width: 100%;
   height: 100%;
   background-image: url('./img/winterfront.jpg');
   background-size: cover;
   background-position: center;
 }
-.hinnastoTxt{
+
+.hinnastoTxt {
   font-size: 14px;
   text-align: center;
 }
 
 
 /*----- LISÄPALVELUT -----*/
-.palvelutPic{
+.palvelutPic {
   width: 100%;
   height: 100%;
   background-image: url('./img/meiehobby.jpg');
@@ -394,7 +431,7 @@
 
 
 /*----- PALAUTE -----*/
-.feed{
+.feed {
   text-align: left;
   margin: 10px;
   padding: 5px;
@@ -402,11 +439,13 @@
   border-radius: 5px;
   background-color: #cbc9b3;
 }
-.feedName{
+
+.feedName {
   font-size: 14px;
   text-decoration: underline;
 }
-.feedRating{
+
+.feedRating {
   background-color: rgb(224, 224, 161);
   font-size: 12px;
   font-weight: 600;
@@ -414,17 +453,20 @@
   width: min-content;
   border-radius: 40%;
 }
-.feedText{
+
+.feedText {
   font-size: 14px;
 }
-.feedDelete{
+
+.feedDelete {
   color: #363109;
   background-color: #cbc9b3;
   border: none;
   margin-left: 500px;
   font-size: medium;
 }
-.divPalaute{
+
+.divPalaute {
   background: #222;
   opacity: 0.8;
   width: 70%;
@@ -433,39 +475,183 @@
   margin-top: 10px;
   border-radius: 5px;
 }
-.pText{
+
+.pText {
   font-size: 18px;
   color: whitesmoke;
   margin-bottom: 20px;
 }
-.divPalaute input{
+
+.divPalaute input {
   margin-bottom: 5px;
   width: 100%;
 }
-.divPalaute textarea{
+
+.divPalaute textarea {
   width: 100%;
 }
-.emptyBtn:hover{
+
+.emptyBtn:hover {
   background-color: #eebe80;
   color: black;
 }
 
+/*----- VARAA -----*/
+.varaaSivu {
+  background-color: rgb(194, 208, 211);
+  background-attachment: fixed;
+  height: 90%;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.VaraaNoutoPalautus{
+  width: 100px;
+}
+
+input[type=email],
+[type=text],
+[type=number],
+[type=phone],
+[type=datetime-local] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.varaaPaivat {
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+.varaaPaivaHlo {
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 20px;
+  margin-right: 5%;
+  margin-left: 10%;
+}
+
+.varaaPaivatTiedot {
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 20px;
+  margin-left: 5%;
+}
+
+@media screen and (max-width: 1700px) {
+  .varaaPaivat,
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: rgb(194, 208, 211);
+    margin-top: 0;
+  }
+}
+
+
+@media screen and (max-width:1470px) {
+  .varaaPaivat,
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    margin-right: 0%;
+    margin-left: 0%;
+    background-color: rgb(194, 208, 211);
+    margin-top: 0;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:950px) {
+  .varaaSivu {
+    background-color: rgb(194, 208, 211);
+    background-attachment: fixed;
+    height: 90%;
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .varaaPaivat {
+    padding: auto;
+    padding-top: 15px;
+    margin: auto;
+    width: 100%;
+    margin-top: 0;
+    background-color: rgb(194, 208, 211);
+  }
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    float: left;
+    background-color: rgb(194, 208, 211);
+    width: 50%;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .varaaPaivat,
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    padding: auto;
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    background-color: rgb(194, 208, 211);
+  }
+}
+
+.varaaLisatarvikkeetSivu {
+  background-color: rgb(194, 208, 211);
+  background-attachment: fixed;
+  height: 90%;
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+
+.varaaLisatarvikkeet {
+  max-width: 500px;
+  display: inline-block;
+  text-align: left;
+
+}
+
+.varauslbVaraa {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 200px;
+  font-size: 17px;
+}
+
+
 /*----- YHTEYSTIEDOT -----*/
-.divYht{
+.divYht {
   background-color: rgb(194, 208, 211);
   margin: auto;
   min-height: 100%;
 }
-.divInfo{
+
+.divInfo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.divInfo-item{
+
+.divInfo-item {
   width: 600px;
   margin: 10px;
 }
-.yhtForm{
+
+.yhtForm {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -479,22 +665,26 @@
   background-image: url('https://pikwizard.com/photos/a0efe701a6330906ea95cf8d7f85db7b-s.jpg');
   background-size: cover;
 }
-.yhtForm h4{
+
+.yhtForm h4 {
   font-size: 18px;
 }
-.yhtForm label{
+
+.yhtForm label {
   font-size: 14px;
 }
 
-.divInfo-item h5{
+.divInfo-item h5 {
   font-size: 16px;
 }
-.divInfo-item p{
+
+.divInfo-item p {
   font-size: 16px;
   font-weight: 600;
   margin-left: 10px;
 }
-.gMap{
+
+.gMap {
   width: 400px;
   height: 250px;
   margin-bottom: 20px;
@@ -502,53 +692,57 @@
 
 
 /*----- ASIAKKAAT & VARAUKSET & ADMIN -----*/
-.addBtn{
+.addBtn {
   background-color: #918308;
   color: whitesmoke;
   font-size: 12px;
   border-radius: 5px;
   margin-left: 10px;
 }
-.asvarEditDelete{
+
+.asvarEditDelete {
   background-color: #918308;
   color: whitesmoke;
   font-size: 12px;
   border-radius: 5px;
 }
 
-.addAsVar h4{
+.addAsVar h4 {
   font-size: 16px;
   margin-top: 10px;
 }
-.addAsVar form{
+
+.addAsVar form {
   font-size: 16px;
 }
 
-.editAsVar h4{
+.editAsVar h4 {
   font-size: 16px;
   margin-top: 10px;
 }
-.editAsVar form{
+
+.editAsVar form {
   font-size: 14px;
 }
 
 
 /*----- ASIAKKAAN VARAUKSET -----*/
-.asvarBtn{
+.asvarBtn {
   background-color: #918308;
   color: whitesmoke;
   font-size: 14px;
   border-radius: 5px;
 }
 
-.asVarShow{
+.asVarShow {
   cursor: pointer;
   margin-top: 15px;
   font-size: 16px;
   font-weight: 600;
   color: #918308;
 }
-.asVarList{
+
+.asVarList {
   font-size: 12px;
   border-width: 1px;
   border-style: solid;
@@ -557,29 +751,34 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-.asVarList th{
+
+.asVarList th {
   padding-left: 10px;
   padding-right: 10px;
 }
-.asVarList td{
+
+.asVarList td {
   padding-left: 10px;
   padding-right: 10px;
 }
 
 
 /*----- ASIAKKAAT -----*/
-.asiakkaatList{
+.asiakkaatList {
   font-size: 12px;
   text-align: left;
   margin: 20px;
 }
-.asiakkaatList th{
+
+.asiakkaatList th {
   padding-right: 15px;
 }
-.asiakkaatList td{
+
+.asiakkaatList td {
   padding-right: 15px;
 }
-.trAsiakkaat{
+
+.trAsiakkaat {
   border-width: 1px;
   border-style: solid;
   border-color: #918308;
@@ -587,34 +786,39 @@
 
 
 /*----- ASIAKAS ADD -----*/
-.terms{
+.terms {
   margin-right: 8px;
   margin-top: 5px;
 }
-.true{
+
+.true {
   color: green;
   margin-left: 5px;
 }
-.false{
+
+.false {
   color: red;
   margin-left: 5px;
 }
 
 
 /*----- VARAUKSET -----*/
-.varauksetList{
+.varauksetList {
   font-size: 12px;
   text-align: left;
   margin: 20px;
 }
-.varauksetList th{
+
+.varauksetList th {
   padding-right: 15px;
 }
-.varauksetList td{
+
+.varauksetList td {
   padding-right: 15px;
 
 }
-.trVaraukset{
+
+.trVaraukset {
   border-width: 1px;
   border-style: solid;
   border-color: #918308;
@@ -622,34 +826,73 @@
 
 
 /*----- VARAUS ADD -----*/
-.addPvm{
+.addPvm {
   padding-left: 20px;
   padding-right: 20px;
 }
-.varauslb{
+
+.varauslb {
   margin-right: 8px;
   margin-top: 5px;
 }
 
 
 /*----- ADMIN -----*/
-.adminList{
+.adminList {
   font-size: 12px;
   text-align: left;
   margin: 20px;
 }
-.adminList th{
+
+.adminList th {
   padding-right: 15px;
 }
-.adminList td{
+
+.adminList td {
   padding-right: 15px;
 }
-.trAdmin{
+
+.trAdmin {
   border-width: 1px;
   border-style: solid;
   border-color: #918308;
 }
 
+
+/*----- LISÄVARUSTEET -----*/
+.lisavarusteSivu {
+  background-color: rgb(194, 208, 211);
+  height: 90%;
+  max-width: 85%;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.lisavarusteLista {
+  max-width: 20%;
+  margin: auto;
+}
+
+.lisavarusteKuva {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.lisavarusteTotal {
+  font-size: 30px;
+}
+
+/*----- KALENTERISIVU -----*/
+.kalenteriSivu {
+  background-color: rgb(194, 208, 211);
+  height: auto;
+  max-width: 85%;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
 
 /*----- KALENTERI -----*/
 .react-calendar {
@@ -670,17 +913,21 @@
 
   line-height: 1.125em;
 }
+
 .react-calendar--doubleView {
   width: 700px;
 }
+
 .react-calendar--doubleView .react-calendar__viewContainer {
   display: flex;
   margin: -0.5em;
 }
-.react-calendar--doubleView .react-calendar__viewContainer > * {
+
+.react-calendar--doubleView .react-calendar__viewContainer>* {
   width: 50%;
   margin: 0.5em;
 }
+
 .react-calendar,
 .react-calendar *,
 .react-calendar *:before,
@@ -689,45 +936,55 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .react-calendar button {
   margin: 0;
   border: 0;
   outline: none;
 }
+
 .react-calendar button:enabled:hover {
   cursor: pointer;
 }
+
 .react-calendar__navigation {
   display: flex;
   height: 44px;
   margin-bottom: 1em;
 }
+
 .react-calendar__navigation button {
   /* min-width: 44px;
   background: none; */
   color: #6f48eb;
   min-width: 44px;
   background: none;
-  font-size: 16px;
+  font-size: 20px;
+  text-transform: uppercase;
   margin-top: 8px;
 }
+
 .react-calendar__navigation button:disabled {
   background-color: #f0f0f0;
 }
+
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
   /* background-color: #e6e6e6; */
   background-color: #f8f8fa;
 }
+
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.75em;
 }
+
 .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
 }
+
 .react-calendar__month-view__weekNumbers .react-calendar__tile {
   display: flex;
   align-items: center;
@@ -735,17 +992,21 @@
   font-size: 0.75em;
   font-weight: bold;
 }
+
 .react-calendar__month-view__days__day--weekend {
   color: #d10000;
 }
+
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #757575;
 }
+
 .react-calendar__year-view .react-calendar__tile,
 .react-calendar__decade-view .react-calendar__tile,
 .react-calendar__century-view .react-calendar__tile {
   padding: 2em 0.5em;
 }
+
 .react-calendar__tile {
   max-width: 100%;
   padding: 10px 6.6667px;
@@ -753,9 +1014,11 @@
   text-align: center;
   line-height: 16px;
 }
+
 .react-calendar__tile:disabled {
   background-color: #f0f0f0;
 }
+
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
   /* background-color: #e6e6e6; */
@@ -763,6 +1026,7 @@
   color: #6f48eb;
   border-radius: 6px;
 }
+
 .react-calendar__tile--now {
   /* background: #ffff76; */
   background: #6f48eb33;
@@ -770,27 +1034,31 @@
   font-weight: bold;
   color: #6f48eb;
 }
+
 .react-calendar__tile--range {
   background: #f8f8fa;
   color: #6f48eb;
   border-radius: 0;
- }
- .react-calendar__tile--rangeStart {
+}
+
+.react-calendar__tile--rangeStart {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   background: #6f48eb;
   color: white;
- }
- .react-calendar__tile--rangeEnd {
+}
+
+.react-calendar__tile--rangeEnd {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background: #6f48eb;
   color: white;
- }
+}
+
 .react-calendar__tile--now:enabled:hover,
 .react-calendar__tile--now:enabled:focus {
   /* background: #ffffa9; */
@@ -799,14 +1067,17 @@
   font-weight: bold;
   color: #6f48eb;
 }
+
 .react-calendar__tile--hasActive {
   background: #76baff;
 }
+
 .react-calendar__tile--hasActive:enabled:hover,
 .react-calendar__tile--hasActive:enabled:focus {
   /* background: #a9d4ff; */
   background: #f8f8fa;
 }
+
 .react-calendar__tile--active {
   /* background: #006edc;
   color: white; */
@@ -815,15 +1086,15 @@
   font-weight: bold;
   color: white;
 }
+
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
   /* background: #1087ff; */
   background: #6f48eb;
   color: white;
 }
+
 .react-calendar--selectRange .react-calendar__tile--hover {
   /* background-color: #e6e6e6; */
   background-color: #f8f8fa;
 }
-
-

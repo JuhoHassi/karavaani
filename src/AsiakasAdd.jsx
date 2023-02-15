@@ -55,7 +55,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
             message: newMessage,
             terms: newTerms
         }
-        //console.log(newCustomer)
+        console.log(newCustomer)
 
         CustomerService.create(newCustomer)
         .then(response => {

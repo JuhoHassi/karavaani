@@ -31,6 +31,7 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
         FeedbackService.getAll()
             .then(data => {
                 setFeedback(data)
+                console.log(data)
             })
     }, [reload])
 

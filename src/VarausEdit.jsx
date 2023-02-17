@@ -183,13 +183,13 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
                 <div>
                     <label>Nouto pvm </label>
                     <br></br>
-                    <input className='addPvm' type='datetime-local' value={newRentStart} onChange={({ target }) => setNewRentStart(target.value)}/>
+                    <input className='addVarausPvm' type='datetime-local' value={newRentStart} onChange={({ target }) => setNewRentStart(target.value)}/>
                 </div>
 
                 <div>
                     <label>Palautus pvm</label>
                     <br></br>
-                    <input className='addPvm' type='datetime-local' placeholder='Palautus pvm' value={newRentEnd} onChange={({ target }) => setNewRentEnd(target.value)}/>
+                    <input className='addVarausPvm' type='datetime-local' placeholder='Palautus pvm' value={newRentEnd} onChange={({ target }) => setNewRentEnd(target.value)}/>
                 </div>
 
                 <div>

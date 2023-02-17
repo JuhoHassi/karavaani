@@ -118,7 +118,7 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
     }
 
     return (
-        <div className='divEhdot'>
+        <div className='divBack'>
             <h2 className='titleName'>PALAUTTEET</h2>
             <div className='divInfo'>
                 <div className='divInfo-item'>

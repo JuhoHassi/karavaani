@@ -1,5 +1,7 @@
 import './App.css'
 import React, {useState} from 'react'
+import { format } from 'date-fns'
+import BackToTopBtn from './BackToTopBtn'
 
 
 const AsiakkaanVaraus = ({customerBook}) => {
@@ -8,7 +10,7 @@ const AsiakkaanVaraus = ({customerBook}) => {
 
     return(
         <div>
-            <h4 onClick={() => setShow(!show)} className='asVarShow'> {customerBook.rentingStart} - {customerBook.rentingEnd} {customerBook.firstName} {customerBook.lastName}</h4>
+            <h4 onClick={() => setShow(!show)} className='asVarShow'> {format(new Date(customerBook.rentingStart), 'dd.MM.yyyy HH:mm')} - {format(new Date(customerBook.rentingEnd), 'dd.MM.yyyy HH:mm')} {customerBook.firstName} {customerBook.lastName}</h4>
             
             {show && <div className='asVarList'>
                 <table>
@@ -58,6 +60,7 @@ const AsiakkaanVaraus = ({customerBook}) => {
                         </tbody>
                     </table>
                 </div>}
+            <BackToTopBtn/>
         </div>
     )
 }

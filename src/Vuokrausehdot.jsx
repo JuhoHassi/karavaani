@@ -23,7 +23,7 @@ const Vuokrausehdot = () => {
                         <h5>4. VARAAMINEN</h5>
                         <p>Vuokra-aika alkaa matkailuauton luovutushetkestä, tai erikseen kirjallisesti sovitusta muusta ajankohdasta.<br/>
                         Vuokrasopimus allekirjoitetaan auton noudon yhteydessä.
-                        Kesäaikana 1.6 - 31.8 lyhin vuokrausaika on yksi viikko mutta aina voi kysyä jos kalenterissa on vapaita aikoja. Kesäajan ulkopuolella minimi vuokrausaika on 2 päivää. 
+                        Kesäaikana 1.6 - 31.8 ja talvella 20.12 - 10.01 lyhin vuokrausaika on yksi viikko mutta aina voi kysyä jos kalenterissa on vapaita aikoja. Kesäajan ulkopuolella minimi vuokrausaika on 2 päivää. 
                         Vuokra-aika alkaa yleensä klo 17:00 ja päättyy klo 13:00.<br/>
                         Oman auton voi jättää säilytykseen vuokrauksen ajaksi vuokraamon pihaan. Alueella on kameravalvonta.</p>
                         <h5>5. VARAUSMAKSU / PANTTI</h5>
@@ -110,6 +110,7 @@ const Vuokrausehdot = () => {
                         -	jääkaapin, lavuaarin, lieden ja pöytien pyyhkimisen <br/>
                         -	lattian lakaisun <br/>
                         -	WC:n likasäiliön tyhjennyksen ja puhdistuksen <br/>
+                        <br />
                         Vuokra-aikaan kuluvien kilometrien ylittyessä, maksetaan ylimenevät kilometrit 0,35€ /km palautuksen yhteydessä.<br/>
                         Tankkauksesta on esitettävä kuitti autoa palauttaessa.<br/>
                         Vuokranantaja ei hyvitä käyttämättä jäänyttä kaasua vuokraajalle.<br/>

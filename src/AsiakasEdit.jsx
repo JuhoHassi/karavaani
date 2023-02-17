@@ -114,7 +114,7 @@ const AsiakasEdit = ({setMuokkaustila, muokattavaAsiakas ,reload, reloadNow, set
                 <div>
                     <label>Syntymäpäivä:</label>
                     <br></br>
-                    <input className='addPvm' type='datetime-local' placeholder='Syntymäpäivä' value={newBirthday} onChange={({ target }) => setNewBirthday(target.value)}/>
+                    <input className='editPvm' type='date' placeholder='Syntymäpäivä' value={newBirthday} onChange={({ target }) => setNewBirthday(target.value)}/>
                 </div>
 
                 <div>

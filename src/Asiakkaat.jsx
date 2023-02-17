@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import CustomerService from './services/Customer'
 import AsiakasAdd from './AsiakasAdd'
 import AsiakasEdit from './AsiakasEdit'
+import { format } from 'date-fns'
 
 import { BsPen, BsTrash } from "react-icons/bs"
 
@@ -38,7 +39,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                     setMessage(`Asiakas ${customer.firstName} ${customer.lastName} on nyt poistettu.`)
                     setIsPositive(true)
                     setShowMessage(true)
-                    //window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
+                    window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
 
                     setTimeout(() =>{
                         setShowMessage(false)
@@ -50,7 +51,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                 setMessage("Error")
                 setIsPositive(false)
                 setShowMessage(true)
-                //window.scrollBy(0, -10000)
+                window.scrollBy(0, -10000)
 
                 setTimeout(() =>{
                     setShowMessage(false)
@@ -62,7 +63,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
             setMessage('Asiakkaan poisto on keskeytetty!')
             setIsPositive(true)
             setShowMessage(true)
-            //window.scrollBy(0, -10000)
+            window.scrollBy(0, -10000)
 
             setTimeout(() =>{
                 setShowMessage(false)
@@ -117,7 +118,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                         <td>{c.companyName}</td>
                         <td>{c.firstName}</td>
                         <td>{c.lastName}</td>
-                        <td>{c.birthDay}</td>
+                        <td>{format(new Date(c.birthDay), 'dd.MM.yyyy')}</td>
                         <td>{c.address}</td>
                         <td>{c.postalcode}</td>
                         <td>{c.city}</td>

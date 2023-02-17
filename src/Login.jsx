@@ -64,7 +64,7 @@ const Login = ({setLoggedIn, setIsPositive, setShowMessage, setMessage}) => {
                 </div>
 
                 <div>
-                    <input type='password' placeholder='Salasana' value={password} onChange={({ target }) => setPassword(target.value)}/>
+                    <input className='passWord' type='password' placeholder='Salasana' value={password} onChange={({ target }) => setPassword(target.value)}/>
                 </div>
 
 

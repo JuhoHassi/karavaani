@@ -93,11 +93,11 @@ const AdminAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMess
                 </div>
 
                 <div>
-                    <input type='password' placeholder='Salasana' value={newPassword} onChange={({ target }) => setNewPassword(target.value)}/>
+                    <input className='addSalas' type='password' placeholder='Salasana' value={newPassword} onChange={({ target }) => setNewPassword(target.value)}/>
                 </div>
 
                 <div>
-                    <input type='password' placeholder='Salasanan tarkistus' onChange={({ target }) => tarkistus(target.value)} />
+                    <input className='addSalas' type='password' placeholder='Salasanan tarkistus' onChange={({ target }) => tarkistus(target.value)} />
                 </div>
                 <div>
                     <br></br>

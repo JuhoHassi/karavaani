@@ -2,6 +2,7 @@ import './App.css'
 import React, {useState, useEffect} from 'react'
 import BookingService from './services/Booking'
 import VarausAdd from './VarausAdd'
+import { format } from 'date-fns'
 
 import { BsPen, BsTrash } from "react-icons/bs"
 import VarausEdit from './VarausEdit'
@@ -39,7 +40,7 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                     setMessage(`Varaus aikaväliltä: ${booking.startDay} - ${booking.endDay} on nyt poistettu.`)
                     setIsPositive(true)
                     setShowMessage(true)
-                    //window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
+                    window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti
 
                     setTimeout(() =>{
                         setShowMessage(false)
@@ -51,7 +52,7 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                 setMessage("Error")
                 setIsPositive(false)
                 setShowMessage(true)
-                //window.scrollBy(0, -10000)
+                window.scrollBy(0, -10000)
 
                 setTimeout(() =>{
                     setShowMessage(false)
@@ -63,7 +64,7 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
             setMessage('Varauksen poisto on keskeytetty!')
             setIsPositive(true)
             setShowMessage(true)
-            //window.scrollBy(0, -10000)
+            window.scrollBy(0, -10000)
 
             setTimeout(() =>{
                 setShowMessage(false)
@@ -115,8 +116,8 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
                     <tr key={b.bookingId} className="trVaraukset">
                         <td>{b.bookingId}</td>
                         <td>{b.customerId}</td>
-                        <td>{b.startDay}</td>
-                        <td>{b.endDay}</td>
+                        <td>{format(new Date(b.startDay), 'dd.MM.yyyy HH:mm')}</td>
+                        <td>{format(new Date(b.endDay), 'dd.MM.yyyy HH:mm')}</td>
                         <td>{b.persons}</td>
                         <td>{String(b.gasGrill)}</td>
                         <td>{String(b.tableChairs)}</td>

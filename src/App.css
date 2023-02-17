@@ -60,6 +60,16 @@
   margin-left: 5px;
 }
 
+.passWord {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  border-width: 0;
+  margin-top: 2px;
+}
+
 
 /*----- ILMOITUS -----*/
 .neg {
@@ -827,13 +837,37 @@ input[type=email],
 
 /*----- VARAUS ADD -----*/
 .addPvm {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-width: 0;
+  border-radius: 4px;
+  margin-bottom: 1px;
+}
+.editPvm {
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-width: 0;
+  border-radius: 4px;
+  margin-bottom: 1px;
 }
 
 .varauslb {
   margin-right: 8px;
   margin-top: 5px;
+}
+
+.addVarausPvm {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-width: 0;
+  border-radius: 4px;
+  margin-bottom: 1px;
 }
 
 
@@ -856,6 +890,17 @@ input[type=email],
   border-width: 1px;
   border-style: solid;
   border-color: #918308;
+}
+
+.addSalas {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  border-color: none;
+  border-width: 0;
+  margin-bottom: 2px;
 }
 
 

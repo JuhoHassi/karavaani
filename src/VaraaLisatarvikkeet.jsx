@@ -157,66 +157,65 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
     }
     return (
         <div className='varaaLisatarvikkeetSivu'>
-            <h2 className='titleName'>Valitse lisätarvikkeet ja palvelut</h2>
+            <h2 className='titleName'>Valitse lisätarvikkeet ja/tai palvelut</h2>
             <form onSubmit={handleSubmit}>
                 <div className='varaaLisatarvikkeet'>
                     <div>
-                        <label className='varauslbVaraa'>Kaasugrilli: </label>
+                        <label className='varauslbVaraa'>Kaasugrilli (sisältää kaasupullon) - 45€ </label>
                         <Switch onClick={Grill} />
                         {newGasGrill ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Pöytä & tuolit: </label>
+                        <label className='varauslbVaraa'>Taittopöytä + tuolit(4kpl) - 35€ </label>
                         <Switch onClick={TableChairs} />
                         {newTableChairs ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Retkituolit: </label>
+                        <label className='varauslbVaraa'>Retkituolit - 6€ / kpl </label>
                         <Switch onClick={CampingChairs} />
                         {newCampChairs ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Sähköpotkulauta: </label>
+                        <label className='varauslbVaraa'>Sähköpotkulauta - 10€ / vrk </label>
                         <Switch onClick={EScooter} />
                         {newScooter ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Kaasupullon vaihto palaut. : </label>
+                        <label className='varauslbVaraa'>Kaasupullon vaihto palautaessa - 35€  </label>
                         <Switch onClick={GasReplacement} />
                         {newGasRep ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Pidenetty vkl: </label>
+                        <label className='varauslbVaraa'>Pidennetty viikonloppu - 100€ </label>
                         <Switch onClick={LongWeekend} />
                         {newLongW ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Toimitus: </label>
+                        <label className='varauslbVaraa'>Toimitus kotiovelle - 1,50€ / km </label>
                         <Switch onClick={HomeDelivery} />
                         {newDelivery ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Loppusiivous: </label>
+                        <label className='varauslbVaraa'>Loppusiivous - 75€ </label>
                         <Switch onClick={Cleaning} />
                         {newCleaning ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
 
                     <div>
-                        <label className='varauslbVaraa'>Wc ja vesisäiliöin tyhjennys: </label>
+                        <label className='varauslbVaraa'>Wc ja vesisäiliöin tyhjennys - 70€ </label>
                         <Switch onClick={WcAndWaterTank} />
                         {newWcWaterEmpt ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
                 </div>
-                <br />
                 <div>
-                    <input className='btn btn-warning' type="submit" value="Varaa" />
+                    <input className='btn btn-warning' style={{ paddingLeft: '180px', paddingRight: '180px' }} type="submit" value="Varaa" />
                 </div>
             </form>
         </div>

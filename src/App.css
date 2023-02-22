@@ -8,7 +8,6 @@
   background-image: url('./img/backpic.jpg');
   height: 100vh;
   background-position: center;
-  /* background-repeat:no-repeat; */
   background-size: cover;
   font-family: 'MyFont';
   src: local('MyFont'), url(./fonts/Poppins-Regular.ttf) format('ttf');
@@ -19,7 +18,6 @@
   font-weight: 700;
   color: rgb(235, 235, 161);
   margin-top: 10px;
-
 }
 
 .matka {
@@ -123,10 +121,47 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .tarjousTxt {
-  margin-top: 40px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+.tarjousTxt2{
   font-size: 18px;
+  font-weight: 600;
+  margin-top: 20%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.tarjousTxt3{
+  font-size: 18px;
+  text-align: center;
+}
+.tarjousTxt4{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 40%;
+}
+.tarjousYhtLink{
+  font-size: 16px;
+  border: 1px solid #222;
+  background-color: #91830834;
+  text-align: center;
+}
+.tarjousVaraaLink{
+  font-size: 16px;
+  border: 1px solid #222;
+  background-color: #9183086e;
+  text-align: center;
+  margin-top: 5px;
+}
+.tarjousContainer-slider{
+    max-width: 6s 00px;
+    height: 400px;
+    margin: 100px auto 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -284,13 +319,11 @@
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   .container-slider {
     margin: 100px 10px 0;
   }
-}
-
+} */
 .slide {
   width: 100%;
   height: 100%;
@@ -298,18 +331,14 @@
   opacity: 0;
   transition: opacity ease-in-out 0.4s;
 }
-
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
-  /* object-fit: cover; */
 }
-
 .active-anim {
   opacity: 1;
 }
-
 .btn-slide {
   width: 40px;
   height: 40px;
@@ -322,19 +351,16 @@
   align-items: center;
   cursor: pointer;
 }
-
 .prev {
   top: 50%;
   left: 20px;
   transform: translateY(-60%);
 }
-
 .next {
   top: 50%;
   right: 20px;
   transform: translateY(-60%);
 }
-
 .container-dots {
   position: absolute;
   bottom: 10px;
@@ -342,7 +368,6 @@
   transform: translateX(-50%);
   display: flex;
 }
-
 .dot {
   width: 15px;
   height: 15px;
@@ -352,12 +377,11 @@
   background: rgb(32, 32, 32);
   cursor: pointer;
 }
-
 .dot.active {
   background: #f1f1f1;
 }
-
 /* ----- */
+
 .ehdotLink {
   font-size: 16px;
   border: 1px solid #222;
@@ -365,7 +389,6 @@
   padding: 5px;
   text-align: center;
 }
-
 .galleriaLink {
   font-size: 16px;
   border: 1px solid #222;
@@ -374,27 +397,22 @@
   text-align: center;
   margin-top: 5px;
 }
-
 .avText {
   margin-left: 60px;
 }
-
 .vaTitle {
   font-size: 16px;
   font-weight: 600;
 }
-
 .leftText {
   margin-left: 20px;
 }
-
 .tiedotBtn {
   font-size: 16px;
   border: 1px solid #222;
   background-color: #91830834;
   padding: 0% 15%;
   text-align: center;
-
 }
 
 
@@ -409,12 +427,14 @@
 
 
 /*----- HINNASTO -----*/
+.hinnastoName{
+  font-size: 18px;
+  text-align: center;
+}
 .hinnastoTable {
   margin-top: 50px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-
 }
-
 .hinnastoPic {
   width: 100%;
   height: 100%;
@@ -422,7 +442,6 @@
   background-size: cover;
   background-position: center;
 }
-
 .hinnastoTxt {
   font-size: 14px;
   text-align: center;
@@ -443,75 +462,72 @@
 /*----- PALAUTE -----*/
 .feed {
   text-align: left;
+  width: 400px;
+  max-height: 120px;
   margin: 10px;
-  padding: 5px;
+  padding-left: 10px;
   border: 1px solid #918308;
-  border-radius: 5px;
-  background-color: #cbc9b3;
+  border-radius: 4px;
+  /* background-color: #cbc9b3; */
 }
-
 .feedName {
-  font-size: 14px;
-  text-decoration: underline;
+  font-size: 16px;
+  font-style: italic;
 }
-
 .feedRating {
-  background-color: rgb(224, 224, 161);
-  font-size: 12px;
+  background-color: rgb(250, 224, 75);
+  font-size: 14px;
   font-weight: 600;
   padding: 3px;
   width: min-content;
   border-radius: 40%;
 }
-
 .feedText {
   font-size: 14px;
 }
-
+.feedDay{
+  font-size: 12px;
+}
 .feedDelete {
   color: #363109;
-  background-color: #cbc9b3;
+  /* background-color: #cbc9b3; */
+  background-color: rgb(194, 208, 211);
   border: none;
-  margin-left: 500px;
+  margin-left: 80%;
+  margin-top: 5px;
   font-size: medium;
 }
-
 .divPalaute {
-  background: #222;
-  opacity: 0.8;
-  width: 70%;
-  margin-left: 30%;
-  padding: 30px;
-  margin-top: 10px;
-  border-radius: 5px;
+  /* background: #222;
+  opacity: 0.7; */
+  width: 80%;
+  margin-left: 0%;
+  padding: 40px;
+  border-radius: 4px;
 }
-
 .pText {
-  font-size: 18px;
-  color: whitesmoke;
+  font-size: 20px;
+  color: black;
   margin-bottom: 20px;
 }
-
 .divPalaute input {
   margin-bottom: 5px;
   width: 100%;
 }
-
 .divPalaute textarea {
   width: 100%;
 }
-
 .emptyBtn:hover {
   background-color: #eebe80;
   color: black;
 }
 
+
 /*----- VARAA -----*/
 .varaaSivu {
   background-color: rgb(194, 208, 211);
   background-attachment: fixed;
-  height: 90%;
-  max-width: 90%;
+  height: 100%;
   margin: auto;
   text-align: center;
 }
@@ -542,104 +558,51 @@ input[type=email],
   width: auto;
   height: auto;
   float: left;
-  padding: 20px;
+  padding-top: 50px;
   margin-right: 5%;
   margin-left: 10%;
+}
+.varaaPaivaHlo input{
+  margin-bottom: -20px;
 }
 
 .varaaPaivatTiedot {
   width: auto;
   height: auto;
   float: left;
-  padding: 20px;
+  padding-top: 50px;
   margin-left: 5%;
 }
 
-@media screen and (max-width: 1700px) {
-  .varaaPaivat,
-  .varaaPaivaHlo,
-  .varaaPaivatTiedot {
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: rgb(194, 208, 211);
-    margin-top: 0;
-  }
-}
-
-
-@media screen and (max-width:1470px) {
-  .varaaPaivat,
-  .varaaPaivaHlo,
-  .varaaPaivatTiedot {
-    margin-right: 0%;
-    margin-left: 0%;
-    background-color: rgb(194, 208, 211);
-    margin-top: 0;
-    width: 30%;
-  }
-}
-
-@media screen and (max-width:950px) {
-  .varaaSivu {
-    background-color: rgb(194, 208, 211);
-    background-attachment: fixed;
-    height: 90%;
-    max-width: 90%;
-    margin: auto;
-    text-align: center;
-  }
-
-  .varaaPaivat {
-    padding: auto;
-    padding-top: 15px;
-    margin: auto;
-    width: 100%;
-    margin-top: 0;
-    background-color: rgb(194, 208, 211);
-  }
-  .varaaPaivaHlo,
-  .varaaPaivatTiedot {
-    float: left;
-    background-color: rgb(194, 208, 211);
-    width: 50%;
-    height: 600px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .varaaPaivat,
-  .varaaPaivaHlo,
-  .varaaPaivatTiedot {
-    padding: auto;
-    height: auto;
-    width: 100%;
-    margin-top: 0;
-    background-color: rgb(194, 208, 211);
-  }
+.varaaPaivatTiedot input{
+  margin-bottom: -20px;
 }
 
 .varaaLisatarvikkeetSivu {
   background-color: rgb(194, 208, 211);
   background-attachment: fixed;
-  height: 90%;
-  max-width: 90%;
+  height: 100%;
   text-align: center;
   margin: auto;
 }
 
-
 .varaaLisatarvikkeet {
+  margin-top: 20px;
+  margin-bottom: 20px;
   max-width: 500px;
   display: inline-block;
   text-align: left;
-
 }
 
 .varauslbVaraa {
   margin-top: 5px;
   margin-bottom: 5px;
-  width: 200px;
+  width: 300px;
   font-size: 17px;
+}
+
+.varauslb {
+  margin-bottom: 5px;
 }
 
 
@@ -669,11 +632,10 @@ input[type=email],
   padding: 50px;
   margin-left: 50px;
   margin-right: 50px;
-  /* border-radius: 5px;
+  border-radius: 4px;
   border: #918308;
-  border-style: solid; */
-  background-image: url('https://pikwizard.com/photos/a0efe701a6330906ea95cf8d7f85db7b-s.jpg');
-  background-size: cover;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .yhtForm h4 {
@@ -705,8 +667,10 @@ input[type=email],
 .addBtn {
   background-color: #918308;
   color: whitesmoke;
-  font-size: 12px;
+  padding: 2px 5px;
+  font-size: 14px;
   border-radius: 5px;
+  border-width: 1px;
   margin-left: 10px;
 }
 
@@ -715,6 +679,7 @@ input[type=email],
   color: whitesmoke;
   font-size: 12px;
   border-radius: 5px;
+  border-width: 1px;
 }
 
 .addAsVar h4 {
@@ -742,6 +707,8 @@ input[type=email],
   color: whitesmoke;
   font-size: 14px;
   border-radius: 5px;
+  border-width: 1px;
+  margin-left: 5px;
 }
 
 .asVarShow {
@@ -903,243 +870,224 @@ input[type=email],
   margin-bottom: 2px;
 }
 
-
-/*----- LISÄVARUSTEET -----*/
-.lisavarusteSivu {
-  background-color: rgb(194, 208, 211);
-  height: 90%;
-  max-width: 85%;
-  margin: auto;
-  text-align: center;
-  font-size: 20px;
+/***** RESPONSIIVISUS *****/
+@media screen and (max-width: 1700px) {
+  .varaaPaivat,
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    margin-right: 5%;
+    margin-left: 5%;
+    background-color: rgb(194, 208, 211);
+    margin-top: 0;
+  }
 }
 
-.lisavarusteLista {
-  max-width: 20%;
-  margin: auto;
+
+@media screen and (max-width:1470px) {
+  .varaaPaivat,
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    margin-right: 0%;
+    margin-left: 0%;
+    background-color: rgb(194, 208, 211);
+    margin-top: 0;
+    width: 30%;
+  }
+  /*Tarjoukset*/
+  .tarjousTxt2{
+    margin-top: 40px;
+  }
+  .tarjousTxt4{
+    margin-bottom: 10%;
+  }
+  .tarjousContainer-slider{
+    margin-top: 0px;
+  }
+
+  /*Vuokrattavat autot*/
+  .container-slider{
+    margin-top: 40px;
+  }
 }
 
-.lisavarusteKuva {
-  width: 200px;
-  height: 150px;
-  border-radius: 10px;
+
+@media screen and (max-width:950px) {
+  .varaaSivu {
+    background-color: rgb(194, 208, 211);
+    background-attachment: fixed;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .varaaPaivat {
+    padding: auto;
+    padding-top: 15px;
+    margin: auto;
+    width: 100%;
+    margin-top: 0;
+    background-color: rgb(194, 208, 211);
+  }
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    float: left;
+    background-color: rgb(194, 208, 211);
+    width: 50%;
+    height: 600px;
+  }
+  .matka{
+    font-size: 18px;
+    margin-top: 17px;
+    padding-left: 5px;
+  }
+  .me-auto{
+    margin-left: -20px;
+  }
+  /*Vuokrattavat autot*/
+  .container-slider{
+    margin-top: 20px;
+  }
+  /*Tarjoukset*/
+  .tarjousTxt {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .tarjousTxt2{
+    font-size: 18px;
+    margin-top: 500px;
+    margin-bottom: 10px;
+  }
+  .tarjousTxt3{
+    font-size: 18px;
+  }
+  .tarjousTxt4{
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+  .tarjousContainer-slider{
+    margin-top: -650px;
+  }
+  /*Login*/
+  .loginWindow {
+    margin-left: 65%;
+    margin-top: 10px;
+  }
+  .loginWindow h4 {
+    font-size: 20px;
+  }
 }
 
-.lisavarusteTotal {
-  font-size: 30px;
-}
 
-/*----- KALENTERISIVU -----*/
-.kalenteriSivu {
-  background-color: rgb(194, 208, 211);
-  height: auto;
-  max-width: 85%;
-  margin: auto;
-  text-align: center;
-  font-size: 20px;
-}
+@media screen and (max-width: 600px) {
+  .varaaPaivat,
+  .varaaPaivaHlo,
+  .varaaPaivatTiedot {
+    padding: auto;
+    height: auto;
+    width: 100%;
+    margin-top: 0;
+    background-color: rgb(194, 208, 211);
+  }
+  .varauslbVaraa {
+    font-size: 16px;
+  }
 
-/*----- KALENTERI -----*/
-.react-calendar {
-  /* width: 350px;
-  max-width: 100%;
-  background: white;
-  border: 1px solid #a0a096;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.125em; */
-  width: 400px;
-  max-width: 100%;
-  background-color: #fff;
-  color: #222;
-  border-radius: 8px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: 'MyFont';
+  .me-auto{
+    margin-left: 0px;
+  }
+  .matka{
+    font-size: 18px;
+    margin-top: 0;
+    padding-left: 0;
+  }
+  .titleName{
+    font-size: 18px;
+  }
 
-  line-height: 1.125em;
-}
+  /*Tarjoukset*/
+  .tarjousTxt {
+    font-size: 18px;
+  }
+  .tarjousTxt2{
+    font-size: 16px;
+    margin-top: 500px;
+    margin-bottom: 10px;
+  }
+  .tarjousTxt3{
+    font-size: 16px;
+  }
+  .tarjousTxt4{
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .tarjousContainer-slider{
+    margin-top: -650px;
+  }
 
-.react-calendar--doubleView {
-  width: 700px;
-}
+  /*Vuokrattavat autot*/
+  .divInfo-item {
+    width: 400px;
+  }
+  .avText {
+    margin-left: 0px;
+  }
+  .vaTitle {
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-.react-calendar--doubleView .react-calendar__viewContainer {
-  display: flex;
-  margin: -0.5em;
-}
+  /*Hinnasto*/
+  .hinnastoName{
+    text-align: center;
+    font-size: 14px;
+  }
+  .hinnastoTable {
+    margin-top: 20px;
+  }
+  /*Palaute*/
+  .pText {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .divPalaute {
+    /* background: #222;
+    opacity: 0.7; */
+    width: 90%;
+    margin-left: 0%;
+    padding: 40px;
+    border-radius: 4px;
+  }
+  .divPalaute input {
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .divPalaute textarea{
+    font-size: 14px;
+  }
+  .feedName {
+    font-size: 14px;
+  }
+  .feedRating {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px;
+    width: min-content;
+    border-radius: 40%;
+  }
+  /*Login*/
+  .loginWindow {
+    margin-left: 55%;
+    margin-top: 10px;
+  }
+  .loginWindow h4 {
+    font-size: 18px;
+  }
 
-.react-calendar--doubleView .react-calendar__viewContainer>* {
-  width: 50%;
-  margin: 0.5em;
-}
 
-.react-calendar,
-.react-calendar *,
-.react-calendar *:before,
-.react-calendar *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.react-calendar button {
-  margin: 0;
-  border: 0;
-  outline: none;
-}
-
-.react-calendar button:enabled:hover {
-  cursor: pointer;
-}
-
-.react-calendar__navigation {
-  display: flex;
-  height: 44px;
-  margin-bottom: 1em;
-}
-
-.react-calendar__navigation button {
-  /* min-width: 44px;
-  background: none; */
-  color: #6f48eb;
-  min-width: 44px;
-  background: none;
-  font-size: 20px;
-  text-transform: uppercase;
-  margin-top: 8px;
-}
-
-.react-calendar__navigation button:disabled {
-  background-color: #f0f0f0;
-}
-
-.react-calendar__navigation button:enabled:hover,
-.react-calendar__navigation button:enabled:focus {
-  /* background-color: #e6e6e6; */
-  background-color: #f8f8fa;
-}
-
-.react-calendar__month-view__weekdays {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.75em;
-}
-
-.react-calendar__month-view__weekdays__weekday {
-  padding: 0.5em;
-}
-
-.react-calendar__month-view__weekNumbers .react-calendar__tile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75em;
-  font-weight: bold;
-}
-
-.react-calendar__month-view__days__day--weekend {
-  color: #d10000;
-}
-
-.react-calendar__month-view__days__day--neighboringMonth {
-  color: #757575;
-}
-
-.react-calendar__year-view .react-calendar__tile,
-.react-calendar__decade-view .react-calendar__tile,
-.react-calendar__century-view .react-calendar__tile {
-  padding: 2em 0.5em;
-}
-
-.react-calendar__tile {
-  max-width: 100%;
-  padding: 10px 6.6667px;
-  background: none;
-  text-align: center;
-  line-height: 16px;
-}
-
-.react-calendar__tile:disabled {
-  background-color: #f0f0f0;
-}
-
-.react-calendar__tile:enabled:hover,
-.react-calendar__tile:enabled:focus {
-  /* background-color: #e6e6e6; */
-  background: #f8f8fa;
-  color: #6f48eb;
-  border-radius: 6px;
-}
-
-.react-calendar__tile--now {
-  /* background: #ffff76; */
-  background: #6f48eb33;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #6f48eb;
-}
-
-.react-calendar__tile--range {
-  background: #f8f8fa;
-  color: #6f48eb;
-  border-radius: 0;
-}
-
-.react-calendar__tile--rangeStart {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  background: #6f48eb;
-  color: white;
-}
-
-.react-calendar__tile--rangeEnd {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  background: #6f48eb;
-  color: white;
-}
-
-.react-calendar__tile--now:enabled:hover,
-.react-calendar__tile--now:enabled:focus {
-  /* background: #ffffa9; */
-  background: #6f48eb33;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #6f48eb;
-}
-
-.react-calendar__tile--hasActive {
-  background: #76baff;
-}
-
-.react-calendar__tile--hasActive:enabled:hover,
-.react-calendar__tile--hasActive:enabled:focus {
-  /* background: #a9d4ff; */
-  background: #f8f8fa;
-}
-
-.react-calendar__tile--active {
-  /* background: #006edc;
-  color: white; */
-  background: #6f48eb;
-  border-radius: 6px;
-  font-weight: bold;
-  color: white;
-}
-
-.react-calendar__tile--active:enabled:hover,
-.react-calendar__tile--active:enabled:focus {
-  /* background: #1087ff; */
-  background: #6f48eb;
-  color: white;
-}
-
-.react-calendar--selectRange .react-calendar__tile--hover {
-  /* background-color: #e6e6e6; */
-  background-color: #f8f8fa;
+  .divInfo-item h5 {
+    font-size: 14px;
+  }
+  .divInfo-item p{
+    font-size: 14px;
+  }
 }

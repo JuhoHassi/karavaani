@@ -57,14 +57,12 @@ function App() {
             <Nav className='me-auto'><h2 className='tsr'>TSR </h2><h2 className='matka'> Matkailuauto</h2></Nav>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto"  style={{ fontSize: 20 }}>
+              <Nav className="me-auto" style={{ fontSize: 20, marginLeft:'20%' }}>
                 <Nav.Link href="/Etusivu">Etusivu</Nav.Link>
                 <Nav.Link href="/Tarjoukset">Tarjoukset</Nav.Link>
                 <NavDropdown title="Vuokraus" id="collasible-nav-dropdown">
                   <NavDropdown.Item href="/VuokrattavatAutot">Vuokrattavat autot</NavDropdown.Item>
-                  {/* <NavDropdown.Item href="/Varaa">Varaa</NavDropdown.Item> */}
                   <NavDropdown.Item href="/VaraaPaivat">Varaa</NavDropdown.Item>
-                  {/* <NavDropdown.Item href="/Varaa3">Varaa3</NavDropdown.Item> */}
 
                   <NavDropdown.Item href="/Hinnasto">Hinnasto</NavDropdown.Item>
                   <NavDropdown.Item href="/Lisäpalvelut">Lisäpalvelut</NavDropdown.Item>
@@ -95,7 +93,6 @@ function App() {
           <Route path="/Etusivu"><Etusivu /></Route>
           <Route path="/Tarjoukset"><Tarjoukset /></Route>
           <Route path="/VuokrattavatAutot"><VuokrattavatAutot /></Route>
-          {/* <Route path="/Varaa"><Varaa setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route> */}
           <Route path="/VaraaPaivat"><VaraaPaivat setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
           <Route path="/VaraaLisatarvikkeet"><VaraaLisatarvikkeet setIsPositive={setIsPositive} setMessage={setMessage} setShowMessage={setShowMessage}/></Route>
 

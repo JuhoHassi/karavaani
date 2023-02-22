@@ -1,6 +1,7 @@
 import './App.css'
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import BackToTopBtn from './BackToTopBtn'
 
 const Yhteystiedot = ({setIsPositive, setShowMessage, setMessage}) => {
     const form = useRef()
@@ -73,6 +74,7 @@ const Yhteystiedot = ({setIsPositive, setShowMessage, setMessage}) => {
                     </form>
                 </div>
             </div>
+            <BackToTopBtn/>
         </div>
         
     )

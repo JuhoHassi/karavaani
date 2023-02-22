@@ -17,7 +17,7 @@ const Hinnasto = () => {
                 <div className='divInfo'>
                     <div className='divInfo-item'>
                         <br />
-                        <h5 className='titleName'>Hobby Optima T65 HKM ONTOUR, 2021</h5>
+                        <h3 className='hinnastoName'>Hobby Optima T65 HKM ONTOUR, 2021</h3>
                         <Table striped bordered hover className='hinnastoTable'>
                             <thead>
                                 <tr style={{ textAlign: 'center', backgroundColor: '#9183086e' }}>
@@ -33,10 +33,10 @@ const Hinnasto = () => {
                             </thead>
                             <tbody>
                                 <tr style={{ textAlign: 'center', backgroundColor: '#ae9e0b3a' }}>
-                                    <td>850€/vko</td>
-                                    <td>1290€/vko</td>
-                                    <td>790€/vko</td>
-                                    <td>690€/vko</td>
+                                    <td>850€ / vko</td>
+                                    <td>1290€ / vko</td>
+                                    <td>790€ / vko</td>
+                                    <td>690€ / vko</td>
                                 </tr>
                                 <tr style={{ textAlign: 'center' }}>
                                     <td>PE-MA / 490€</td>

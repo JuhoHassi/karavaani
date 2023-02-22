@@ -12,8 +12,6 @@ const Lisäpalvelut = () => {
                     <div className='container-slider'>
                         <div className='palvelutPic'></div>
                     </div>
-                    
-
                 </div>
 
                 <div className='divInfo-item'>
@@ -36,11 +34,8 @@ const Lisäpalvelut = () => {
                         <h5><BsDot/> Toimitus kotiovelle - 1,50€ / km (kuitenkin vähintään 50 €)</h5>
                         <br />
                         <h4 style={{fontSize: '14px'}}>Kaikki hinnat sisältävät arvonlisäveron 24%</h4>
-
-
                     </div>
                 </div>
-
             </div>
         </div>
         </>

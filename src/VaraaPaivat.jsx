@@ -216,19 +216,19 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
 
                 <div className='varaaPaivaHlo'>
                     <div>
-                        <input type='text' placeholder='Etunimi' value={newFirstName} onChange={({ target }) => setNewFirstName(target.value)} required/>
+                        <input type='text' placeholder='Etunimi' value={newFirstName} onChange={({ target }) => setNewFirstName(target.value)} required />
                     </div>
                     <br />
                     <div>
-                        <input type='text' placeholder='Sukunimi' value={newLastName} onChange={({ target }) => setNewLastName(target.value)} required/>
+                        <input type='text' placeholder='Sukunimi' value={newLastName} onChange={({ target }) => setNewLastName(target.value)} required />
                     </div>
                     <br />
                     <div>
-                        <input type='email' placeholder='Sähköposti' value={newEmail} onChange={({ target }) => setNewEmail(target.value)} required/>
+                        <input type='email' placeholder='Sähköposti' value={newEmail} onChange={({ target }) => setNewEmail(target.value)} required />
                     </div>
                     <br />
                     <div>
-                        <input type='number' placeholder='Henkilömäärä' value={newHeadCount} onChange={({ target }) => setNewHeadCount(target.value)} required/>
+                        <input type='number' placeholder='Henkilömäärä' value={newHeadCount} onChange={({ target }) => setNewHeadCount(target.value)} required />
                     </div>
                     <br />
 
@@ -238,7 +238,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                     <br />
                     <label>Syntymäpäivä</label>
                     <div>
-                        <input type='datetime-local' placeholder='ikä' value={newBirthday} onChange={({ target }) => setNewBirthday(target.value)} required/>
+                        <input type='date' className='addPvm' placeholder='ikä' value={newBirthday} onChange={({ target }) => setNewBirthday(target.value)} required />
                     </div>
                 </div>
 
@@ -279,7 +279,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                         <Switch2 onClick={Terms} />
                         {newTerms ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                         <Router>
-                            <NavLink href="/Vuokrausehdot" className='btn btn-warning' target='_blank'>Lue vuokrausehdot</NavLink>
+                            <NavLink href="/Vuokrausehdot" className='btn btn-outline-warning' style={{ color: 'black', marginTop: '20px' }} target='_blank'>Lue vuokrausehdot</NavLink>
                             <Switch>
                                 <Route path="/Vuokrausehdot" exact>
                                     <Vuokrausehdot />
@@ -287,15 +287,12 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                             </Switch>
                         </Router>
                     </div>
-                    <br />
 
                     <div>
-                        <input className='btn btn-warning' type="submit" value="Jatka" />
+                        <input className='btn btn-warning' style={{ paddingLeft: '150px', paddingRight: '150px', marginBottom: '20px', marginTop: '5px' }} type="submit" value="Jatka varausta" />
                     </div>
 
                 </div>
-                <br />
-
             </form>
         </div>
     )

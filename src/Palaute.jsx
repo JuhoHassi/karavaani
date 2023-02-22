@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import FeedbackService from './services/Feedback'
 import { BsTrash } from "react-icons/bs"
 import BackToTopBtn from './BackToTopBtn'
+import { format } from 'date-fns'
 
 const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
     const [feedback, setFeedback] = useState([])
@@ -124,11 +125,11 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
                 <div className='divInfo-item'>
                     {feedback && feedback.map(f =>
                         <div key={f.feedbackId} className='feed'>
-                            <h3 className='feedName'>{f.customerName}</h3>
+                            <h3 className='feedName'>{f.customerName} <button className='feedDelete' onClick={() => deleteFeedback(f)}><BsTrash /></button></h3>
                             <h3 className='feedRating'>{f.rating}</h3>
                             <h3 className='feedText'>{f.feedbackText}</h3>
-                            <h3 className='feedText'>{f.feedbackDay}</h3>
-                            <button className='feedDelete' onClick={() => deleteFeedback(f)}><BsTrash /></button>
+                            <h3 className='feedDay'>{format(new Date(f.feedbackDay), 'dd.MM.yyyy')}</h3>
+                            
                         </div>
                         )}
                 </div>
@@ -149,10 +150,10 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
                             <textarea placeholder='Kirjoittaa tänne kommentti ...' type='text' value={newText} onChange={({ target }) => setNewText(target.value)} required ></textarea>                          
                         </div>
                         <div>
-                            <input type="datetime-local" value={newDay} onChange={({ target }) => setNewDay(target.value)}/>
+                            <input type="date" className='addPvm' value={newDay} onChange={({ target }) => setNewDay(target.value)}/>
                         </div>
                         <div>
-                            <input className='btn btn-outline-warning' type='button' value='Tyhjentää' onClick={emptyFields}/>
+                            <input className='btn btn-outline-dark' type='button' value='Tyhjentää' onClick={emptyFields}/>
                             <input className='btn btn-warning' type="submit" value="Lähetä"/>                            
                         </div>
                     </form>

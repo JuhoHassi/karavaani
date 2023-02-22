@@ -84,6 +84,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
         setNewBirthday('')
         setNewTerms(false)
     }
+
     const onChange = (dates) => {
         const [start, end, starttime, endtime] = dates;
         setNewStart(start);
@@ -140,13 +141,13 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
             CustomerService.create(newCustomer)
                 .then(response => {
                     if (response.status === 200) {
-                        setMessage("Lisätty uusi asiakas: " + newCustomer.firstName)
+                        setMessage("Jatketaan varausta, " + newCustomer.firstName)
                         setIsPositive(true)     //näyttää vihreän ilmoitustekstin
                         setShowMessage(true)    //näyttää ilmoituksen
 
                         setTimeout(() => {
                             setShowMessage(false)
-                        }, 5000)    //näyttää ilmoituksen 5sek.
+                        }, 8000)    //näyttää ilmoituksen 5sek.
 
                         window.location.replace("/VaraaLisatarvikkeet") //Siirrytään seuraavalle sivulle
                     }

@@ -537,10 +537,10 @@
 }
 
 input[type=email],
-[type=text],
-[type=number],
-[type=phone],
-[type=datetime-local] {
+  [type=text],
+  [type=number],
+  [type=phone],
+  [type=datetime-local] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;

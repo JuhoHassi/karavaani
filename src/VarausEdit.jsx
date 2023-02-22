@@ -2,6 +2,7 @@ import './App.css'
 import React, { useState } from 'react'
 import BookingService from './services/Booking'
 import { Switch } from 'antd'
+import { format } from 'date-fns'
 
 const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIsPositive, setShowMessage, setMessage}) => {
     
@@ -141,7 +142,7 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
         BookingService.update(newBooking)
         .then(response => {
             if(response.status === 200){
-                setMessage("Muokattu varausta: " + newBooking.startDay + ' - ' +newBooking.endDay)
+                setMessage("Muokattu varausta: " + format(new Date(newBooking.startDay), 'dd.MM.yyyy') + ' - ' + format(new Date(newBooking.endDay), 'dd.MM.yyyy'))
                 setIsPositive(true)     //näyttää vihreän ilmoitustekstin
                 setShowMessage(true)    //näyttää ilmoituksen
 

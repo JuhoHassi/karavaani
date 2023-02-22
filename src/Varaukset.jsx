@@ -32,12 +32,12 @@ const Varaukset = ({setIsPositive, setShowMessage, setMessage}) => {
 
     // Varauksen poisto
     const deleteVaraus = (booking) => {
-        let vastaus = window.confirm(`Poistetaanko varaus aikaväliltä: ${booking.startDay} - ${booking.endDay}?`)
+        let vastaus = window.confirm(`Poistetaanko varaus aikaväliltä: ${format(new Date(booking.startDay), 'dd.MM.yyyy')} - ${format(new Date(booking.endDay), 'dd.MM.yyyy')}?`)
         if(vastaus === true){
             BookingService.remove(booking.bookingId)
             .then(res => {
                 if(res.status === 200){
-                    setMessage(`Varaus aikaväliltä: ${booking.startDay} - ${booking.endDay} on nyt poistettu.`)
+                    setMessage(`Varaus aikaväliltä: ${format(new Date(booking.startDay), 'dd.MM.yyyy')} - ${format(new Date(booking.endDay), 'dd.MM.yyyy')} on nyt poistettu.`)
                     setIsPositive(true)
                     setShowMessage(true)
                     window.scrollBy(0, -10000) //Scrollataan ylös jotta nähdään alert viesti

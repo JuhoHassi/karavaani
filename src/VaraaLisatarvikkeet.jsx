@@ -132,7 +132,7 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
         BookingService.create(newBook) // Lisätään uusi varaus
             .then(response => {
                 if (response.status === 200) {
-                    setMessage("Kiitos! Varaus on lisätty.")
+                    setMessage("Kiitos! Varaus onnistui.")
                     setIsPositive(true)
                     setShowMessage(true)
                     window.scrollBy(0, -10000)
@@ -141,7 +141,7 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
                         setShowMessage(false)
                         emptyFields()
                         window.location.replace("/Etusivu")
-                    }, 5000)
+                    }, 8000)
                 }
             })
             .catch(error => {

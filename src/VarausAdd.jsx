@@ -2,6 +2,7 @@ import './App.css'
 import React, { useState } from 'react'
 import BookingService from './services/Booking'
 import { Switch } from 'antd'
+import { format } from 'date-fns'
 
 const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMessage, setMessage}) => {
     const [newCustomerId, setNewCustomerId] = useState('')
@@ -104,7 +105,7 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
         BookingService.create(newBook)
         .then(response => {
             if(response.status === 200){
-                setMessage("Lisätty uusi varaus ajalle: " + newBook.startDay +' - '+ newBook.endDay)
+                setMessage("Lisätty uusi varaus ajalle: " + format(new Date(newBook.startDay), 'dd.MM.yyyy') +' - '+ format(new Date(newBook.endDay), 'dd.MM.yyyy'))
                 setIsPositive(true)     //näyttää vihreän ilmoitustekstin
                 setShowMessage(true)    //näyttää ilmoituksen
 

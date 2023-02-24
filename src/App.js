@@ -54,10 +54,10 @@ function App() {
       <Router>
         <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
           <Container>
-            <Nav className='me-auto'><h2 className='tsr'>TSR </h2><h2 className='matka'> Matkailuauto</h2></Nav>
+            <Nav><h2 className='tsr'>TSR </h2><h2 className='matka'> Matkailuauto</h2></Nav>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto" style={{ fontSize: 20, marginLeft:'20%' }}>
+              <Nav className="me-auto" >
                 <Nav.Link href="/Etusivu">Etusivu</Nav.Link>
                 <Nav.Link href="/Tarjoukset">Tarjoukset</Nav.Link>
                 <NavDropdown title="Vuokraus" id="collasible-nav-dropdown">
@@ -73,7 +73,7 @@ function App() {
                 <NavLink href="/Palaute" >Palaute</NavLink>
                 <NavLink href="/Yhteystiedot">Yhteystiedot</NavLink>
               </Nav>
-              <Nav  style={{ fontSize: 20 }}>
+              <Nav>
                 {loggedIn && <NavDropdown className='appTiedot' title="Tiedot">
                   <NavDropdown.Item href="/AsiakkaanVaraukset">Asiakkaiden varaukset</NavDropdown.Item>
                   <NavDropdown.Item href="/Asiakkaat">Asiakkaat</NavDropdown.Item>

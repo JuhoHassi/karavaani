@@ -1,11 +1,12 @@
 import './App.css'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import CustomerBookingService from './services/CustomerBooking'
 import BookingService from './services/Booking'
 import CustomerService from './services/Customer'
-import "react-datepicker/dist/react-datepicker.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-datepicker/dist/react-datepicker.css"
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { Switch } from 'antd'
+import emailjs from '@emailjs/browser'
 
 // Kalenterikomponentin dokumentaatio https://reactdatepicker.com/
 
@@ -110,8 +111,23 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
         setNewWcWaterEmpt(false)
     }
 
+    const form = useRef()
+
     const handleSubmit = (event) => {
         event.preventDefault()
+
+        emailjs.sendForm('service_vjj6wdw', 'template_4bgjk34', form.current, '41BBDlyHTwF5LnCXc')
+            .then((result) => {
+                console.log(result.text)
+                console.log("Viestin lähetys onnistui")
+
+            }, (error) => {
+                console.log(error.text)
+                console.log('Ei onnistunut')
+            })
+
+        event.target.reset()
+
         var newBook = { 
             customerId: viimenen,
             gasGrill: newGasGrill,
@@ -129,6 +145,7 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
             persons: newHeadCount
         }
         console.log(newBook)
+
         BookingService.create(newBook) // Lisätään uusi varaus
             .then(response => {
                 if (response.status === 200) {
@@ -157,8 +174,8 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
     }
     return (
         <div className='varaaLisatarvikkeetSivu'>
-            <h2 className='titleName'>Valitse lisätarvikkeet ja/tai palvelut</h2>
-            <form onSubmit={handleSubmit}>
+            <h2 className='titleName'>Valitse halutessa lisätarvikkeet ja palvelut</h2>
+            <form ref={form} onSubmit={handleSubmit}>
                 <div className='varaaLisatarvikkeet'>
                     <div>
                         <label className='varauslbVaraa'>Kaasugrilli (sisältää kaasupullon) - 45€ </label>
@@ -213,9 +230,13 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
                         <Switch onClick={WcAndWaterTank} />
                         {newWcWaterEmpt ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                     </div>
+                    <div className='varaaEmail'>
+                        <label>Sähköposti varausmaksua varten:</label>
+                        <input  type='email' name='user_email' required />
+                    </div>
+                    <div>
+                    <input className='btn btn-warning' style={{ paddingLeft: '170px', paddingRight: '170px' }} type="submit" value="Varaa" />
                 </div>
-                <div>
-                    <input className='btn btn-warning' style={{ paddingLeft: '180px', paddingRight: '180px' }} type="submit" value="Varaa" />
                 </div>
             </form>
         </div>

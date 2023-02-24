@@ -7,7 +7,7 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import moment from 'moment'
-import { Switch as Switch2} from 'antd'
+import { Switch as Switch2 } from 'antd'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import NavLink from 'react-bootstrap/esm/NavLink'
 import Vuokrausehdot from './Vuokrausehdot'
@@ -119,9 +119,10 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
             localStorage.setItem("startday", startDay) // Tallenetaan päivät ja henkilömäärä localstorageen
             localStorage.setItem("endday", endDay)
             localStorage.setItem("persons", maara)
-            console.log(startDay + "      "+endDay)
+            console.log(startDay + "      " + endDay)
 
             event.preventDefault()
+
             var newCustomer = { //Luodaa uusi asiakas
                 companyName: newCompanyName,
                 firstName: newFirstName,
@@ -147,23 +148,24 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
 
                         setTimeout(() => {
                             setShowMessage(false)
-                        }, 8000)    //näyttää ilmoituksen 5sek.
+                        }, 10000)    //näyttää ilmoituksen 5sek.
 
                         window.location.replace("/VaraaLisatarvikkeet") //Siirrytään seuraavalle sivulle
                     }
                 })
                 .catch(error => {
-                    setMessage("Error, tarkista ehdot ja syntymäpäivä?")
+                    setMessage("Error, tarkista kaikki kentät.")
                     setIsPositive(false)
                     setShowMessage(true)
 
                     setTimeout(() => {
                         setShowMessage(false)
-                    }, 8000)
+                    }, 10000)
                 })
             emptyFields()
         }
     }
+
     return (
         <div className='varaaSivu'>
             <h2 className='titleName'>VARAA</h2>
@@ -228,6 +230,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                         <input type='email' placeholder='Sähköposti' value={newEmail} onChange={({ target }) => setNewEmail(target.value)} required />
                     </div>
                     <br />
+
                     <div>
                         <input type='number' placeholder='Henkilömäärä' value={newHeadCount} onChange={({ target }) => setNewHeadCount(target.value)} required />
                     </div>
@@ -292,7 +295,6 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                     <div>
                         <input className='btn btn-warning' style={{ paddingLeft: '150px', paddingRight: '150px', marginBottom: '20px', marginTop: '5px' }} type="submit" value="Jatka varausta" />
                     </div>
-
                 </div>
             </form>
         </div>

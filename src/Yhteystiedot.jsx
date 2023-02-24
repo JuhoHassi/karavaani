@@ -11,7 +11,7 @@ const Yhteystiedot = ({setIsPositive, setShowMessage, setMessage}) => {
         emailjs.sendForm('service_vjj6wdw', 'template_xiskw9n', form.current, '41BBDlyHTwF5LnCXc')
         .then((result) => {
             console.log(result.text)
-            console.log("Ok")          
+            console.log("Viestin lähetys onnistui")          
             setMessage("Viesti on lähetetty!")
             setIsPositive(true)
             setShowMessage(true)

@@ -149,7 +149,7 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
         BookingService.create(newBook) // Lisätään uusi varaus
             .then(response => {
                 if (response.status === 200) {
-                    setMessage("Kiitos! Varaus onnistui.")
+                    setMessage("Kiitos varauksestasi! Varausmaksu lähetetty.")
                     setIsPositive(true)
                     setShowMessage(true)
                     window.scrollBy(0, -10000)

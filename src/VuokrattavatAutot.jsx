@@ -60,18 +60,20 @@ const VuokrattavatAutot = () => {
                         <h5><BsDot /> Ulosvedettävä kaasupulloteline, 2 x 11 kg pulloille</h5>
                         <h5><BsDot /> Truma Combi E6- ilmakeskuslämmitys (kaasu/ sähkö)</h5>
                         <h5><BsDot /> Lattialämmitys</h5>
-                        <h5><BsDot /> Korkea 133l jääkaappi pakaistinlokerolla (kaasu/ sähkö)</h5>
+                        <h5><BsDot /> Korkea 133l jääkaappi pakastinlokerolla (kaasu/ sähkö)</h5>
                         <h5><BsDot /> Kaasuliesi</h5>
                         <h5><BsDot /> Ruokailuvälineet ja astiasto kuudelle</h5>
-                        <h5><BsDot /> Ruanlaittovälineet</h5>
+                        <h5><BsDot /> Ruoanlaittovälineet</h5>
                         <h5><BsDot /> Kahvin- ja vedenkeitin</h5>
                         <h5><BsDot /> Pölynimuri</h5>
                         <h5><BsDot /> WC / Suihku</h5>
                         <h5><BsDot /> 24" Android Smart TV (Netflix, Youtube ...)</h5>
                         <h5><BsDot /> CD - Radio, Navigaattori</h5>
+                        <h5><BsDot /> Sisätilanpistokkeet, USB useissa paikoissa</h5>
                         <h5><BsDot /> Pimennys- ja hyönteisverkot ikkunoissa</h5>
                         <h5><BsDot /> Tilava tavaratila</h5>
-                        <h5><BsDot /> Sänkyt: </h5>
+                        <h5><BsDot /> 6 - nukkumapaikkaa</h5>
+                        <h5><BsDot /> Sängyt: </h5>
                         <div className='leftText'>
                             <h5> - Takana kerrossänky (sopii myös aikuisille)</h5>
                             <h5> - Keskellä alaslaskettava parivuode</h5>

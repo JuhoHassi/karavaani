@@ -2,10 +2,23 @@ import './App.css'
 import React from 'react'
 
 const Etusivu = () => {
-    return(
+    return (
         <div className='divEtusivu'>
-            <h2>Tervetuloa</h2>
-            <h4>asuntoautojen vuokraus sivulle</h4>
+            <div className='etuSpan'>
+                <span>M</span>
+                <span>A</span>
+                <span>T</span>
+                <span>K</span>
+                <span>U</span>
+                <span>S</span>
+                <span>T</span>
+                <span>A</span>
+                <span>A</span>
+            </div>
+            <div  className='etuText'>
+                <h4>vuokramalla matkailuauto</h4>
+            </div>
+           
         </div>
     )
 }

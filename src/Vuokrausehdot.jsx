@@ -44,7 +44,7 @@ const Vuokrausehdot = () => {
                         Vuokranantaja pidättää itsellään oikeuden perua varaus ilman korvausvelvollisuutta milloin tahansa ennen sovittua autonvuokrausta, 
                         jos autoa ei voida luovuttaa vuokranantajasta riippumattomasta syystä, esimerkiksi kuin auto on vaurioitunut liikennekelvottomaan kuntoon.</p>                    
                         <h5>8. VUOKRAAN SISÄLTYY</h5>
-                        <p>Auton käyttö vuokra-ajaksi. Käytönopastus, sovittu ajokilometrimäärä, tankit täydetty (disel, AdBlue), wc-kemikaalit, yksi täysi kaasupullo, täysi vesitankki, auton vakuutus 200€ omavastuulla, 
+                        <p>Auton käyttö vuokra-ajaksi. Käytönopastus, sovittu ajokilometrimäärä, tankit täydetty (disel, AdBlue), wc-kemikaalit, yksi täysi kaasupullo, täysi vesitankki, auton vakuutus 700€ omavastuulla, 
                         auton ulkopesu (AUTOA EI SAA PESTÄ ITSE), sähköliityntäjohto adapterilla, ruokailuvälineet, astiasto 6 henkilölle, ruoanlaittovälineet.<br/>
                         Lisäksi autossa olevat käyttötavarat ja laitteet vuokraajan käyttöön koko vuokra-ajaksi. Tarvittaessa tuen matkasi aikana.<br/>
                         Polttoaine ei sisälly hintaan.</p>
@@ -62,8 +62,8 @@ const Vuokrausehdot = () => {
                         <h5>10. VAKUUTUKSET JA VASTUUT</h5>
                         <p>Matkailuautossa on liikenne- ja kaskovakuutus. Täyskasko korvaa matkailuauton vahingot törmäysonnettomuudessa. 
                         Lisäksi täyskasko korvaa vaunu-, eläin-, ilkivalta-, palo- ja varkausvahingot. Matkailuautossa on myös lasivakuutus.<br/>
-                        Vuokraajan omavastuu kussakin vahinkotapauksessa on 200 €. Mikäli autolle sattuu vahinko auton vuokra-aikana, 
-                        maksetaan omavastuuosuus 200 € seitsemän päivän kuluessa vuokra-ajan päättymisestä. Panttimaksu voidaan käyttää osasuorituksena vakuutuksen omavastuuosuudesta.
+                        Vuokraajan omavastuu kussakin vahinkotapauksessa on 700 €. Mikäli autolle sattuu vahinko auton vuokra-aikana, 
+                        maksetaan omavastuuosuus 700 € seitsemän päivän kuluessa vuokra-ajan päättymisestä. Panttimaksu voidaan käyttää osasuorituksena vakuutuksen omavastuuosuudesta.
                         Jos matkailuautolle koituneet vahingot johtuvat vuokraajan tahallisuudesta, huolimattomuudesta, tai matkailuauton väärinkäytöstä tai 
                         jos kuljettaja on vahingon sattuessa alkoholin tai huumaavien aineiden vaikutuksen alainen, tai jos vakuutusyhtiö ei suostu korvaamaan matkailuautolle sattunutta vahinkoa, 
                         tulee vuokralaisen korvata kaikki aiheutuneet vahingot kokonaisuudessaan välittömästi vahinkojen euromääräisen summa tultua ilmoitetuksi vuokraajalle.<br/>

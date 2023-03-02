@@ -80,7 +80,7 @@ const Hinnasto = () => {
                             <h4 style={{fontSize: '14px'}}>Lisäkilometrit jälkikäteen maksettuna 0,35€/km</h4>
                         </div>
                         <br />
-                        <h5><BsCheck /> Täyskaskovakuutus 200€ omavastuulla</h5>
+                        <h5><BsCheck /> Täyskaskovakuutus 700€ omavastuulla</h5>
                         <h5><BsCheck /> Päivystyspalvelu matkan aikana</h5>
                         <h5><BsCheck /> Kirjallinen vuokrasopimus</h5>
                         <h5><BsCheck /> Käytönopastus</h5>

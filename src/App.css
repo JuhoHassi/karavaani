@@ -975,13 +975,16 @@ input[type=email],
   }
 }
 
-
 @media screen and (max-width:1470px) {
   .me-auto{
     margin-left: 40px;
   }
   .tsr{
     margin-left: 10px;
+  }
+  /*Etusivu*/
+  .etuText{
+    margin-top: 28%;
   }
   .varaaPaivat,
   .varaaPaivaHlo,
@@ -1006,6 +1009,22 @@ input[type=email],
   /*Vuokrattavat autot*/
   .container-slider{
     margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .etuText{
+    margin-top: 30%;
+    margin-left: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .etuText{
+    margin-top: 36%;
+  }
+  .etuText h4{
+    font-size: 4.5vw;
   }
 }
 
@@ -1055,6 +1074,11 @@ input[type=email],
   .logOutBtn{
     font-size: 15px;
   }
+  /*Etusivu*/
+  .etuText{
+    margin-top: 42%;
+    margin-left: 50%;
+  }
   /*Vuokrattavat autot*/
   .container-slider{
     margin-top: 20px;
@@ -1086,6 +1110,26 @@ input[type=email],
   }
   .loginWindow h4 {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 820px){
+.etuText{
+  margin-top: 43%;
+  
+}
+.etuText h4{
+  font-size: 4.5vw;
+}
+}
+
+@media screen and (max-width: 700px){
+  .etuText{
+    margin-top: 50%;
+    margin-left: 50%;
+  }
+  .etuText h4{
+    font-size: 4.5vw;
   }
 }
 
@@ -1123,6 +1167,14 @@ input[type=email],
   }
   .titleName{
     font-size: 18px;
+  }
+  /*Etusivu*/
+  .etuText{
+    margin-top: 60%;
+    margin-left: 50%;
+  }
+  .etuText h4{
+    font-size: 4.5vw;
   }
 
   /*Tarjoukset*/
@@ -1224,5 +1276,14 @@ input[type=email],
   }
   .divInfo-item p{
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px){
+  .etuText{
+    margin-top: 60%;
+    margin-left: 50%;
+  }
+  .etuText h4{
+    font-size: 4.5vw;
   }
 }

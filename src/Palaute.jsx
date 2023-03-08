@@ -65,7 +65,7 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
                 }
             })
             .catch(error => {
-                setMessage("Error")
+                setMessage("Tarkista vielä päivämäärä.")
                 setIsPositive(false)
                 setShowMessage(true)
                 window.scrollBy(0, -10000)
@@ -95,7 +95,7 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
                     }
                 })
                 .catch(error => {
-                    setMessage("Error")
+                    setMessage("Error, palautetta ei poistettu.")
                     setIsPositive(false)
                     setShowMessage(true)
                     window.scrollBy(0, -10000)

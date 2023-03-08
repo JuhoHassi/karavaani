@@ -118,7 +118,7 @@ const VarausAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMes
             }
         })
         .catch(error => {
-            setMessage("Error, tarkista päivämäärät!")  //Pitää olla response.data - pelkkään error ei riitä, backendistä tarvitaan vastaus!
+            setMessage("Tarkista päivämäärät, min 2pv!")  //Pitää olla response.data - pelkkään error ei riitä, backendistä tarvitaan vastaus!
             setIsPositive(false)
             setShowMessage(true)
 

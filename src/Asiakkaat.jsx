@@ -48,7 +48,7 @@ const Asiakkaat = ({setIsPositive, setShowMessage, setMessage}) => {
                 }
             })
             .catch(error => {
-                setMessage("Error")
+                setMessage("Error, tarkista onko asiakkaalla varauksia.")
                 setIsPositive(false)
                 setShowMessage(true)
                 window.scrollBy(0, -10000)

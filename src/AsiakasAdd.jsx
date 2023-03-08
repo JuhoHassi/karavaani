@@ -73,7 +73,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
             }
         })
         .catch(error => {
-            setMessage("Error, tarkista ehdot ja syntymäpäivä?")
+            setMessage("Tarkista vielä syntymäpäivä, hyväksyitkö ehdot?")
             setIsPositive(false)
             setShowMessage(true)
 
@@ -123,7 +123,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
                 </div>
 
                 <div>
-                    <input type='email' placeholder='Sähköposti' value={newEmail} onChange={({ target }) => setNewEmail(target.value)}/>
+                    <input type='email' placeholder='Sähköposti' value={newEmail} onChange={({ target }) => setNewEmail(target.value)} required/>
                 </div>
 
                 <div>

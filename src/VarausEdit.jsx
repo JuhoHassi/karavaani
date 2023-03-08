@@ -155,7 +155,7 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
             }
         })
         .catch(error => {
-            setMessage("Error, tarkista päivämäärät!")
+            setMessage("Tarkista päivämäärät, min 2pv!")
             setIsPositive(false)
             setShowMessage(true)
 

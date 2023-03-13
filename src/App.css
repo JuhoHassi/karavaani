@@ -569,11 +569,10 @@
 }
 .feedDelete {
   color: #363109;
-  /* background-color: #cbc9b3; */
   background-color: rgb(194, 208, 211);
   border: none;
   margin-left: 80%;
-  margin-top: 5px;
+  margin-top: -50px;
   font-size: medium;
 }
 .divPalaute {

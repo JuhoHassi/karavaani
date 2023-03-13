@@ -125,10 +125,13 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
                 <div className='divInfo-item'>
                     {feedback && feedback.map(f =>
                         <div key={f.feedbackId} className='feed'>
-                            <h3 className='feedName'>{f.customerName} <button className='feedDelete' onClick={() => deleteFeedback(f)}><BsTrash /></button></h3>
+                            <h3 className='feedName'>{f.customerName}</h3>
                             <h3 className='feedRating'>{f.rating}</h3>
                             <h3 className='feedText'>{f.feedbackText}</h3>
                             <h3 className='feedDay'>{format(new Date(f.feedbackDay), 'dd.MM.yyyy')}</h3>
+                            <button className='feedDelete' onClick={() => deleteFeedback(f)}><BsTrash /></button>
+                            
+                            
                             
                         </div>
                         )}

@@ -13,10 +13,9 @@ const Etusivu = () => {
                 <span>S</span>
                 <span>T</span>
                 <span>A</span>
-                <span>A</span>
             </div>
             <div  className='etuText'>
-                <h4>vuokramalla matkailuauto</h4>
+                <h4>vuokraamalla matkailuauto</h4>
             </div>
            
         </div>

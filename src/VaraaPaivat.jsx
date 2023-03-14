@@ -91,12 +91,14 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
         setNewEnd(end);
         setNewStartTime(starttime);
         setNewEndTime(endtime);
-
     };
 
     const handleSubmit = (event) => {
         if (!newTerms) {
-            console.log("Ehdot 3" + newTerms)
+            alert("Hyväksy ja lue ehdot")
+        }
+        else if(newEnd - newStart <= 1){
+            alert("Valitse vähintään kaksi päivää")
         }
         else { //Muokataan valitut päivämäärät noutoaika ja palautusaika oikeean muotoon
             let startDay = new Date(
@@ -107,6 +109,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                 newStartTime.getMinutes(),
                 newStartTime.getSeconds()
             )
+
             let endDay = new Date(
                 newEnd.getFullYear(),
                 newEnd.getMonth(),
@@ -115,6 +118,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                 newEndTime.getMinutes(),
                 newEndTime.getSeconds()
             )
+
             let maara = newHeadCount
             localStorage.setItem("startday", startDay) // Tallenetaan päivät ja henkilömäärä localstorageen
             localStorage.setItem("endday", endDay)
@@ -171,7 +175,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
             <h2 className='titleName'>VARAA</h2>
             <form onSubmit={handleSubmit}>
                 <div className='varaaPaivat'>
-                    <label>Valitse päivät</label>
+                    <label>Valitse päivät (väh. 2)</label>
                     <DatePicker
                         value={newStart}
                         selected={newStart}

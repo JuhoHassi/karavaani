@@ -136,7 +136,7 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
 
                 <div className='divInfo-item'>
                     <form onSubmit={handleSubmit} className='divPalaute'>
-                        <h4 className='pText'>Anna meille palautetta...</h4>
+                        <h4 className='pText'>Anna meille palautetta</h4>
                         <div>
                             <input type='text' placeholder='Nimi' value={newName} onChange={({ target }) => setNewName(target.value)} required />
                         </div>
@@ -147,13 +147,13 @@ const Palaute = ({ setMessage, setShowMessage, setIsPositive }) => {
                             <input type='number' max='10' min='1' placeholder='Arvio asteikolla 1-10' value={newRating} onChange={({ target }) => setNewRating(target.value)} required/>
                         </div>
                         <div>
-                            <textarea placeholder='Kirjoittaa tänne kommentti ...' type='text' value={newText} onChange={({ target }) => setNewText(target.value)} required ></textarea>                          
+                            <textarea placeholder='Kirjoita kommentti' type='text' value={newText} onChange={({ target }) => setNewText(target.value)} required ></textarea>                          
                         </div>
                         <div>
                             <input type="date" className='addPvm' value={newDay} onChange={({ target }) => setNewDay(target.value)}/>
                         </div>
                         <div>
-                            <input className='btn btn-outline-dark' type='button' value='Tyhjentää' onClick={emptyFields}/>
+                            <input className='btn btn-outline-dark' type='button' value='Tyhjennä' onClick={emptyFields}/>
                             <input className='btn btn-warning' type="submit" value="Lähetä"/>                            
                         </div>
                     </form>

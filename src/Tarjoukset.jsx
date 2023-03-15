@@ -14,7 +14,7 @@ const Tarjoukset = () => {
             <div className='divInfo'>
                 <div className='divInfo-item'>
                     <h3 className='tarjousTxt'>Toteuta oma unelmien loma ja vuokraa matkailuauto</h3>
-                    <h3 className='tarjousTxt2'>Helmikuun tarjous!</h3>
+                    <h3 className='tarjousTxt2'>Maaliskuun tarjous!</h3>
                     <h3 className='tarjousTxt3'>Vuokraa matkailuauto helmikuun ajaksi</h3>
                     <h3 className='tarjousTxt4'>viikko hinta - <b>590€</b></h3>
                 

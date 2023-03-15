@@ -142,7 +142,7 @@ const AsiakasAdd = ({setLisäystila, reload, reloadNow, setIsPositive, setShowMe
 
                 <br></br>
                 <input className="btn btn-outline-success btn-sm" type='submit' value='Tallenna' />
-                <input className="btn btn-outline-warning btn-sm" type='button' value='Tyhjentää' onClick={emptyFields}/>
+                <input className="btn btn-outline-warning btn-sm" type='button' value='Tyhjennä' onClick={emptyFields}/>
                 <input className="btn btn-outline-dark btn-sm" type='button' value='Takaisin' onClick={() => setLisäystila(false)}/>
          
             </form>           

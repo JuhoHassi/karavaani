@@ -255,7 +255,7 @@ const VarausEdit = ({setMuokkaustila, muokattavaVaraus ,reload, reloadNow, setIs
 
                 <br></br>
                 <input className="btn btn-outline-success btn-sm" type='submit' value='Tallenna' />
-                <input className="btn btn-outline-warning btn-sm" type='button' value='Tyhjentää' onClick={resetFields}/>
+                <input className="btn btn-outline-warning btn-sm" type='button' value='Tyhjennä' onClick={resetFields}/>
                 <input className="btn btn-outline-dark btn-sm" type='button' value='Takaisin' onClick={() => setMuokkaustila(false)}/>
          
             </form>           

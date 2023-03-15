@@ -98,7 +98,7 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
             alert("Hyväksy ja lue ehdot")
         }
         else if(newEnd - newStart <= 1){
-            alert("Valitse vähintään kaksi päivää")
+            alert("Valitse päivät, vähintään 2pv")
         }
         else { //Muokataan valitut päivämäärät noutoaika ja palautusaika oikeean muotoon
             let startDay = new Date(

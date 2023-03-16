@@ -15,9 +15,6 @@ const Etusivu = () => {
                 <span>A</span>
                 <h4>vuokraamalla matkailuauto</h4>
             </div>
-            {/* <div  className='etuText'>
-                <h4>vuokraamalla matkailuauto</h4>
-            </div> */}
         </div>
     )
 }

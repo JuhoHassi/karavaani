@@ -235,7 +235,7 @@ const VaraaLisatarvikkeet = ({ setMessage, setShowMessage, setIsPositive }) => {
                         <input  type='email' name='user_email' required />
                     </div>
                     <div>
-                    <input className='btn btn-warning' style={{ paddingLeft: '170px', paddingRight: '170px' }} type="submit" value="Varaa" />
+                    <input className='btn btn-warning' style={{ paddingLeft: '170px', paddingRight: '170px', maxWidth:'350px'  }} type="submit" value="Varaa" />
                 </div>
                 </div>
             </form>

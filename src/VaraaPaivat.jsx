@@ -282,22 +282,19 @@ const VaraaPaivat = ({ setMessage, setShowMessage, setIsPositive }) => {
                     </div>
                     <br />
 
-                    <div>
+                    <div style={{ display:'inline-block'}}>
                         <label className='varauslb'>Olen lukenut ja <br /> hyväksyn vuokrausehdot: </label>
                         <Switch2 onClick={Terms} />
                         {newTerms ? <span className='true'>Kyllä</span> : <span className='false'>Ei</span>}
                         <Router>
-                            <NavLink href="/Vuokrausehdot" className='btn btn-outline-warning' style={{ color: 'black', marginTop: '20px' }} target='_blank'>Lue vuokrausehdot</NavLink>
+                            <NavLink href="/Vuokrausehdot" className='btn btn-outline-warning' style={{ color: 'black', marginTop: '20px', maxWidth:'350px' }} target='_blank'>Lue vuokrausehdot</NavLink>
                             <Switch>
                                 <Route path="/Vuokrausehdot" exact>
                                     <Vuokrausehdot />
                                 </Route>
                             </Switch>
                         </Router>
-                    </div>
-
-                    <div>
-                        <input className='btn btn-warning' style={{ paddingLeft: '150px', paddingRight: '150px', marginBottom: '20px', marginTop: '5px' }} type="submit" value="Jatka varausta" />
+                        <input className='btn btn-warning' style={{   paddingLeft: '150px', paddingRight: '150px', marginBottom: '20px', marginTop: '5px', maxWidth:'350px' }} type="submit" value="Jatka varausta" />
                     </div>
                 </div>
             </form>

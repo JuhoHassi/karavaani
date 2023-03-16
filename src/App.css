@@ -686,11 +686,14 @@ input[type=email],
   font-size: 17px;
   margin-bottom: 5px;
   margin-top: 40px;
+  max-width: 350px;
+
 }
 
 .varaaEmail input{
   padding-left: 155px;
   border-radius: 6px;
+  max-width: 350px;
 }
 
 .varauslb {
@@ -749,7 +752,7 @@ input[type=email],
 }
 
 .gMap {
-  width: 400px;
+  width: 350px;
   height: 250px;
   margin-bottom: 20px;
 }

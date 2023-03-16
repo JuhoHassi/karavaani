@@ -51,11 +51,8 @@
   text-align: center;
 }
 .etuSpan{
-  position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, 0%);
   width: 90%;
-  top: 40%;
-  left: 50%
 }
 .etuSpan span{
   display: inline-block;
@@ -65,7 +62,7 @@
   color: white;
   letter-spacing: 1vw;
 
-  text-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 15px 45px rgba(0, 0, 0, 0.91);
   position: relative;
   transform: translateY(-100vh);
   animation: fall 3.5s forwards;
@@ -101,12 +98,7 @@
 .etuSpan span:nth-child(9){
   animation-delay: 5.5s;
 }
-.etuText{
-  margin-top: 25%;
-  margin-left: 60%;
-  transform: translate(-50%, -50%); 
-}
-.etuText h4{
+.etuSpan h4{
   display: inline-block;
   font-size: 3.5vw;
   color: white;
@@ -984,10 +976,7 @@ input[type=email],
   .tsr{
     margin-left: 10px;
   }
-  /*Etusivu*/
-  .etuText{
-    margin-top: 28%;
-  }
+
   .varaaPaivat,
   .varaaPaivaHlo,
   .varaaPaivatTiedot {
@@ -1014,22 +1003,11 @@ input[type=email],
   }
 }
 
-@media screen and (max-width: 1200px){
-  .etuText{
-    margin-top: 30%;
-    margin-left: 50%;
-  }
-}
-
 @media screen and (max-width: 1000px){
-  .etuText{
-    margin-top: 36%;
-  }
-  .etuText h4{
+  .etuSpan h4{
     font-size: 4.5vw;
   }
 }
-
 
 @media screen and (max-width:950px) {
   #responsive-navbar-nav{
@@ -1076,11 +1054,6 @@ input[type=email],
   .logOutBtn{
     font-size: 15px;
   }
-  /*Etusivu*/
-  .etuText{
-    margin-top: 42%;
-    margin-left: 50%;
-  }
   /*Vuokrattavat autot*/
   .container-slider{
     margin-top: 20px;
@@ -1116,25 +1089,16 @@ input[type=email],
 }
 
 @media screen and (max-width: 820px){
-.etuText{
-  margin-top: 43%;
-  
-}
-.etuText h4{
+.etuSpan h4{
   font-size: 4.5vw;
 }
 }
 
 @media screen and (max-width: 700px){
-  .etuText{
-    margin-top: 50%;
-    margin-left: 50%;
-  }
-  .etuText h4{
+  .etuSpan h4{
     font-size: 4.5vw;
   }
 }
-
 
 @media screen and (max-width: 600px) {
   .varaaPaivat,
@@ -1171,11 +1135,7 @@ input[type=email],
     font-size: 18px;
   }
   /*Etusivu*/
-  .etuText{
-    margin-top: 60%;
-    margin-left: 50%;
-  }
-  .etuText h4{
+  .etuSpan h4{
     font-size: 4.5vw;
   }
 
@@ -1281,11 +1241,7 @@ input[type=email],
   }
 }
 @media screen and (max-width: 500px){
-  .etuText{
-    margin-top: 60%;
-    margin-left: 50%;
-  }
-  .etuText h4{
+  .etuSpan h4{
     font-size: 4.5vw;
   }
 }
